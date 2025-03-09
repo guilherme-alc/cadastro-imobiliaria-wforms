@@ -25,7 +25,7 @@
             string erro;
 
             if (txt != null && string.IsNullOrWhiteSpace(txt.Text))
-                erro = $"{txt.Name} é obrigatório!";
+                erro = $"Preenchimento do campo obrigatório!";
             else
                 erro = "";
 
@@ -36,9 +36,9 @@
             string erro;
 
             if (txt != null && string.IsNullOrWhiteSpace(txt.Text))
-                erro = $"{txt.Name} é obrigatório!";
+                erro = $"Preenchimento do campo obrigatório!";
             else if(!txt.MaskFull)
-                erro = "CPF incompleto!";
+                erro = "Preenchimento incompleto!";
             else
                 erro = "";
 

@@ -56,9 +56,11 @@
             mtxtCEP = new MaskedTextBox();
             lblTitulo = new Label();
             mtxtTelefone = new MaskedTextBox();
+            menuStrip1 = new MenuStrip();
             panel1 = new Panel();
             menuStrip = new MenuStrip();
             menuPrincipalToolStripMenuItem = new ToolStripMenuItem();
+            sairToolStripMenuItem = new ToolStripMenuItem();
             errorProvider1 = new ErrorProvider(components);
             pnlConteudo.SuspendLayout();
             panel1.SuspendLayout();
@@ -226,6 +228,7 @@
             pnlConteudo.Controls.Add(radFisica);
             pnlConteudo.Controls.Add(lblDocumento);
             pnlConteudo.Controls.Add(radJuridica);
+            pnlConteudo.Controls.Add(menuStrip1);
             pnlConteudo.Dock = DockStyle.Fill;
             pnlConteudo.Location = new Point(0, 0);
             pnlConteudo.Name = "pnlConteudo";
@@ -305,7 +308,6 @@
             txtNumero.Name = "txtNumero";
             txtNumero.Size = new Size(87, 27);
             txtNumero.TabIndex = 11;
-            txtNumero.KeyPress += txtNumero_KeyPress;
             txtNumero.Validated += textBox_Validated;
             // 
             // txtLogradouro
@@ -362,6 +364,15 @@
             mtxtTelefone.KeyPress += txtNumero_KeyPress;
             mtxtTelefone.Validated += maskedTextBox_Validated;
             // 
+            // menuStrip1
+            // 
+            menuStrip1.ImageScalingSize = new Size(20, 20);
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(908, 24);
+            menuStrip1.TabIndex = 4213144;
+            menuStrip1.Text = "menuStrip1";
+            // 
             // panel1
             // 
             panel1.Controls.Add(menuStrip);
@@ -374,7 +385,7 @@
             // menuStrip
             // 
             menuStrip.ImageScalingSize = new Size(20, 20);
-            menuStrip.Items.AddRange(new ToolStripItem[] { menuPrincipalToolStripMenuItem });
+            menuStrip.Items.AddRange(new ToolStripItem[] { menuPrincipalToolStripMenuItem, sairToolStripMenuItem });
             menuStrip.Location = new Point(0, 0);
             menuStrip.Name = "menuStrip";
             menuStrip.Size = new Size(908, 28);
@@ -384,9 +395,16 @@
             // menuPrincipalToolStripMenuItem
             // 
             menuPrincipalToolStripMenuItem.Name = "menuPrincipalToolStripMenuItem";
-            menuPrincipalToolStripMenuItem.Size = new Size(152, 24);
+            menuPrincipalToolStripMenuItem.Size = new Size(121, 24);
             menuPrincipalToolStripMenuItem.Text = "Menu Principal";
             menuPrincipalToolStripMenuItem.Click += menuPrincipalToolStripMenuItem_Click_1;
+            // 
+            // sairToolStripMenuItem
+            // 
+            sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            sairToolStripMenuItem.Size = new Size(48, 24);
+            sairToolStripMenuItem.Text = "Sair";
+            sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
             // errorProvider1
             // 
@@ -447,5 +465,7 @@
         private MenuStrip menuStrip;
         private ToolStripMenuItem menuPrincipalToolStripMenuItem;
         private ErrorProvider errorProvider1;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem sairToolStripMenuItem;
     }
 }

@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             menuHeader = new MenuStrip();
             cadastroToolStripMenuItem = new ToolStripMenuItem();
+            clientesToolStripMenuItem = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
             picGroupLogo = new PictureBox();
             menuHeader.SuspendLayout();
@@ -41,7 +42,7 @@
             // 
             resources.ApplyResources(menuHeader, "menuHeader");
             menuHeader.ImageScalingSize = new Size(20, 20);
-            menuHeader.Items.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem, sairToolStripMenuItem });
+            menuHeader.Items.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem, clientesToolStripMenuItem, sairToolStripMenuItem });
             menuHeader.Name = "menuHeader";
             // 
             // cadastroToolStripMenuItem
@@ -49,6 +50,12 @@
             resources.ApplyResources(cadastroToolStripMenuItem, "cadastroToolStripMenuItem");
             cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             cadastroToolStripMenuItem.Click += cadastroToolStripMenuItem_Click;
+            // 
+            // clientesToolStripMenuItem
+            // 
+            resources.ApplyResources(clientesToolStripMenuItem, "clientesToolStripMenuItem");
+            clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            clientesToolStripMenuItem.Click += clientesToolStripMenuItem_Click;
             // 
             // sairToolStripMenuItem
             // 
@@ -86,5 +93,6 @@
         private ToolStripMenuItem cadastroToolStripMenuItem;
         private ToolStripMenuItem sairToolStripMenuItem;
         private PictureBox picGroupLogo;
+        private ToolStripMenuItem clientesToolStripMenuItem;
     }
 }

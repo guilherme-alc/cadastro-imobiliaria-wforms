@@ -17,5 +17,11 @@ namespace CadastroImobiliaria
             Form cadastro = new Cadastro(this);
             cadastro.Show();
         }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form clientes = new Clientes(this);
+            clientes.Show();
+        }
     }
 }
