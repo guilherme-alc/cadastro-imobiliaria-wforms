@@ -32,17 +32,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clientes));
             panel1 = new Panel();
             listBox1 = new ListBox();
+            bsClientes = new BindingSource(components);
             contextMenuStrip1 = new ContextMenuStrip(components);
             menuToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1 = new MenuStrip();
             menuPrincipalToolStripMenuItem = new ToolStripMenuItem();
             cadastroToolStripMenuItem = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
-            bsClientes = new BindingSource(components);
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)bsClientes).BeginInit();
             contextMenuStrip1.SuspendLayout();
             menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)bsClientes).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -55,11 +55,14 @@
             // 
             // listBox1
             // 
+            listBox1.DataSource = bsClientes;
+            listBox1.DisplayMember = "Nome";
             listBox1.FormattingEnabled = true;
             listBox1.Location = new Point(3, 0);
             listBox1.Name = "listBox1";
             listBox1.Size = new Size(169, 384);
             listBox1.TabIndex = 0;
+            listBox1.ValueMember = "Documento";
             // 
             // contextMenuStrip1
             // 
@@ -117,10 +120,10 @@
             Name = "Clientes";
             Text = "Clientes";
             panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)bsClientes).EndInit();
             contextMenuStrip1.ResumeLayout(false);
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)bsClientes).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
