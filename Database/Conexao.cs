@@ -6,7 +6,7 @@ namespace CadastroImobiliaria.Database
     {
         public static SqlConnection ObterConexao()
         {
-            string connectionString = @"Server=GUICAM\SQLEXPRESS;Database=imobiliaria;User Id=sa;Password=123;TrustServerCertificate=True;";
+            string connectionString = @"";
 
             SqlConnection connection = new SqlConnection(connectionString);
             try
