@@ -36,13 +36,13 @@
             radFisica = new RadioButton();
             radJuridica = new RadioButton();
             lblDocumento = new Label();
-            txtDocumento = new TextBox();
             lblEmail = new Label();
             lblTelefone = new Label();
             txtEmail = new TextBox();
             btnCadastrar = new Button();
             btnLimparCampos = new Button();
             pnlConteudo = new Panel();
+            mtxtDocumento = new MaskedTextBox();
             txtBairro = new TextBox();
             txtCidade = new TextBox();
             txtEstado = new TextBox();
@@ -52,7 +52,7 @@
             lblNumero = new Label();
             txtNumero = new TextBox();
             txtLogradouro = new TextBox();
-            label1 = new Label();
+            lblLogradouro = new Label();
             mtxtCEP = new MaskedTextBox();
             lblTitulo = new Label();
             mtxtTelefone = new MaskedTextBox();
@@ -60,6 +60,7 @@
             panel1 = new Panel();
             menuStrip = new MenuStrip();
             menuPrincipalToolStripMenuItem = new ToolStripMenuItem();
+            pessoasToolStripMenuItem = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
             errorProvider1 = new ErrorProvider(components);
             pnlConteudo.SuspendLayout();
@@ -102,6 +103,7 @@
             // radFisica
             // 
             radFisica.AutoSize = true;
+            radFisica.Checked = true;
             radFisica.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             radFisica.Location = new Point(38, 248);
             radFisica.Name = "radFisica";
@@ -110,6 +112,7 @@
             radFisica.TabStop = true;
             radFisica.Text = "Pessoa Física";
             radFisica.UseVisualStyleBackColor = true;
+            radFisica.CheckedChanged += radFisica_CheckedChanged;
             // 
             // radJuridica
             // 
@@ -119,9 +122,9 @@
             radJuridica.Name = "radJuridica";
             radJuridica.Size = new Size(144, 27);
             radJuridica.TabIndex = 3;
-            radJuridica.TabStop = true;
             radJuridica.Text = "Pessoa Jurídica";
             radJuridica.UseVisualStyleBackColor = true;
+            radJuridica.CheckedChanged += radJuridica_CheckedChanged;
             // 
             // lblDocumento
             // 
@@ -133,17 +136,6 @@
             lblDocumento.Size = new Size(106, 25);
             lblDocumento.TabIndex = 83213;
             lblDocumento.Text = "Documento";
-            // 
-            // txtDocumento
-            // 
-            txtDocumento.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtDocumento.Location = new Point(38, 306);
-            txtDocumento.MaxLength = 18;
-            txtDocumento.Name = "txtDocumento";
-            txtDocumento.Size = new Size(196, 30);
-            txtDocumento.TabIndex = 4;
-            txtDocumento.KeyPress += txtNumero_KeyPress;
-            txtDocumento.Validated += textBox_Validated;
             // 
             // lblEmail
             // 
@@ -203,6 +195,7 @@
             // 
             // pnlConteudo
             // 
+            pnlConteudo.Controls.Add(mtxtDocumento);
             pnlConteudo.Controls.Add(txtBairro);
             pnlConteudo.Controls.Add(txtCidade);
             pnlConteudo.Controls.Add(txtEstado);
@@ -212,7 +205,7 @@
             pnlConteudo.Controls.Add(lblNumero);
             pnlConteudo.Controls.Add(txtNumero);
             pnlConteudo.Controls.Add(txtLogradouro);
-            pnlConteudo.Controls.Add(label1);
+            pnlConteudo.Controls.Add(lblLogradouro);
             pnlConteudo.Controls.Add(mtxtCEP);
             pnlConteudo.Controls.Add(lblTitulo);
             pnlConteudo.Controls.Add(mtxtTelefone);
@@ -224,7 +217,6 @@
             pnlConteudo.Controls.Add(lblTelefone);
             pnlConteudo.Controls.Add(lblCEP);
             pnlConteudo.Controls.Add(lblEmail);
-            pnlConteudo.Controls.Add(txtDocumento);
             pnlConteudo.Controls.Add(radFisica);
             pnlConteudo.Controls.Add(lblDocumento);
             pnlConteudo.Controls.Add(radJuridica);
@@ -234,6 +226,14 @@
             pnlConteudo.Name = "pnlConteudo";
             pnlConteudo.Size = new Size(908, 646);
             pnlConteudo.TabIndex = 4213134;
+            // 
+            // mtxtDocumento
+            // 
+            mtxtDocumento.Location = new Point(38, 306);
+            mtxtDocumento.Mask = "000.000.000-00";
+            mtxtDocumento.Name = "mtxtDocumento";
+            mtxtDocumento.Size = new Size(196, 27);
+            mtxtDocumento.TabIndex = 4213145;
             // 
             // txtBairro
             // 
@@ -320,15 +320,15 @@
             txtLogradouro.TabIndex = 10;
             txtLogradouro.Validated += textBox_Validated;
             // 
-            // label1
+            // lblLogradouro
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(38, 495);
-            label1.Name = "label1";
-            label1.Size = new Size(106, 25);
-            label1.TabIndex = 4213137;
-            label1.Text = "Logradouro";
+            lblLogradouro.AutoSize = true;
+            lblLogradouro.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblLogradouro.Location = new Point(38, 495);
+            lblLogradouro.Name = "lblLogradouro";
+            lblLogradouro.Size = new Size(106, 25);
+            lblLogradouro.TabIndex = 4213137;
+            lblLogradouro.Text = "Logradouro";
             // 
             // mtxtCEP
             // 
@@ -339,7 +339,6 @@
             mtxtCEP.Size = new Size(79, 30);
             mtxtCEP.TabIndex = 6;
             mtxtCEP.TextAlign = HorizontalAlignment.Center;
-            mtxtCEP.KeyPress += txtNumero_KeyPress;
             mtxtCEP.Validated += maskedTextBox_Validated;
             // 
             // lblTitulo
@@ -361,7 +360,6 @@
             mtxtTelefone.Size = new Size(129, 30);
             mtxtTelefone.TabIndex = 5;
             mtxtTelefone.TextAlign = HorizontalAlignment.Center;
-            mtxtTelefone.KeyPress += txtNumero_KeyPress;
             mtxtTelefone.Validated += maskedTextBox_Validated;
             // 
             // menuStrip1
@@ -385,7 +383,7 @@
             // menuStrip
             // 
             menuStrip.ImageScalingSize = new Size(20, 20);
-            menuStrip.Items.AddRange(new ToolStripItem[] { menuPrincipalToolStripMenuItem, sairToolStripMenuItem });
+            menuStrip.Items.AddRange(new ToolStripItem[] { menuPrincipalToolStripMenuItem, pessoasToolStripMenuItem, sairToolStripMenuItem });
             menuStrip.Location = new Point(0, 0);
             menuStrip.Name = "menuStrip";
             menuStrip.Size = new Size(908, 28);
@@ -398,6 +396,13 @@
             menuPrincipalToolStripMenuItem.Size = new Size(121, 24);
             menuPrincipalToolStripMenuItem.Text = "Menu Principal";
             menuPrincipalToolStripMenuItem.Click += menuPrincipalToolStripMenuItem_Click_1;
+            // 
+            // pessoasToolStripMenuItem
+            // 
+            pessoasToolStripMenuItem.Name = "pessoasToolStripMenuItem";
+            pessoasToolStripMenuItem.Size = new Size(73, 24);
+            pessoasToolStripMenuItem.Text = "Pessoas";
+            pessoasToolStripMenuItem.Click += pessoasToolStripMenuItem_Click;
             // 
             // sairToolStripMenuItem
             // 
@@ -440,7 +445,6 @@
         private RadioButton radFisica;
         private RadioButton radJuridica;
         private Label lblDocumento;
-        private TextBox txtDocumento;
         private Label lblEmail;
         private Label lblTelefone;
         private TextBox txtEmail;
@@ -451,7 +455,7 @@
         private Panel panel1;
         private MaskedTextBox mtxtTelefone;
         private Label lblTitulo;
-        private Label label1;
+        private Label lblLogradouro;
         private MaskedTextBox mtxtCEP;
         private Label lblNumero;
         private TextBox txtNumero;
@@ -467,5 +471,7 @@
         private ErrorProvider errorProvider1;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem sairToolStripMenuItem;
+        private MaskedTextBox mtxtDocumento;
+        private ToolStripMenuItem pessoasToolStripMenuItem;
     }
 }

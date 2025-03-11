@@ -1,6 +1,6 @@
 ﻿namespace CadastroImobiliaria
 {
-    partial class Clientes
+    partial class ListaPessoas
     {
         /// <summary>
         /// Required designer variable.
@@ -28,54 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clientes));
-            panel1 = new Panel();
-            listBox1 = new ListBox();
-            bsClientes = new BindingSource(components);
-            contextMenuStrip1 = new ContextMenuStrip(components);
-            menuToolStripMenuItem = new ToolStripMenuItem();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListaPessoas));
             menuStrip1 = new MenuStrip();
             menuPrincipalToolStripMenuItem = new ToolStripMenuItem();
             cadastroToolStripMenuItem = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)bsClientes).BeginInit();
-            contextMenuStrip1.SuspendLayout();
+            dgvPessoas = new DataGridView();
             menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvPessoas).BeginInit();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.Controls.Add(listBox1);
-            panel1.Location = new Point(0, 31);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(175, 417);
-            panel1.TabIndex = 0;
-            // 
-            // listBox1
-            // 
-            listBox1.DataSource = bsClientes;
-            listBox1.DisplayMember = "Nome";
-            listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(3, 0);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(169, 384);
-            listBox1.TabIndex = 0;
-            listBox1.ValueMember = "Documento";
-            // 
-            // contextMenuStrip1
-            // 
-            contextMenuStrip1.ImageScalingSize = new Size(20, 20);
-            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { menuToolStripMenuItem });
-            contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(116, 28);
-            // 
-            // menuToolStripMenuItem
-            // 
-            menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            menuToolStripMenuItem.Size = new Size(115, 24);
-            menuToolStripMenuItem.Text = "Menu";
             // 
             // menuStrip1
             // 
@@ -108,36 +69,39 @@
             sairToolStripMenuItem.Text = "Sair";
             sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
-            // Clientes
+            // dgvPessoas
+            // 
+            dgvPessoas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvPessoas.Location = new Point(0, 31);
+            dgvPessoas.Name = "dgvPessoas";
+            dgvPessoas.RowHeadersWidth = 51;
+            dgvPessoas.Size = new Size(800, 188);
+            dgvPessoas.TabIndex = 2;
+            // 
+            // ListaPessoas
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(dgvPessoas);
             Controls.Add(menuStrip1);
-            Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
-            Name = "Clientes";
+            Name = "ListaPessoas";
             Text = "Clientes";
-            panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)bsClientes).EndInit();
-            contextMenuStrip1.ResumeLayout(false);
+            Load += ListaPessoas_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvPessoas).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Panel panel1;
-        private ContextMenuStrip contextMenuStrip1;
-        private ToolStripMenuItem menuToolStripMenuItem;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem menuPrincipalToolStripMenuItem;
         private ToolStripMenuItem cadastroToolStripMenuItem;
         private ToolStripMenuItem sairToolStripMenuItem;
-        private ListBox listBox1;
-        private BindingSource bsClientes;
+        private DataGridView dgvPessoas;
     }
 }

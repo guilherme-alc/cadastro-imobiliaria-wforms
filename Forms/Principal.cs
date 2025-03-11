@@ -1,8 +1,8 @@
 namespace CadastroImobiliaria
 {
-    public partial class Main : Form
+    public partial class Principal : Form
     {
-        public Main()
+        public Principal()
         {
             InitializeComponent();
         }
@@ -20,8 +20,8 @@ namespace CadastroImobiliaria
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form clientes = new Clientes(this);
-            clientes.Show();
+            Form listaPessoas = new ListaPessoas(this);
+            listaPessoas.Show();
         }
     }
 }

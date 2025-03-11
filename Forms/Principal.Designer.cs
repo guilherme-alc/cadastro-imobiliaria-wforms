@@ -1,6 +1,6 @@
 ﻿namespace CadastroImobiliaria
 {
-    partial class Main
+    partial class Principal
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             menuHeader = new MenuStrip();
             cadastroToolStripMenuItem = new ToolStripMenuItem();
             clientesToolStripMenuItem = new ToolStripMenuItem();
@@ -70,7 +70,7 @@
             picGroupLogo.Name = "picGroupLogo";
             picGroupLogo.TabStop = false;
             // 
-            // Main
+            // Principal
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
@@ -79,7 +79,7 @@
             MainMenuStrip = menuHeader;
             MaximizeBox = false;
             MinimizeBox = false;
-            Name = "Main";
+            Name = "Principal";
             menuHeader.ResumeLayout(false);
             menuHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picGroupLogo).EndInit();

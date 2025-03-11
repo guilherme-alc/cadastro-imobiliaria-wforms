@@ -1,16 +1,25 @@
-﻿namespace CadastroImobiliaria
+﻿using CadastroImobiliaria.Models;
+using CadastroImobiliaria.Repositorio;
+
+namespace CadastroImobiliaria
 {
-    public partial class Clientes : Form
+    public partial class ListaPessoas : Form
     {
-        private readonly Main _formPrincipal;
-        public Clientes(Main formPrincipal)
+        private readonly Principal _formPrincipal;
+        private readonly Cadastro _formCadastro;
+        public ListaPessoas(Principal formPrincipal)
         {
             InitializeComponent();
             _formPrincipal = formPrincipal;
         }
-        public Clientes()
+        public ListaPessoas()
         {
             InitializeComponent();
+        }
+
+        private void ListaPessoas_Load(object sender, EventArgs e)
+        {
+            dgvPessoas.DataSource = PessoaRepositorio.BuscarTodasPessoas();
         }
 
         private void menuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
