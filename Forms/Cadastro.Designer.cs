@@ -42,6 +42,7 @@
             btnCadastrar = new Button();
             btnLimparCampos = new Button();
             pnlConteudo = new Panel();
+            pictureBox1 = new PictureBox();
             mtxtDocumento = new MaskedTextBox();
             txtBairro = new TextBox();
             txtCidade = new TextBox();
@@ -64,6 +65,7 @@
             sairToolStripMenuItem = new ToolStripMenuItem();
             errorProvider1 = new ErrorProvider(components);
             pnlConteudo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
@@ -80,6 +82,7 @@
             // txtNome
             // 
             resources.ApplyResources(txtNome, "txtNome");
+            txtNome.BackColor = SystemColors.HighlightText;
             errorProvider1.SetError(txtNome, resources.GetString("txtNome.Error"));
             errorProvider1.SetIconAlignment(txtNome, (ErrorIconAlignment)resources.GetObject("txtNome.IconAlignment"));
             errorProvider1.SetIconPadding(txtNome, (int)resources.GetObject("txtNome.IconPadding"));
@@ -152,7 +155,7 @@
             // btnCadastrar
             // 
             resources.ApplyResources(btnCadastrar, "btnCadastrar");
-            btnCadastrar.BackColor = Color.RoyalBlue;
+            btnCadastrar.BackColor = Color.SteelBlue;
             errorProvider1.SetError(btnCadastrar, resources.GetString("btnCadastrar.Error"));
             btnCadastrar.ForeColor = Color.White;
             errorProvider1.SetIconAlignment(btnCadastrar, (ErrorIconAlignment)resources.GetObject("btnCadastrar.IconAlignment"));
@@ -164,15 +167,19 @@
             // btnLimparCampos
             // 
             resources.ApplyResources(btnLimparCampos, "btnLimparCampos");
+            btnLimparCampos.BackColor = Color.FromArgb(160, 0, 0);
             errorProvider1.SetError(btnLimparCampos, resources.GetString("btnLimparCampos.Error"));
+            btnLimparCampos.ForeColor = SystemColors.MenuBar;
             errorProvider1.SetIconAlignment(btnLimparCampos, (ErrorIconAlignment)resources.GetObject("btnLimparCampos.IconAlignment"));
             errorProvider1.SetIconPadding(btnLimparCampos, (int)resources.GetObject("btnLimparCampos.IconPadding"));
             btnLimparCampos.Name = "btnLimparCampos";
-            btnLimparCampos.UseVisualStyleBackColor = true;
+            btnLimparCampos.UseVisualStyleBackColor = false;
             // 
             // pnlConteudo
             // 
             resources.ApplyResources(pnlConteudo, "pnlConteudo");
+            pnlConteudo.BackColor = SystemColors.ControlLight;
+            pnlConteudo.Controls.Add(pictureBox1);
             pnlConteudo.Controls.Add(mtxtDocumento);
             pnlConteudo.Controls.Add(txtBairro);
             pnlConteudo.Controls.Add(txtCidade);
@@ -203,6 +210,16 @@
             errorProvider1.SetIconAlignment(pnlConteudo, (ErrorIconAlignment)resources.GetObject("pnlConteudo.IconAlignment"));
             errorProvider1.SetIconPadding(pnlConteudo, (int)resources.GetObject("pnlConteudo.IconPadding"));
             pnlConteudo.Name = "pnlConteudo";
+            // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(pictureBox1, "pictureBox1");
+            errorProvider1.SetError(pictureBox1, resources.GetString("pictureBox1.Error"));
+            errorProvider1.SetIconAlignment(pictureBox1, (ErrorIconAlignment)resources.GetObject("pictureBox1.IconAlignment"));
+            errorProvider1.SetIconPadding(pictureBox1, (int)resources.GetObject("pictureBox1.IconPadding"));
+            pictureBox1.Image = Properties.Resources.group_banner;
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.TabStop = false;
             // 
             // mtxtDocumento
             // 
@@ -311,6 +328,7 @@
             // 
             resources.ApplyResources(lblTitulo, "lblTitulo");
             errorProvider1.SetError(lblTitulo, resources.GetString("lblTitulo.Error"));
+            lblTitulo.ForeColor = Color.Black;
             errorProvider1.SetIconAlignment(lblTitulo, (ErrorIconAlignment)resources.GetObject("lblTitulo.IconAlignment"));
             errorProvider1.SetIconPadding(lblTitulo, (int)resources.GetObject("lblTitulo.IconPadding"));
             lblTitulo.Name = "lblTitulo";
@@ -345,6 +363,7 @@
             // menuStrip
             // 
             resources.ApplyResources(menuStrip, "menuStrip");
+            menuStrip.BackColor = Color.SteelBlue;
             errorProvider1.SetError(menuStrip, resources.GetString("menuStrip.Error"));
             errorProvider1.SetIconAlignment(menuStrip, (ErrorIconAlignment)resources.GetObject("menuStrip.IconAlignment"));
             errorProvider1.SetIconPadding(menuStrip, (int)resources.GetObject("menuStrip.IconPadding"));
@@ -385,6 +404,7 @@
             Name = "Cadastro";
             pnlConteudo.ResumeLayout(false);
             pnlConteudo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             menuStrip.ResumeLayout(false);
@@ -428,5 +448,6 @@
         private ToolStripMenuItem sairToolStripMenuItem;
         private MaskedTextBox mtxtDocumento;
         private ToolStripMenuItem pessoasToolStripMenuItem;
+        private PictureBox pictureBox1;
     }
 }
