@@ -1,5 +1,4 @@
-﻿using CadastroImobiliaria.Models;
-using CadastroImobiliaria.Repositorio;
+﻿using CadastroImobiliaria.Repositorio;
 
 namespace CadastroImobiliaria
 {

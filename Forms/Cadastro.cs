@@ -136,7 +136,7 @@ namespace CadastroImobiliaria
 
         private void pessoasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form pessoas = new ListaPessoas();
+            Form pessoas = new ListaPessoas(_formPrincipal);
             pessoas.Show();
         }
     }

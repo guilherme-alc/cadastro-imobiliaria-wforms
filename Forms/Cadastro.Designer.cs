@@ -71,130 +71,108 @@
             // 
             // lblNome
             // 
-            lblNome.AutoSize = true;
-            lblNome.Font = new Font("Segoe UI", 10.8F);
-            lblNome.Location = new Point(38, 96);
+            resources.ApplyResources(lblNome, "lblNome");
+            errorProvider1.SetError(lblNome, resources.GetString("lblNome.Error"));
+            errorProvider1.SetIconAlignment(lblNome, (ErrorIconAlignment)resources.GetObject("lblNome.IconAlignment"));
+            errorProvider1.SetIconPadding(lblNome, (int)resources.GetObject("lblNome.IconPadding"));
             lblNome.Name = "lblNome";
-            lblNome.Size = new Size(61, 25);
-            lblNome.TabIndex = 2132321;
-            lblNome.Text = "Nome";
             // 
             // txtNome
             // 
-            txtNome.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtNome.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtNome.Location = new Point(38, 124);
-            txtNome.MaxLength = 100;
+            resources.ApplyResources(txtNome, "txtNome");
+            errorProvider1.SetError(txtNome, resources.GetString("txtNome.Error"));
+            errorProvider1.SetIconAlignment(txtNome, (ErrorIconAlignment)resources.GetObject("txtNome.IconAlignment"));
+            errorProvider1.SetIconPadding(txtNome, (int)resources.GetObject("txtNome.IconPadding"));
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(388, 30);
-            txtNome.TabIndex = 0;
             txtNome.Validated += textBox_Validated;
             // 
             // lblCEP
             // 
-            lblCEP.AutoSize = true;
-            lblCEP.Font = new Font("Segoe UI", 10.8F);
-            lblCEP.Location = new Point(38, 443);
+            resources.ApplyResources(lblCEP, "lblCEP");
+            errorProvider1.SetError(lblCEP, resources.GetString("lblCEP.Error"));
+            errorProvider1.SetIconAlignment(lblCEP, (ErrorIconAlignment)resources.GetObject("lblCEP.IconAlignment"));
+            errorProvider1.SetIconPadding(lblCEP, (int)resources.GetObject("lblCEP.IconPadding"));
             lblCEP.Name = "lblCEP";
-            lblCEP.Size = new Size(42, 25);
-            lblCEP.TabIndex = 4213132;
-            lblCEP.Text = "CEP";
             // 
             // radFisica
             // 
-            radFisica.AutoSize = true;
+            resources.ApplyResources(radFisica, "radFisica");
             radFisica.Checked = true;
-            radFisica.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            radFisica.Location = new Point(38, 248);
+            errorProvider1.SetError(radFisica, resources.GetString("radFisica.Error"));
+            errorProvider1.SetIconAlignment(radFisica, (ErrorIconAlignment)resources.GetObject("radFisica.IconAlignment"));
+            errorProvider1.SetIconPadding(radFisica, (int)resources.GetObject("radFisica.IconPadding"));
             radFisica.Name = "radFisica";
-            radFisica.Size = new Size(127, 27);
-            radFisica.TabIndex = 2;
             radFisica.TabStop = true;
-            radFisica.Text = "Pessoa Física";
             radFisica.UseVisualStyleBackColor = true;
             radFisica.CheckedChanged += radFisica_CheckedChanged;
             // 
             // radJuridica
             // 
-            radJuridica.AutoSize = true;
-            radJuridica.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            radJuridica.Location = new Point(185, 248);
+            resources.ApplyResources(radJuridica, "radJuridica");
+            errorProvider1.SetError(radJuridica, resources.GetString("radJuridica.Error"));
+            errorProvider1.SetIconAlignment(radJuridica, (ErrorIconAlignment)resources.GetObject("radJuridica.IconAlignment"));
+            errorProvider1.SetIconPadding(radJuridica, (int)resources.GetObject("radJuridica.IconPadding"));
             radJuridica.Name = "radJuridica";
-            radJuridica.Size = new Size(144, 27);
-            radJuridica.TabIndex = 3;
-            radJuridica.Text = "Pessoa Jurídica";
             radJuridica.UseVisualStyleBackColor = true;
             radJuridica.CheckedChanged += radJuridica_CheckedChanged;
             // 
             // lblDocumento
             // 
-            lblDocumento.AutoSize = true;
-            lblDocumento.Font = new Font("Segoe UI", 10.8F);
-            lblDocumento.Location = new Point(38, 278);
-            lblDocumento.Margin = new Padding(0, 0, 3, 0);
+            resources.ApplyResources(lblDocumento, "lblDocumento");
+            errorProvider1.SetError(lblDocumento, resources.GetString("lblDocumento.Error"));
+            errorProvider1.SetIconAlignment(lblDocumento, (ErrorIconAlignment)resources.GetObject("lblDocumento.IconAlignment"));
+            errorProvider1.SetIconPadding(lblDocumento, (int)resources.GetObject("lblDocumento.IconPadding"));
             lblDocumento.Name = "lblDocumento";
-            lblDocumento.Size = new Size(106, 25);
-            lblDocumento.TabIndex = 83213;
-            lblDocumento.Text = "Documento";
             // 
             // lblEmail
             // 
-            lblEmail.AutoSize = true;
-            lblEmail.Font = new Font("Segoe UI", 10.8F);
-            lblEmail.Location = new Point(38, 167);
+            resources.ApplyResources(lblEmail, "lblEmail");
+            errorProvider1.SetError(lblEmail, resources.GetString("lblEmail.Error"));
+            errorProvider1.SetIconAlignment(lblEmail, (ErrorIconAlignment)resources.GetObject("lblEmail.IconAlignment"));
+            errorProvider1.SetIconPadding(lblEmail, (int)resources.GetObject("lblEmail.IconPadding"));
             lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(61, 25);
-            lblEmail.TabIndex = 932131;
-            lblEmail.Text = "E-mail";
             // 
             // lblTelefone
             // 
-            lblTelefone.AutoSize = true;
-            lblTelefone.Font = new Font("Segoe UI", 10.8F);
-            lblTelefone.Location = new Point(38, 356);
+            resources.ApplyResources(lblTelefone, "lblTelefone");
+            errorProvider1.SetError(lblTelefone, resources.GetString("lblTelefone.Error"));
+            errorProvider1.SetIconAlignment(lblTelefone, (ErrorIconAlignment)resources.GetObject("lblTelefone.IconAlignment"));
+            errorProvider1.SetIconPadding(lblTelefone, (int)resources.GetObject("lblTelefone.IconPadding"));
             lblTelefone.Name = "lblTelefone";
-            lblTelefone.Size = new Size(77, 25);
-            lblTelefone.TabIndex = 13132;
-            lblTelefone.Text = "Telefone";
             // 
             // txtEmail
             // 
-            txtEmail.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtEmail.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtEmail.Location = new Point(38, 195);
-            txtEmail.MaxLength = 254;
+            resources.ApplyResources(txtEmail, "txtEmail");
+            errorProvider1.SetError(txtEmail, resources.GetString("txtEmail.Error"));
+            errorProvider1.SetIconAlignment(txtEmail, (ErrorIconAlignment)resources.GetObject("txtEmail.IconAlignment"));
+            errorProvider1.SetIconPadding(txtEmail, (int)resources.GetObject("txtEmail.IconPadding"));
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(388, 30);
-            txtEmail.TabIndex = 1;
             txtEmail.Validated += textBox_Validated;
             // 
             // btnCadastrar
             // 
-            btnCadastrar.Anchor = AnchorStyles.Bottom;
+            resources.ApplyResources(btnCadastrar, "btnCadastrar");
             btnCadastrar.BackColor = Color.RoyalBlue;
-            btnCadastrar.FlatStyle = FlatStyle.Flat;
-            btnCadastrar.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            errorProvider1.SetError(btnCadastrar, resources.GetString("btnCadastrar.Error"));
             btnCadastrar.ForeColor = Color.White;
-            btnCadastrar.Location = new Point(372, 573);
+            errorProvider1.SetIconAlignment(btnCadastrar, (ErrorIconAlignment)resources.GetObject("btnCadastrar.IconAlignment"));
+            errorProvider1.SetIconPadding(btnCadastrar, (int)resources.GetObject("btnCadastrar.IconPadding"));
             btnCadastrar.Name = "btnCadastrar";
-            btnCadastrar.Size = new Size(165, 61);
-            btnCadastrar.TabIndex = 12;
-            btnCadastrar.Text = "Cadastrar";
             btnCadastrar.UseVisualStyleBackColor = false;
             btnCadastrar.Click += btnCadastrar_Click;
             // 
             // btnLimparCampos
             // 
-            btnLimparCampos.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnLimparCampos.Location = new Point(802, 44);
+            resources.ApplyResources(btnLimparCampos, "btnLimparCampos");
+            errorProvider1.SetError(btnLimparCampos, resources.GetString("btnLimparCampos.Error"));
+            errorProvider1.SetIconAlignment(btnLimparCampos, (ErrorIconAlignment)resources.GetObject("btnLimparCampos.IconAlignment"));
+            errorProvider1.SetIconPadding(btnLimparCampos, (int)resources.GetObject("btnLimparCampos.IconPadding"));
             btnLimparCampos.Name = "btnLimparCampos";
-            btnLimparCampos.Size = new Size(94, 31);
-            btnLimparCampos.TabIndex = 13;
-            btnLimparCampos.Text = "Limpar";
             btnLimparCampos.UseVisualStyleBackColor = true;
             // 
             // pnlConteudo
             // 
+            resources.ApplyResources(pnlConteudo, "pnlConteudo");
             pnlConteudo.Controls.Add(mtxtDocumento);
             pnlConteudo.Controls.Add(txtBairro);
             pnlConteudo.Controls.Add(txtCidade);
@@ -221,213 +199,190 @@
             pnlConteudo.Controls.Add(lblDocumento);
             pnlConteudo.Controls.Add(radJuridica);
             pnlConteudo.Controls.Add(menuStrip1);
-            pnlConteudo.Dock = DockStyle.Fill;
-            pnlConteudo.Location = new Point(0, 0);
+            errorProvider1.SetError(pnlConteudo, resources.GetString("pnlConteudo.Error"));
+            errorProvider1.SetIconAlignment(pnlConteudo, (ErrorIconAlignment)resources.GetObject("pnlConteudo.IconAlignment"));
+            errorProvider1.SetIconPadding(pnlConteudo, (int)resources.GetObject("pnlConteudo.IconPadding"));
             pnlConteudo.Name = "pnlConteudo";
-            pnlConteudo.Size = new Size(908, 646);
-            pnlConteudo.TabIndex = 4213134;
             // 
             // mtxtDocumento
             // 
-            mtxtDocumento.Location = new Point(38, 306);
-            mtxtDocumento.Mask = "000.000.000-00";
+            resources.ApplyResources(mtxtDocumento, "mtxtDocumento");
+            errorProvider1.SetError(mtxtDocumento, resources.GetString("mtxtDocumento.Error"));
+            errorProvider1.SetIconAlignment(mtxtDocumento, (ErrorIconAlignment)resources.GetObject("mtxtDocumento.IconAlignment"));
+            errorProvider1.SetIconPadding(mtxtDocumento, (int)resources.GetObject("mtxtDocumento.IconPadding"));
             mtxtDocumento.Name = "mtxtDocumento";
-            mtxtDocumento.Size = new Size(196, 27);
-            mtxtDocumento.TabIndex = 4213145;
+            mtxtDocumento.Validated += maskedTextBox_Validated;
             // 
             // txtBairro
             // 
-            txtBairro.Location = new Point(747, 444);
+            resources.ApplyResources(txtBairro, "txtBairro");
+            errorProvider1.SetError(txtBairro, resources.GetString("txtBairro.Error"));
+            errorProvider1.SetIconAlignment(txtBairro, (ErrorIconAlignment)resources.GetObject("txtBairro.IconAlignment"));
+            errorProvider1.SetIconPadding(txtBairro, (int)resources.GetObject("txtBairro.IconPadding"));
             txtBairro.Name = "txtBairro";
-            txtBairro.Size = new Size(125, 27);
-            txtBairro.TabIndex = 9;
             txtBairro.Validated += textBox_Validated;
             // 
             // txtCidade
             // 
-            txtCidade.Location = new Point(522, 444);
+            resources.ApplyResources(txtCidade, "txtCidade");
+            errorProvider1.SetError(txtCidade, resources.GetString("txtCidade.Error"));
+            errorProvider1.SetIconAlignment(txtCidade, (ErrorIconAlignment)resources.GetObject("txtCidade.IconAlignment"));
+            errorProvider1.SetIconPadding(txtCidade, (int)resources.GetObject("txtCidade.IconPadding"));
             txtCidade.Name = "txtCidade";
-            txtCidade.Size = new Size(125, 27);
-            txtCidade.TabIndex = 8;
             txtCidade.Validated += textBox_Validated;
             // 
             // txtEstado
             // 
-            txtEstado.Location = new Point(288, 444);
+            resources.ApplyResources(txtEstado, "txtEstado");
+            errorProvider1.SetError(txtEstado, resources.GetString("txtEstado.Error"));
+            errorProvider1.SetIconAlignment(txtEstado, (ErrorIconAlignment)resources.GetObject("txtEstado.IconAlignment"));
+            errorProvider1.SetIconPadding(txtEstado, (int)resources.GetObject("txtEstado.IconPadding"));
             txtEstado.Name = "txtEstado";
-            txtEstado.Size = new Size(125, 27);
-            txtEstado.TabIndex = 7;
             txtEstado.Validated += textBox_Validated;
             // 
             // lblBairro
             // 
-            lblBairro.AutoSize = true;
-            lblBairro.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblBairro.Location = new Point(668, 442);
+            resources.ApplyResources(lblBairro, "lblBairro");
+            errorProvider1.SetError(lblBairro, resources.GetString("lblBairro.Error"));
+            errorProvider1.SetIconAlignment(lblBairro, (ErrorIconAlignment)resources.GetObject("lblBairro.IconAlignment"));
+            errorProvider1.SetIconPadding(lblBairro, (int)resources.GetObject("lblBairro.IconPadding"));
             lblBairro.Name = "lblBairro";
-            lblBairro.Size = new Size(58, 25);
-            lblBairro.TabIndex = 4213143;
-            lblBairro.Text = "Bairro";
             // 
             // lblCidade
             // 
-            lblCidade.AutoSize = true;
-            lblCidade.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblCidade.Location = new Point(434, 442);
+            resources.ApplyResources(lblCidade, "lblCidade");
+            errorProvider1.SetError(lblCidade, resources.GetString("lblCidade.Error"));
+            errorProvider1.SetIconAlignment(lblCidade, (ErrorIconAlignment)resources.GetObject("lblCidade.IconAlignment"));
+            errorProvider1.SetIconPadding(lblCidade, (int)resources.GetObject("lblCidade.IconPadding"));
             lblCidade.Name = "lblCidade";
-            lblCidade.Size = new Size(67, 25);
-            lblCidade.TabIndex = 4213142;
-            lblCidade.Text = "Cidade";
             // 
             // lblEstado
             // 
-            lblEstado.AutoSize = true;
-            lblEstado.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblEstado.Location = new Point(201, 443);
+            resources.ApplyResources(lblEstado, "lblEstado");
+            errorProvider1.SetError(lblEstado, resources.GetString("lblEstado.Error"));
+            errorProvider1.SetIconAlignment(lblEstado, (ErrorIconAlignment)resources.GetObject("lblEstado.IconAlignment"));
+            errorProvider1.SetIconPadding(lblEstado, (int)resources.GetObject("lblEstado.IconPadding"));
             lblEstado.Name = "lblEstado";
-            lblEstado.Size = new Size(66, 25);
-            lblEstado.TabIndex = 4213141;
-            lblEstado.Text = "Estado";
             // 
             // lblNumero
             // 
-            lblNumero.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            lblNumero.AutoSize = true;
-            lblNumero.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblNumero.Location = new Point(468, 497);
+            resources.ApplyResources(lblNumero, "lblNumero");
+            errorProvider1.SetError(lblNumero, resources.GetString("lblNumero.Error"));
+            errorProvider1.SetIconAlignment(lblNumero, (ErrorIconAlignment)resources.GetObject("lblNumero.IconAlignment"));
+            errorProvider1.SetIconPadding(lblNumero, (int)resources.GetObject("lblNumero.IconPadding"));
             lblNumero.Name = "lblNumero";
-            lblNumero.Size = new Size(73, 23);
-            lblNumero.TabIndex = 4213140;
-            lblNumero.Text = "Número";
             // 
             // txtNumero
             // 
-            txtNumero.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtNumero.Location = new Point(468, 523);
-            txtNumero.MaxLength = 10;
+            resources.ApplyResources(txtNumero, "txtNumero");
+            errorProvider1.SetError(txtNumero, resources.GetString("txtNumero.Error"));
+            errorProvider1.SetIconAlignment(txtNumero, (ErrorIconAlignment)resources.GetObject("txtNumero.IconAlignment"));
+            errorProvider1.SetIconPadding(txtNumero, (int)resources.GetObject("txtNumero.IconPadding"));
             txtNumero.Name = "txtNumero";
-            txtNumero.Size = new Size(87, 27);
-            txtNumero.TabIndex = 11;
             txtNumero.Validated += textBox_Validated;
             // 
             // txtLogradouro
             // 
-            txtLogradouro.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtLogradouro.Location = new Point(38, 523);
-            txtLogradouro.MaxLength = 100;
+            resources.ApplyResources(txtLogradouro, "txtLogradouro");
+            errorProvider1.SetError(txtLogradouro, resources.GetString("txtLogradouro.Error"));
+            errorProvider1.SetIconAlignment(txtLogradouro, (ErrorIconAlignment)resources.GetObject("txtLogradouro.IconAlignment"));
+            errorProvider1.SetIconPadding(txtLogradouro, (int)resources.GetObject("txtLogradouro.IconPadding"));
             txtLogradouro.Name = "txtLogradouro";
-            txtLogradouro.Size = new Size(388, 27);
-            txtLogradouro.TabIndex = 10;
             txtLogradouro.Validated += textBox_Validated;
             // 
             // lblLogradouro
             // 
-            lblLogradouro.AutoSize = true;
-            lblLogradouro.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblLogradouro.Location = new Point(38, 495);
+            resources.ApplyResources(lblLogradouro, "lblLogradouro");
+            errorProvider1.SetError(lblLogradouro, resources.GetString("lblLogradouro.Error"));
+            errorProvider1.SetIconAlignment(lblLogradouro, (ErrorIconAlignment)resources.GetObject("lblLogradouro.IconAlignment"));
+            errorProvider1.SetIconPadding(lblLogradouro, (int)resources.GetObject("lblLogradouro.IconPadding"));
             lblLogradouro.Name = "lblLogradouro";
-            lblLogradouro.Size = new Size(106, 25);
-            lblLogradouro.TabIndex = 4213137;
-            lblLogradouro.Text = "Logradouro";
             // 
             // mtxtCEP
             // 
-            mtxtCEP.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            mtxtCEP.Location = new Point(101, 442);
-            mtxtCEP.Mask = "00000-000";
+            resources.ApplyResources(mtxtCEP, "mtxtCEP");
+            errorProvider1.SetError(mtxtCEP, resources.GetString("mtxtCEP.Error"));
+            errorProvider1.SetIconAlignment(mtxtCEP, (ErrorIconAlignment)resources.GetObject("mtxtCEP.IconAlignment"));
+            errorProvider1.SetIconPadding(mtxtCEP, (int)resources.GetObject("mtxtCEP.IconPadding"));
             mtxtCEP.Name = "mtxtCEP";
-            mtxtCEP.Size = new Size(79, 30);
-            mtxtCEP.TabIndex = 6;
-            mtxtCEP.TextAlign = HorizontalAlignment.Center;
             mtxtCEP.Validated += maskedTextBox_Validated;
             // 
             // lblTitulo
             // 
-            lblTitulo.AutoSize = true;
-            lblTitulo.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitulo.Location = new Point(38, 44);
+            resources.ApplyResources(lblTitulo, "lblTitulo");
+            errorProvider1.SetError(lblTitulo, resources.GetString("lblTitulo.Error"));
+            errorProvider1.SetIconAlignment(lblTitulo, (ErrorIconAlignment)resources.GetObject("lblTitulo.IconAlignment"));
+            errorProvider1.SetIconPadding(lblTitulo, (int)resources.GetObject("lblTitulo.IconPadding"));
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(235, 35);
-            lblTitulo.TabIndex = 4213135;
-            lblTitulo.Text = "Cadastro de Pessoa";
             // 
             // mtxtTelefone
             // 
-            mtxtTelefone.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            mtxtTelefone.Location = new Point(38, 384);
-            mtxtTelefone.Mask = "(00) 00000-0000";
+            resources.ApplyResources(mtxtTelefone, "mtxtTelefone");
+            errorProvider1.SetError(mtxtTelefone, resources.GetString("mtxtTelefone.Error"));
+            errorProvider1.SetIconAlignment(mtxtTelefone, (ErrorIconAlignment)resources.GetObject("mtxtTelefone.IconAlignment"));
+            errorProvider1.SetIconPadding(mtxtTelefone, (int)resources.GetObject("mtxtTelefone.IconPadding"));
             mtxtTelefone.Name = "mtxtTelefone";
-            mtxtTelefone.Size = new Size(129, 30);
-            mtxtTelefone.TabIndex = 5;
-            mtxtTelefone.TextAlign = HorizontalAlignment.Center;
             mtxtTelefone.Validated += maskedTextBox_Validated;
             // 
             // menuStrip1
             // 
+            resources.ApplyResources(menuStrip1, "menuStrip1");
+            errorProvider1.SetError(menuStrip1, resources.GetString("menuStrip1.Error"));
+            errorProvider1.SetIconAlignment(menuStrip1, (ErrorIconAlignment)resources.GetObject("menuStrip1.IconAlignment"));
+            errorProvider1.SetIconPadding(menuStrip1, (int)resources.GetObject("menuStrip1.IconPadding"));
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(908, 24);
-            menuStrip1.TabIndex = 4213144;
-            menuStrip1.Text = "menuStrip1";
             // 
             // panel1
             // 
+            resources.ApplyResources(panel1, "panel1");
             panel1.Controls.Add(menuStrip);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
+            errorProvider1.SetError(panel1, resources.GetString("panel1.Error"));
+            errorProvider1.SetIconAlignment(panel1, (ErrorIconAlignment)resources.GetObject("panel1.IconAlignment"));
+            errorProvider1.SetIconPadding(panel1, (int)resources.GetObject("panel1.IconPadding"));
             panel1.Name = "panel1";
-            panel1.Size = new Size(908, 31);
-            panel1.TabIndex = 4213135;
             // 
             // menuStrip
             // 
+            resources.ApplyResources(menuStrip, "menuStrip");
+            errorProvider1.SetError(menuStrip, resources.GetString("menuStrip.Error"));
+            errorProvider1.SetIconAlignment(menuStrip, (ErrorIconAlignment)resources.GetObject("menuStrip.IconAlignment"));
+            errorProvider1.SetIconPadding(menuStrip, (int)resources.GetObject("menuStrip.IconPadding"));
             menuStrip.ImageScalingSize = new Size(20, 20);
             menuStrip.Items.AddRange(new ToolStripItem[] { menuPrincipalToolStripMenuItem, pessoasToolStripMenuItem, sairToolStripMenuItem });
-            menuStrip.Location = new Point(0, 0);
             menuStrip.Name = "menuStrip";
-            menuStrip.Size = new Size(908, 28);
-            menuStrip.TabIndex = 0;
-            menuStrip.Text = "menuStrip1";
             // 
             // menuPrincipalToolStripMenuItem
             // 
+            resources.ApplyResources(menuPrincipalToolStripMenuItem, "menuPrincipalToolStripMenuItem");
             menuPrincipalToolStripMenuItem.Name = "menuPrincipalToolStripMenuItem";
-            menuPrincipalToolStripMenuItem.Size = new Size(121, 24);
-            menuPrincipalToolStripMenuItem.Text = "Menu Principal";
             menuPrincipalToolStripMenuItem.Click += menuPrincipalToolStripMenuItem_Click_1;
             // 
             // pessoasToolStripMenuItem
             // 
+            resources.ApplyResources(pessoasToolStripMenuItem, "pessoasToolStripMenuItem");
             pessoasToolStripMenuItem.Name = "pessoasToolStripMenuItem";
-            pessoasToolStripMenuItem.Size = new Size(73, 24);
-            pessoasToolStripMenuItem.Text = "Pessoas";
             pessoasToolStripMenuItem.Click += pessoasToolStripMenuItem_Click;
             // 
             // sairToolStripMenuItem
             // 
+            resources.ApplyResources(sairToolStripMenuItem, "sairToolStripMenuItem");
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            sairToolStripMenuItem.Size = new Size(48, 24);
-            sairToolStripMenuItem.Text = "Sair";
             sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
             // errorProvider1
             // 
             errorProvider1.ContainerControl = this;
+            resources.ApplyResources(errorProvider1, "errorProvider1");
             // 
             // Cadastro
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(908, 646);
             Controls.Add(panel1);
             Controls.Add(pnlConteudo);
-            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip;
-            MaximumSize = new Size(1432, 800);
-            MinimumSize = new Size(926, 693);
             Name = "Cadastro";
-            Text = "Cadastro";
             pnlConteudo.ResumeLayout(false);
             pnlConteudo.PerformLayout();
             panel1.ResumeLayout(false);
