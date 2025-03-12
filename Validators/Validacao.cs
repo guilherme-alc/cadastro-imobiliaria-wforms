@@ -72,15 +72,14 @@
             {
                 soma2 += int.Parse(cnpj[i].ToString()) * peso2;
                 peso2 = (peso2 == 2) ? 9 : peso2 - 1;
-
-                int digito2 = 11 - (soma2 % 11);
-                if (digito2 == 10 || digito2 == 11)
-                    digito2 = 0;
-
-                bool eValido = cnpj[12].ToString() == digito1.ToString() && cnpj[13].ToString() == digito2.ToString();
-
-                return eValido;
             }
+
+            int digito2 = 11 - (soma2 % 11);
+            if (digito2 == 10 || digito2 == 11)
+                digito2 = 0;
+
+            bool eValido = cnpj[12].ToString() == digito1.ToString() && cnpj[13].ToString() == digito2.ToString();
+            return eValido;
         }
 
         public static string CampoTexto(TextBox txt)
@@ -112,7 +111,19 @@
         {
             bool camposValidos = true;
 
-            if (string.IsNullOrEmpty(campo.Text))
+            if (campo is MaskedTextBox)
+            {
+                if (string.IsNullOrEmpty(campo.Text) || campo.Text.Length < ((MaskedTextBox)campo).Mask.Length)
+                {
+                    erro.SetError(campo, $"O campo {nomeCampo} é obrigatório.");
+                    camposValidos = false;
+                }
+                else
+                {
+                    erro.SetError(campo, "");
+                }
+            }
+            else if (string.IsNullOrEmpty(campo.Text))
             {
                 erro.SetError(campo, $"O campo {nomeCampo} é obrigatório.");
                 camposValidos = false;
