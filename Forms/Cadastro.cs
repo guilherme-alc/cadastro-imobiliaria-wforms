@@ -46,7 +46,11 @@ namespace CadastroImobiliaria
 
                 if (radFisica.Checked)
                 {
-
+                    if (!Validacao.CPF(mtxtDocumento.Text))
+                    {
+                        MessageBox.Show("CPF inválido", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
                 }
                 else if (radJuridica.Checked)
                 {
@@ -70,7 +74,7 @@ namespace CadastroImobiliaria
                         .Replace("/", "")
                         .Replace(" ", ""),
                     Telefone = mtxtTelefone.Text.Trim(),
-                    CEP = mtxtCEP.Text.Trim(),
+                    CEP = mtxtCEP.Text.Trim().Replace("-", ""),
                     Estado = txtEstado.Text.Trim(),
                     Cidade = txtCidade.Text.Trim(),
                     Bairro = txtBairro.Text.Trim(),
@@ -89,9 +93,9 @@ namespace CadastroImobiliaria
                 
                 MessageBox.Show("Pessoa cadastrada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("Falha interna no servidor", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Falha interna no servidor {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

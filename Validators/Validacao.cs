@@ -11,73 +11,76 @@
         }
         public static bool CPF(string cpf)
         {
-            int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
-            int[] multiplicador2 = new int[10] { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
-            string tempCpf;
-            string digito;
-            int soma;
-            int resto;
-            cpf = cpf.Trim();
-            cpf = cpf.Replace(".", "").Replace("-", "");
-            if (cpf.Length != 11)
-                return false;
-            tempCpf = cpf.Substring(0, 9);
-            soma = 0;
+            cpf = cpf.Replace(",", "").Replace(".", "").Replace("-", "");
 
-            for (int i = 0; i < 9; i++)
-                soma += int.Parse(tempCpf[i].ToString()) * multiplicador1[i];
-            resto = soma % 11;
-            if (resto < 2)
-                resto = 0;
-            else
-                resto = 11 - resto;
-            digito = resto.ToString();
-            tempCpf = tempCpf + digito;
-            soma = 0;
-            for (int i = 0; i < 10; i++)
-                soma += int.Parse(tempCpf[i].ToString()) * multiplicador2[i];
-            resto = soma % 11;
-            if (resto < 2)
-                resto = 0;
-            else
-                resto = 11 - resto;
-            digito = digito + resto.ToString();
-            return true;
+            // verifica se possui 11 digitos e se eles não são repetidos do primeiro caractere
+            if (cpf.Length != 11 || cpf.All(c => c == cpf[0]))
+                return false;
+
+            int soma1 = 0;
+            int peso1 = 10;
+            for(int i = 0; i < 9; i++)
+            {
+                soma1 += int.Parse(cpf[i].ToString()) * peso1;
+                peso1--;
+            }
+
+            int digito1 = 11 - (soma1 % 11);
+            if (digito1 == 10 || digito1 == 11)
+                digito1 = 0;
+
+            int soma2 = 0;
+            int peso2 = 11;
+            for(int i = 0; i < 10; i++)
+            {
+                soma2 += int.Parse(cpf[i].ToString()) * peso2;
+                peso2--;
+            }
+
+            int digito2 = 11 - (soma2 % 11);
+            if (digito2 == 10 || digito2 == 11)
+                digito2 = 0;
+
+            // a conversão para string é necessária pois o char compara o valor número na tabela ASCII e não o caractere em específico
+
+            var eValido = cpf[9].ToString() == digito1.ToString() && cpf[10].ToString() == digito2.ToString();
+            return eValido;
         }
 
         public static bool CNPJ(string cnpj)
         {
-            int[] multiplicador1 = new int[12] { 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
-            int[] multiplicador2 = new int[13] { 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
-            int soma;
-            int resto;
-            string digito;
-            string tempCnpj;
-            cnpj = cnpj.Trim();
             cnpj = cnpj.Replace(".", "").Replace("-", "").Replace("/", "");
-            if (cnpj.Length != 14)
+
+            if (cnpj.Length != 14 || cnpj.All(c => c == cnpj[0]))
                 return false;
-            tempCnpj = cnpj.Substring(0, 12);
-            soma = 0;
+
+            int soma1 = 0;
+            int peso1 = 5;
             for (int i = 0; i < 12; i++)
-                soma += int.Parse(tempCnpj[i].ToString()) * multiplicador1[i];
-            resto = (soma % 11);
-            if (resto < 2)
-                resto = 0;
-            else
-                resto = 11 - resto;
-            digito = resto.ToString();
-            tempCnpj = tempCnpj + digito;
-            soma = 0;
+            {
+                soma1 += int.Parse(cnpj[i].ToString()) * peso1;
+                peso1 = (peso1 == 2) ? 9 : peso1 - 1;
+            }
+
+            int digito1 = 11 - (soma1 % 11);
+            if (digito1 == 10 || digito1 == 11)
+                digito1 = 0;
+
+            int soma2 = 0;
+            int peso2 = 6;
             for (int i = 0; i < 13; i++)
-                soma += int.Parse(tempCnpj[i].ToString()) * multiplicador2[i];
-            resto = (soma % 11);
-            if (resto < 2)
-                resto = 0;
-            else
-                resto = 11 - resto;
-            digito = digito + resto.ToString();
-            return cnpj.EndsWith(digito);
+            {
+                soma2 += int.Parse(cnpj[i].ToString()) * peso2;
+                peso2 = (peso2 == 2) ? 9 : peso2 - 1;
+
+                int digito2 = 11 - (soma2 % 11);
+                if (digito2 == 10 || digito2 == 11)
+                    digito2 = 0;
+
+                bool eValido = cnpj[12].ToString() == digito1.ToString() && cnpj[13].ToString() == digito2.ToString();
+
+                return eValido;
+            }
         }
 
         public static string CampoTexto(TextBox txt)
