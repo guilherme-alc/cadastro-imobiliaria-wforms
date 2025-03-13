@@ -13,12 +13,6 @@ namespace CadastroImobiliaria
             _formPrincipal = formPrincipal;
         }
 
-        private void menuPrincipalToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            _formPrincipal.Show();
-            this.Close();
-        }
-
         private void textBox_Validated(object sender, EventArgs e)
         {
             var txt = (TextBox)sender;
@@ -59,6 +53,16 @@ namespace CadastroImobiliaria
                         MessageBox.Show("CNPJ inválido", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
+                }
+                if(!Validacao.Email(txtEmail.Text))
+                {
+                    MessageBox.Show("E-mail inválido", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (!Validacao.CEP(txtEmail.Text))
+                {
+                    MessageBox.Show("CEP inválido", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
 
                 var pessoa = new Pessoa
@@ -102,16 +106,16 @@ namespace CadastroImobiliaria
         private bool validarPreenchimento(out bool camposValidos)
         {
             errorProvider1.Clear();
-            camposValidos = Validacao.PreenchimentoCampo(txtNome, lblNome.Text, errorProvider1);
-            camposValidos = Validacao.PreenchimentoCampo(txtEmail, lblEmail.Text, errorProvider1);
-            camposValidos = Validacao.PreenchimentoCampo(mtxtTelefone, lblTelefone.Text, errorProvider1);
-            camposValidos = Validacao.PreenchimentoCampo(mtxtDocumento, lblDocumento.Text, errorProvider1);
-            camposValidos = Validacao.PreenchimentoCampo(mtxtCEP, lblCEP.Text, errorProvider1);
-            camposValidos = Validacao.PreenchimentoCampo(txtEstado, lblEstado.Text, errorProvider1);
-            camposValidos = Validacao.PreenchimentoCampo(txtCidade, lblCidade.Text, errorProvider1);
-            camposValidos = Validacao.PreenchimentoCampo(txtBairro, lblBairro.Text, errorProvider1);
-            camposValidos = Validacao.PreenchimentoCampo(txtLogradouro, lblLogradouro.Text, errorProvider1);
-            camposValidos = Validacao.PreenchimentoCampo(txtNumero, lblNumero.Text, errorProvider1);
+            camposValidos = Validacao.PreenchimentoCampo(txtNome, lblNome.Text, errorProvider1) &&
+                            Validacao.PreenchimentoCampo(txtEmail, lblEmail.Text, errorProvider1) &&    
+                            Validacao.PreenchimentoCampo(mtxtTelefone, lblTelefone.Text, errorProvider1) &&
+                            Validacao.PreenchimentoCampo(mtxtDocumento, lblDocumento.Text, errorProvider1) &&
+                            Validacao.PreenchimentoCampo(mtxtCEP, lblCEP.Text, errorProvider1) &&
+                            Validacao.PreenchimentoCampo(txtEstado, lblEstado.Text, errorProvider1) &&
+                            Validacao.PreenchimentoCampo(txtCidade, lblCidade.Text, errorProvider1) &&
+                            Validacao.PreenchimentoCampo(txtBairro, lblBairro.Text, errorProvider1) &&
+                            Validacao.PreenchimentoCampo(txtLogradouro, lblLogradouro.Text, errorProvider1) &&
+                            Validacao.PreenchimentoCampo(txtNumero, lblNumero.Text, errorProvider1);
 
             return camposValidos;
         }
@@ -128,16 +132,22 @@ namespace CadastroImobiliaria
             mtxtDocumento.Mask = "000.000.000-00";
         }
 
-        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        private void menuPrincipalToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
+            _formPrincipal.Show();
             this.Close();
-            _formPrincipal.Close();
         }
 
         private void pessoasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form pessoas = new ListaPessoas(_formPrincipal);
             pessoas.Show();
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            _formPrincipal.Close();
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace CadastroImobiliaria.Validators
+﻿using System.Text.RegularExpressions;
+
+namespace CadastroImobiliaria.Validators
 {
     public static class Validacao
     {
@@ -79,6 +81,18 @@
                 digito2 = 0;
 
             bool eValido = cnpj[12].ToString() == digito1.ToString() && cnpj[13].ToString() == digito2.ToString();
+            return eValido;
+        }
+
+        public static bool Email(string email)
+        {
+            bool eValido = Regex.IsMatch(email, @"^[\w\-\.]+@([\w-]+\.)+[\w-]{2,}$");
+            return eValido;
+        }
+
+        public static bool CEP(string cep)
+        {
+            bool eValido = Regex.IsMatch(cep, @"^[0-9]{5}-[0-9]{3}$");
             return eValido;
         }
 
