@@ -100,7 +100,7 @@ namespace CadastroImobiliaria.Validators
         {
             string erro;
 
-            if (txt != null && string.IsNullOrWhiteSpace(txt.Text))
+            if (txt == null && string.IsNullOrWhiteSpace(txt.Text))
                 erro = $"Preenchimento do campo obrigatório!";
             else
                 erro = "";
@@ -111,7 +111,7 @@ namespace CadastroImobiliaria.Validators
         {
             string erro;
 
-            if (txt != null && string.IsNullOrWhiteSpace(txt.Text))
+            if (txt == null && string.IsNullOrWhiteSpace(txt.Text))
                 erro = $"Preenchimento do campo obrigatório!";
             else if (!txt.MaskFull)
                 erro = "Preenchimento incompleto!";

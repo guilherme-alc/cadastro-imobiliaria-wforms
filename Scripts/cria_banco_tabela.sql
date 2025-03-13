@@ -1,8 +1,10 @@
-CREATE DATABASE imobiliaria
+CREATE DATABASE imobiliaria;
+
+USE imobiliaria;
 
 CREATE TABLE Pessoa (
 	Id UNIQUEIDENTIFIER PRIMARY KEY,
-	Nome VARCHAR(100) NOT NULL,
+	Nome VARCHAR(180) NOT NULL,
 	Email VARCHAR(254) NOT NULL,
 	Tipo CHAR(1) NOT NULL CHECK (Tipo IN ('F', 'J')),
 	Documento VARCHAR(14) UNIQUE NOT NULL,
@@ -12,5 +14,9 @@ CREATE TABLE Pessoa (
 	Cidade VARCHAR(100) NOT NULL,
 	Bairro VARCHAR(100) NOT NULL,
 	Logradouro VARCHAR (150) NOT NULL,
-	Numero VARCHAR(10) NOT NULL
-)
+	Numero VARCHAR(10) NOT NULL,
+	DataCadastro DATETIME2 NOT NULL,
+
+	INDEX idx_documento (Documento),
+	INDEX idx_nome (Nome)
+);
