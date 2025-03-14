@@ -96,6 +96,7 @@ namespace CadastroImobiliaria
                 }
 
                 MessageBox.Show("Pessoa cadastrada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                limparCampos();
             }
             catch (Exception ex)
             {
@@ -149,6 +150,11 @@ namespace CadastroImobiliaria
         }
 
         private void btnLimparCampos_Click(object sender, EventArgs e)
+        {
+            limparCampos();
+        }
+
+        private void limparCampos()
         {
             txtNome.Text = string.Empty;
             txtEmail.Text = "";
