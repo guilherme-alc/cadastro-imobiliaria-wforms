@@ -70,5 +70,27 @@ namespace CadastroImobiliaria
         {
 
         }
+
+        private void btnLimparCampos_Click(object sender, EventArgs e)
+        {
+            limparCampos();
+        }
+
+        private void limparCampos()
+        {
+            txtNome.Text = string.Empty;
+            txtEmail.Text = "";
+            radFisica.Checked = false;
+            radJuridica.Checked = false;
+            mtxtDocumento.Text = "";
+            mtxtTelefone.Text = "";
+            mtxtCEP.Text = "";
+            txtEstado.Text = "";
+            txtCidade.Text = "";
+            txtBairro.Text = "";
+            txtLogradouro.Text = "";
+            txtNumero.Text = "";
+            errorProvider1.Clear();
+        }
     }
 }

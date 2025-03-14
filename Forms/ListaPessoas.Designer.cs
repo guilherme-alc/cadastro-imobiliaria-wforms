@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListaPessoas));
             menuStrip1 = new MenuStrip();
             menuPrincipalToolStripMenuItem = new ToolStripMenuItem();
@@ -46,8 +46,8 @@
             txtEmail = new TextBox();
             lblEmail = new Label();
             lblDocumento = new Label();
-            radioButton1 = new RadioButton();
-            radioButton2 = new RadioButton();
+            radFisica = new RadioButton();
+            radJuridica = new RadioButton();
             lblAlterarCadastro = new Label();
             lblCEP = new Label();
             mtxtCEP = new MaskedTextBox();
@@ -57,11 +57,11 @@
             lblLogradouro = new Label();
             lblNumero = new Label();
             mtxtDocumento = new MaskedTextBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
+            txtCidade = new TextBox();
+            txtLogradouro = new TextBox();
+            txtNumero = new TextBox();
+            txtBairro = new TextBox();
+            txtEstado = new TextBox();
             errorProvider1 = new ErrorProvider(components);
             btnExcluir = new Button();
             lblExcluir = new Label();
@@ -118,14 +118,14 @@
             dgvPessoas.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             dgvPessoas.BackgroundColor = SystemColors.GradientActiveCaption;
             dgvPessoas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Window;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(155, 0, 70);
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
-            dgvPessoas.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(155, 0, 70);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvPessoas.DefaultCellStyle = dataGridViewCellStyle2;
             dgvPessoas.Location = new Point(0, 123);
             dgvPessoas.Margin = new Padding(3, 2, 3, 2);
             dgvPessoas.MaximumSize = new Size(1239, 188);
@@ -236,29 +236,29 @@
             lblDocumento.TabIndex = 8;
             lblDocumento.Text = "Documento";
             // 
-            // radioButton1
+            // radFisica
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            radioButton1.Location = new Point(14, 434);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(93, 19);
-            radioButton1.TabIndex = 4;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Pessoa Física";
-            radioButton1.UseVisualStyleBackColor = true;
+            radFisica.AutoSize = true;
+            radFisica.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            radFisica.Location = new Point(14, 434);
+            radFisica.Name = "radFisica";
+            radFisica.Size = new Size(93, 19);
+            radFisica.TabIndex = 4;
+            radFisica.TabStop = true;
+            radFisica.Text = "Pessoa Física";
+            radFisica.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radJuridica
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            radioButton2.Location = new Point(141, 434);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(105, 19);
-            radioButton2.TabIndex = 5;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Pessoa Jurídica";
-            radioButton2.UseVisualStyleBackColor = true;
+            radJuridica.AutoSize = true;
+            radJuridica.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            radJuridica.Location = new Point(141, 434);
+            radJuridica.Name = "radJuridica";
+            radJuridica.Size = new Size(105, 19);
+            radJuridica.TabIndex = 5;
+            radJuridica.TabStop = true;
+            radJuridica.Text = "Pessoa Jurídica";
+            radJuridica.UseVisualStyleBackColor = true;
             // 
             // lblAlterarCadastro
             // 
@@ -347,40 +347,40 @@
             mtxtDocumento.Size = new Size(149, 23);
             mtxtDocumento.TabIndex = 6;
             // 
-            // textBox1
+            // txtCidade
             // 
-            textBox1.Location = new Point(342, 393);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(152, 23);
-            textBox1.TabIndex = 10;
+            txtCidade.Location = new Point(342, 393);
+            txtCidade.Name = "txtCidade";
+            txtCidade.Size = new Size(152, 23);
+            txtCidade.TabIndex = 10;
             // 
-            // textBox2
+            // txtLogradouro
             // 
-            textBox2.Location = new Point(371, 472);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(123, 23);
-            textBox2.TabIndex = 12;
+            txtLogradouro.Location = new Point(371, 472);
+            txtLogradouro.Name = "txtLogradouro";
+            txtLogradouro.Size = new Size(123, 23);
+            txtLogradouro.TabIndex = 12;
             // 
-            // textBox3
+            // txtNumero
             // 
-            textBox3.Location = new Point(563, 472);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(80, 23);
-            textBox3.TabIndex = 13;
+            txtNumero.Location = new Point(563, 472);
+            txtNumero.Name = "txtNumero";
+            txtNumero.Size = new Size(80, 23);
+            txtNumero.TabIndex = 13;
             // 
-            // textBox4
+            // txtBairro
             // 
-            textBox4.Location = new Point(342, 432);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(152, 23);
-            textBox4.TabIndex = 11;
+            txtBairro.Location = new Point(342, 432);
+            txtBairro.Name = "txtBairro";
+            txtBairro.Size = new Size(152, 23);
+            txtBairro.TabIndex = 11;
             // 
-            // textBox5
+            // txtEstado
             // 
-            textBox5.Location = new Point(563, 350);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(80, 23);
-            textBox5.TabIndex = 9;
+            txtEstado.Location = new Point(563, 350);
+            txtEstado.Name = "txtEstado";
+            txtEstado.Size = new Size(80, 23);
+            txtEstado.TabIndex = 9;
             // 
             // errorProvider1
             // 
@@ -447,6 +447,7 @@
             btnLimparCampos.TabIndex = 16;
             btnLimparCampos.Text = "Limpar";
             btnLimparCampos.UseVisualStyleBackColor = false;
+            btnLimparCampos.Click += btnLimparCampos_Click;
             // 
             // ListaPessoas
             // 
@@ -458,17 +459,17 @@
             Controls.Add(btnLimparCampos);
             Controls.Add(lblExcluir);
             Controls.Add(btnExcluir);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtEstado);
+            Controls.Add(txtBairro);
+            Controls.Add(txtNumero);
+            Controls.Add(txtLogradouro);
+            Controls.Add(txtCidade);
             Controls.Add(mtxtTelefone);
             Controls.Add(mtxtDocumento);
             Controls.Add(mtxtCEP);
             Controls.Add(lblAlterarCadastro);
-            Controls.Add(radioButton2);
-            Controls.Add(radioButton1);
+            Controls.Add(radJuridica);
+            Controls.Add(radFisica);
             Controls.Add(lblTelefone);
             Controls.Add(txtEmail);
             Controls.Add(lblDocumento);
@@ -522,8 +523,8 @@
         private TextBox txtEmail;
         private Label lblEmail;
         private Label lblDocumento;
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
+        private RadioButton radFisica;
+        private RadioButton radJuridica;
         private Label lblAlterarCadastro;
         private Label lblCEP;
         private MaskedTextBox mtxtCEP;
@@ -533,11 +534,11 @@
         private Label lblLogradouro;
         private Label lblNumero;
         private MaskedTextBox mtxtDocumento;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
+        private TextBox txtCidade;
+        private TextBox txtLogradouro;
+        private TextBox txtNumero;
+        private TextBox txtBairro;
+        private TextBox txtEstado;
         private ErrorProvider errorProvider1;
         private Button btnExcluir;
         private Label lblExcluir;

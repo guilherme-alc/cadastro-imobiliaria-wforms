@@ -29,17 +29,11 @@ namespace CadastroImobiliaria
         {
             try
             {
-                bool camposValidos;
-                validarPreenchimento(out camposValidos);
+                validarPreenchimento(out bool camposValidos);
 
                 if (!camposValidos)
                 {
                     MessageBox.Show("Preencha todos os campos obrigatórios.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                if(!radFisica.Checked && !radJuridica.Checked)
-                {
-                    MessageBox.Show("Selecione o tipo de pessoa", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -80,6 +74,7 @@ namespace CadastroImobiliaria
                         .Replace("-", "")
                         .Replace(",", "")
                         .Replace(".", "")
+                        .Replace(@"\", "")
                         .Replace("/", "")
                         .Replace(" ", ""),
                     Telefone = mtxtTelefone.Text.Trim(),
@@ -129,6 +124,11 @@ namespace CadastroImobiliaria
                             Validacao.PreenchimentoCampo(txtBairro, lblBairro.Text, errorProvider1) &&
                             Validacao.PreenchimentoCampo(txtLogradouro, lblLogradouro.Text, errorProvider1) &&
                             Validacao.PreenchimentoCampo(txtNumero, lblNumero.Text, errorProvider1);
+
+            if (!radFisica.Checked && !radJuridica.Checked)
+            {
+                camposValidos = false;
+            }
 
             return camposValidos;
         }
