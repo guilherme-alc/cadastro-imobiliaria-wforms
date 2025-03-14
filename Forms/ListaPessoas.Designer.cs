@@ -34,13 +34,18 @@
             cadastroToolStripMenuItem = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
             dgvPessoas = new DataGridView();
+            txtPesquisa = new TextBox();
+            btnPesquisa = new Button();
+            lblPesquisar = new Label();
+            lblInstruPesquisa = new Label();
+            btnSalvar = new Button();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvPessoas).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
             // 
-            menuStrip1.BackColor = Color.FromArgb(155, 0, 70);
+            menuStrip1.BackColor = Color.SteelBlue;
             menuStrip1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
             menuStrip1.ImageScalingSize = new Size(20, 20);
             menuStrip1.Items.AddRange(new ToolStripItem[] { menuPrincipalToolStripMenuItem, cadastroToolStripMenuItem, sairToolStripMenuItem });
@@ -82,12 +87,66 @@
             // 
             dgvPessoas.BackgroundColor = SystemColors.GradientActiveCaption;
             dgvPessoas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvPessoas.Location = new Point(0, 57);
+            dgvPessoas.Location = new Point(0, 123);
             dgvPessoas.Margin = new Padding(3, 2, 3, 2);
             dgvPessoas.Name = "dgvPessoas";
             dgvPessoas.RowHeadersWidth = 51;
-            dgvPessoas.Size = new Size(796, 141);
+            dgvPessoas.Size = new Size(796, 186);
             dgvPessoas.TabIndex = 2;
+            // 
+            // txtPesquisa
+            // 
+            txtPesquisa.Location = new Point(16, 91);
+            txtPesquisa.Name = "txtPesquisa";
+            txtPesquisa.Size = new Size(243, 23);
+            txtPesquisa.TabIndex = 3;
+            // 
+            // btnPesquisa
+            // 
+            btnPesquisa.BackColor = Color.FromArgb(155, 0, 70);
+            btnPesquisa.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnPesquisa.ForeColor = Color.White;
+            btnPesquisa.Location = new Point(279, 87);
+            btnPesquisa.Name = "btnPesquisa";
+            btnPesquisa.Size = new Size(89, 31);
+            btnPesquisa.TabIndex = 4;
+            btnPesquisa.Text = "Pesquisar";
+            btnPesquisa.UseVisualStyleBackColor = false;
+            btnPesquisa.Click += btnPesquisa_Click;
+            // 
+            // lblPesquisar
+            // 
+            lblPesquisar.AutoSize = true;
+            lblPesquisar.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPesquisar.ForeColor = Color.Black;
+            lblPesquisar.Location = new Point(16, 37);
+            lblPesquisar.Name = "lblPesquisar";
+            lblPesquisar.Size = new Size(173, 25);
+            lblPesquisar.TabIndex = 5;
+            lblPesquisar.Text = "Pesquisar Cadastro";
+            // 
+            // lblInstruPesquisa
+            // 
+            lblInstruPesquisa.AutoSize = true;
+            lblInstruPesquisa.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblInstruPesquisa.ForeColor = SystemColors.ControlDarkDark;
+            lblInstruPesquisa.Location = new Point(16, 73);
+            lblInstruPesquisa.Name = "lblInstruPesquisa";
+            lblInstruPesquisa.Size = new Size(228, 15);
+            lblInstruPesquisa.TabIndex = 6;
+            lblInstruPesquisa.Text = "Digite o nome ou documento (CPF/CNPJ)";
+            // 
+            // btnSalvar
+            // 
+            btnSalvar.BackColor = Color.FromArgb(155, 0, 70);
+            btnSalvar.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSalvar.ForeColor = Color.White;
+            btnSalvar.Location = new Point(682, 453);
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.Size = new Size(102, 40);
+            btnSalvar.TabIndex = 7;
+            btnSalvar.Text = "Salvar";
+            btnSalvar.UseVisualStyleBackColor = false;
             // 
             // ListaPessoas
             // 
@@ -95,12 +154,18 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
             ClientSize = new Size(796, 505);
+            Controls.Add(btnSalvar);
+            Controls.Add(lblInstruPesquisa);
+            Controls.Add(lblPesquisar);
+            Controls.Add(btnPesquisa);
+            Controls.Add(txtPesquisa);
             Controls.Add(dgvPessoas);
             Controls.Add(menuStrip1);
-            ForeColor = SystemColors.Control;
+            ForeColor = SystemColors.ControlText;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             Margin = new Padding(3, 2, 3, 2);
+            MaximumSize = new Size(1255, 610);
             MinimumSize = new Size(812, 544);
             Name = "ListaPessoas";
             StartPosition = FormStartPosition.CenterScreen;
@@ -119,5 +184,10 @@
         private ToolStripMenuItem cadastroToolStripMenuItem;
         private ToolStripMenuItem sairToolStripMenuItem;
         private DataGridView dgvPessoas;
+        private TextBox txtPesquisa;
+        private Button btnPesquisa;
+        private Label lblPesquisar;
+        private Label lblInstruPesquisa;
+        private Button btnSalvar;
     }
 }

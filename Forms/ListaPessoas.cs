@@ -18,7 +18,34 @@ namespace CadastroImobiliaria
 
         private void ListaPessoas_Load(object sender, EventArgs e)
         {
-            dgvPessoas.DataSource = PessoaRepositorio.BuscarTodasPessoas();
+            try
+            {
+                dgvPessoas.DataSource = PessoaRepositorio.BuscarTodasPessoas();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Falha interna no servidor {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+
+        private void btnPesquisa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string pesquisaUsuario = txtPesquisa.Text.Trim().ToUpper();
+                string pesquisaFormatada = pesquisaUsuario
+                    .Replace("-", "")
+                    .Replace(".", "")
+                    .Replace(",", "");
+                dgvPessoas.DataSource = PessoaRepositorio.BuscarPessoa(pesquisaFormatada);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Falha interna no servidor {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
         }
 
         private void menuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)

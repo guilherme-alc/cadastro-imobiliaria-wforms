@@ -11,7 +11,9 @@ namespace CadastroImobiliaria.Repositorio
         {
             DataTable dataTable = new DataTable();
             string query = @"SELECT 
-                        [Id], [Nome], [Email], [Tipo], [Documento], [CEP], [Estado], [Cidade], [Bairro], [Logradouro], [Numero], [DataCadastro]
+                                [Id], [Nome], [Email], [Tipo], [Documento], 
+                                [CEP], [Estado], [Cidade], [Bairro], 
+                                [Logradouro], [Numero], [DataCadastro]
                         FROM [Pessoa]";
             try
             {
@@ -24,6 +26,31 @@ namespace CadastroImobiliaria.Repositorio
             catch (Exception ex)
             {
                 throw new Exception($"Falha ao buscar pessoas: {ex.Message}");
+            }
+            return dataTable;
+        }
+
+        public static DataTable BuscarPessoa(string pesquisaUsuario)
+        {
+            DataTable dataTable = new DataTable();
+            string query = @"SELECT 
+                                [Id], [Nome], [Email], [Tipo], [Documento], 
+                                [CEP], [Estado], [Cidade], [Bairro], 
+                                [Logradouro], [Numero], [DataCadastro]
+                            FROM [Pessoa]
+                            WHERE [Nome] LIKE @PesquisaUsuario OR [Documento] LIKE @PesquisaUsuario";
+            try
+            {
+                using(SqlConnection connection = Conexao.ObterConexao())
+                {
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                    adapter.SelectCommand.Parameters.Add(new SqlParameter("@PesquisaUsuario", $"%{pesquisaUsuario}%"));
+                    adapter.Fill(dataTable);
+                }
+            }
+            catch (Exception ex) 
+            {
+                throw new Exception($"Falha ao buscar pessoa: {ex.Message}");
             }
             return dataTable;
         }
