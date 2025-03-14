@@ -155,7 +155,7 @@
             // btnCadastrar
             // 
             resources.ApplyResources(btnCadastrar, "btnCadastrar");
-            btnCadastrar.BackColor = Color.SteelBlue;
+            btnCadastrar.BackColor = Color.FromArgb(155, 0, 70);
             errorProvider1.SetError(btnCadastrar, resources.GetString("btnCadastrar.Error"));
             btnCadastrar.ForeColor = Color.White;
             errorProvider1.SetIconAlignment(btnCadastrar, (ErrorIconAlignment)resources.GetObject("btnCadastrar.IconAlignment"));
@@ -363,7 +363,7 @@
             // menuStrip
             // 
             resources.ApplyResources(menuStrip, "menuStrip");
-            menuStrip.BackColor = Color.SteelBlue;
+            menuStrip.BackColor = Color.FromArgb(155, 0, 70);
             errorProvider1.SetError(menuStrip, resources.GetString("menuStrip.Error"));
             errorProvider1.SetIconAlignment(menuStrip, (ErrorIconAlignment)resources.GetObject("menuStrip.IconAlignment"));
             errorProvider1.SetIconPadding(menuStrip, (int)resources.GetObject("menuStrip.IconPadding"));
@@ -374,18 +374,21 @@
             // menuPrincipalToolStripMenuItem
             // 
             resources.ApplyResources(menuPrincipalToolStripMenuItem, "menuPrincipalToolStripMenuItem");
+            menuPrincipalToolStripMenuItem.ForeColor = SystemColors.Control;
             menuPrincipalToolStripMenuItem.Name = "menuPrincipalToolStripMenuItem";
             menuPrincipalToolStripMenuItem.Click += menuPrincipalToolStripMenuItem_Click_1;
             // 
             // pessoasToolStripMenuItem
             // 
             resources.ApplyResources(pessoasToolStripMenuItem, "pessoasToolStripMenuItem");
+            pessoasToolStripMenuItem.ForeColor = SystemColors.Control;
             pessoasToolStripMenuItem.Name = "pessoasToolStripMenuItem";
             pessoasToolStripMenuItem.Click += pessoasToolStripMenuItem_Click;
             // 
             // sairToolStripMenuItem
             // 
             resources.ApplyResources(sairToolStripMenuItem, "sairToolStripMenuItem");
+            sairToolStripMenuItem.ForeColor = SystemColors.Control;
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 

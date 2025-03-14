@@ -41,6 +41,7 @@
             // menuHeader
             // 
             resources.ApplyResources(menuHeader, "menuHeader");
+            menuHeader.BackColor = Color.SteelBlue;
             menuHeader.ImageScalingSize = new Size(20, 20);
             menuHeader.Items.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem, clientesToolStripMenuItem, sairToolStripMenuItem });
             menuHeader.Name = "menuHeader";
@@ -48,18 +49,21 @@
             // cadastroToolStripMenuItem
             // 
             resources.ApplyResources(cadastroToolStripMenuItem, "cadastroToolStripMenuItem");
+            cadastroToolStripMenuItem.ForeColor = SystemColors.Control;
             cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             cadastroToolStripMenuItem.Click += cadastroToolStripMenuItem_Click;
             // 
             // clientesToolStripMenuItem
             // 
             resources.ApplyResources(clientesToolStripMenuItem, "clientesToolStripMenuItem");
+            clientesToolStripMenuItem.ForeColor = SystemColors.Control;
             clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             clientesToolStripMenuItem.Click += clientesToolStripMenuItem_Click;
             // 
             // sairToolStripMenuItem
             // 
             resources.ApplyResources(sairToolStripMenuItem, "sairToolStripMenuItem");
+            sairToolStripMenuItem.ForeColor = SystemColors.Control;
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
@@ -74,6 +78,7 @@
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlLight;
             Controls.Add(picGroupLogo);
             Controls.Add(menuHeader);
             MainMenuStrip = menuHeader;
