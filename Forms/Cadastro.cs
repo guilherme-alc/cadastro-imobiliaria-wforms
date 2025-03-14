@@ -59,7 +59,7 @@ namespace CadastroImobiliaria
                     MessageBox.Show("E-mail inválido", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                if (!Validacao.CEP(txtEmail.Text))
+                if (!Validacao.CEP(mtxtCEP.Text))
                 {
                     MessageBox.Show("CEP inválido", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -99,7 +99,7 @@ namespace CadastroImobiliaria
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Falha interna no servidor {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Falha interna no servidor:\n {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -107,10 +107,8 @@ namespace CadastroImobiliaria
         {
             errorProvider1.Clear();
             camposValidos = Validacao.PreenchimentoCampo(txtNome, lblNome.Text, errorProvider1) &&
-                            Validacao.PreenchimentoCampo(txtEmail, lblEmail.Text, errorProvider1) &&
                             Validacao.PreenchimentoCampo(mtxtTelefone, lblTelefone.Text, errorProvider1) &&
                             Validacao.PreenchimentoCampo(mtxtDocumento, lblDocumento.Text, errorProvider1) &&
-                            Validacao.PreenchimentoCampo(mtxtCEP, lblCEP.Text, errorProvider1) &&
                             Validacao.PreenchimentoCampo(txtEstado, lblEstado.Text, errorProvider1) &&
                             Validacao.PreenchimentoCampo(txtCidade, lblCidade.Text, errorProvider1) &&
                             Validacao.PreenchimentoCampo(txtBairro, lblBairro.Text, errorProvider1) &&

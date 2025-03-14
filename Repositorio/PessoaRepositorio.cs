@@ -7,52 +7,85 @@ namespace CadastroImobiliaria.Repositorio
 {
     public class PessoaRepositorio
     {
-        public static DataTable BuscarTodasPessoas()
+        public static List<Pessoa> BuscarTodasPessoas()
         {
-            DataTable dataTable = new DataTable();
+            List<Pessoa> listaPessoas = new List<Pessoa>();
             string query = @"SELECT 
                                 [Id], [Nome], [Email], [Tipo], [Documento], 
-                                [CEP], [Estado], [Cidade], [Bairro], 
+                                [Telefone], [CEP], [Estado], [Cidade], [Bairro], 
                                 [Logradouro], [Numero], [DataCadastro]
-                        FROM [Pessoa]";
+                            FROM [Pessoa]";
             try
             {
                 using (SqlConnection connection = Conexao.ObterConexao())
                 {
-                    SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
-                    adapter.Fill(dataTable);
+                    SqlCommand comando = new SqlCommand(query, connection);
+
+                    using (SqlDataReader reader = comando.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Pessoa pessoa = new Pessoa
+                            {
+                                Id = reader.GetGuid(0),
+                                Nome = reader.GetString(1),
+                                Email = reader.GetString(2),
+                                Tipo = reader.GetString(3)[0],
+                                Documento = reader.GetString(4),
+                                Telefone = reader.GetString(5),
+                                CEP = reader.GetString(6),
+                                Estado = reader.GetString(7),
+                                Cidade = reader.GetString(8),
+                                Bairro = reader.GetString(9),
+                                Logradouro = reader.GetString(10),
+                                Numero = reader.GetString(11),
+                                DataCadastro = reader.GetDateTime(12)
+                            };
+                            listaPessoas.Add(pessoa);
+                        }
+                    }
                 }
             }
             catch (Exception ex)
             {
                 throw new Exception($"Falha ao buscar pessoas: {ex.Message}");
             }
-            return dataTable;
+            return listaPessoas;
         }
 
-        public static DataTable BuscarPessoa(string pesquisaUsuario)
+        public static List<Pessoa> BuscarPessoa(string pesquisaUsuario)
         {
-            DataTable dataTable = new DataTable();
-            string query = @"SELECT 
-                                [Id], [Nome], [Email], [Tipo], [Documento], 
-                                [CEP], [Estado], [Cidade], [Bairro], 
-                                [Logradouro], [Numero], [DataCadastro]
-                            FROM [Pessoa]
-                            WHERE [Nome] LIKE @PesquisaUsuario OR [Documento] LIKE @PesquisaUsuario";
-            try
+
+            List<Pessoa> registroEncontrados = new List<Pessoa>();
+
+            List<Pessoa> listaPessoas = BuscarTodasPessoas()
+                .Where(p => p.Nome.Contains(pesquisaUsuario) || p.Documento.Contains(pesquisaUsuario))
+                .ToList();
+
+            if(listaPessoas == null)
+                return new List<Pessoa>();
+
+            foreach(var item in listaPessoas)
             {
-                using(SqlConnection connection = Conexao.ObterConexao())
+                Pessoa pessoa = new Pessoa
                 {
-                    SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
-                    adapter.SelectCommand.Parameters.Add(new SqlParameter("@PesquisaUsuario", $"%{pesquisaUsuario}%"));
-                    adapter.Fill(dataTable);
-                }
+                    Id = item.Id,
+                    Nome = item.Nome,
+                    Email = item.Email,
+                    Tipo = item.Tipo,
+                    Documento = item.Documento,
+                    Telefone = item.Telefone,
+                    CEP = item.CEP,
+                    Estado = item.Estado,
+                    Cidade = item.Cidade,
+                    Bairro = item.Bairro,
+                    Logradouro = item.Logradouro,
+                    Numero = item.Numero,
+                    DataCadastro = item.DataCadastro,
+                };
+                registroEncontrados.Add(pessoa);
             }
-            catch (Exception ex) 
-            {
-                throw new Exception($"Falha ao buscar pessoa: {ex.Message}");
-            }
-            return dataTable;
+            return registroEncontrados;
         }
 
         public static bool AdicionarPessoa(Pessoa pessoa)
@@ -66,6 +99,14 @@ namespace CadastroImobiliaria.Repositorio
             {
                 using (SqlConnection connection = Conexao.ObterConexao())
                 {
+
+                    var existeDocumento = BuscarTodasPessoas().Where(p => p.Documento == pessoa.Documento).FirstOrDefault();
+
+                    if (existeDocumento != null)
+                    {
+                        throw new Exception($"Já possui uma pessoa cadastrada com o documento {pessoa.Documento}");
+                    }
+
                     using(SqlCommand comando = new SqlCommand(query, connection))
                     {
                         comando.Parameters.AddWithValue("@Id", pessoa.Id);
@@ -87,7 +128,7 @@ namespace CadastroImobiliaria.Repositorio
             }
             catch (Exception ex)
             {
-                throw new Exception($"Falha ao inserir pessoas: {ex.Message}");
+                throw new Exception($"Falha ao inserir pessoa: {ex.Message}");
             }
             return linhasAfetadas > 0 ? true : false;
         }
