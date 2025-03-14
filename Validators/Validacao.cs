@@ -51,7 +51,7 @@ namespace CadastroImobiliaria.Validators
 
         public static bool CNPJ(string cnpj)
         {
-            cnpj = cnpj.Replace(".", "").Replace("-", "").Replace("/", "");
+            cnpj = cnpj.Replace(".", "").Replace("-", "").Replace("/", "").Replace(",", "");
 
             if (cnpj.Length != 14 || cnpj.All(c => c == cnpj[0]))
                 return false;
