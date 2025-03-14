@@ -65,5 +65,10 @@ namespace CadastroImobiliaria
             this.Close();
             _formPrincipal.Close();
         }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

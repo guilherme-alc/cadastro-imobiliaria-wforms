@@ -125,19 +125,7 @@ namespace CadastroImobiliaria.Validators
         {
             bool camposValidos = true;
 
-            if (campo is MaskedTextBox)
-            {
-                if (string.IsNullOrEmpty(campo.Text) || campo.Text.Length < ((MaskedTextBox)campo).Mask.Length)
-                {
-                    erro.SetError(campo, $"O campo {nomeCampo} é obrigatório.");
-                    camposValidos = false;
-                }
-                else
-                {
-                    erro.SetError(campo, "");
-                }
-            }
-            else if (string.IsNullOrEmpty(campo.Text))
+            if (string.IsNullOrEmpty(campo.Text))
             {
                 erro.SetError(campo, $"O campo {nomeCampo} é obrigatório.");
                 camposValidos = false;
