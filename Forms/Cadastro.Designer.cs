@@ -100,12 +100,10 @@
             // radFisica
             // 
             resources.ApplyResources(radFisica, "radFisica");
-            radFisica.Checked = true;
             errorProvider1.SetError(radFisica, resources.GetString("radFisica.Error"));
             errorProvider1.SetIconAlignment(radFisica, (ErrorIconAlignment)resources.GetObject("radFisica.IconAlignment"));
             errorProvider1.SetIconPadding(radFisica, (int)resources.GetObject("radFisica.IconPadding"));
             radFisica.Name = "radFisica";
-            radFisica.TabStop = true;
             radFisica.UseVisualStyleBackColor = true;
             radFisica.CheckedChanged += radFisica_CheckedChanged;
             // 

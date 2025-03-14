@@ -37,6 +37,11 @@ namespace CadastroImobiliaria
                     MessageBox.Show("Preencha todos os campos obrigatórios.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+                if(!radFisica.Checked && !radJuridica.Checked)
+                {
+                    MessageBox.Show("Selecione o tipo de pessoa", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
                 if (radFisica.Checked)
                 {
@@ -107,9 +112,18 @@ namespace CadastroImobiliaria
         private bool validarPreenchimento(out bool camposValidos)
         {
             errorProvider1.Clear();
+            var documentoFormatado = mtxtDocumento.Text
+                .Replace(".", "")
+                .Replace(",", "")
+                .Replace("-", "")
+                .Replace("/", "")
+                .Replace(@"\", "")
+                .Replace(" ", "");
+
+
             camposValidos = Validacao.PreenchimentoCampo(txtNome, lblNome.Text, errorProvider1) &&
                             Validacao.PreenchimentoCampo(mtxtTelefone, lblTelefone.Text, errorProvider1) &&
-                            Validacao.PreenchimentoCampo(mtxtDocumento, lblDocumento.Text, errorProvider1) &&
+                            Validacao.PreenchimentoCampo(mtxtDocumento, documentoFormatado, errorProvider1) &&
                             Validacao.PreenchimentoCampo(txtEstado, lblEstado.Text, errorProvider1) &&
                             Validacao.PreenchimentoCampo(txtCidade, lblCidade.Text, errorProvider1) &&
                             Validacao.PreenchimentoCampo(txtBairro, lblBairro.Text, errorProvider1) &&
@@ -122,13 +136,13 @@ namespace CadastroImobiliaria
         private void radJuridica_CheckedChanged(object sender, EventArgs e)
         {
             mtxtDocumento.Text = "";
-            mtxtDocumento.Mask = "00.000.000/0000-00";
+            mtxtDocumento.Mask = @"00\.000\.000/0000-00";
         }
 
         private void radFisica_CheckedChanged(object sender, EventArgs e)
         {
             mtxtDocumento.Text = "";
-            mtxtDocumento.Mask = "000.000.000-00";
+            mtxtDocumento.Mask = @"000\.000\.000-00";
         }
 
         private void menuPrincipalToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -158,6 +172,8 @@ namespace CadastroImobiliaria
         {
             txtNome.Text = string.Empty;
             txtEmail.Text = "";
+            radFisica.Checked = false;
+            radJuridica.Checked = false;
             mtxtDocumento.Text = "";
             mtxtTelefone.Text = "";
             mtxtCEP.Text = "";
