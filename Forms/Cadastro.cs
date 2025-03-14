@@ -54,7 +54,7 @@ namespace CadastroImobiliaria
                         return;
                     }
                 }
-                if(!Validacao.Email(txtEmail.Text))
+                if (!Validacao.Email(txtEmail.Text))
                 {
                     MessageBox.Show("E-mail inválido", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -89,12 +89,12 @@ namespace CadastroImobiliaria
 
                 var sucesso = PessoaRepositorio.AdicionarPessoa(pessoa);
 
-                if(!sucesso)
+                if (!sucesso)
                 {
                     MessageBox.Show("Nenhuma pessoa foi adicionada.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                
+
                 MessageBox.Show("Pessoa cadastrada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
@@ -107,7 +107,7 @@ namespace CadastroImobiliaria
         {
             errorProvider1.Clear();
             camposValidos = Validacao.PreenchimentoCampo(txtNome, lblNome.Text, errorProvider1) &&
-                            Validacao.PreenchimentoCampo(txtEmail, lblEmail.Text, errorProvider1) &&    
+                            Validacao.PreenchimentoCampo(txtEmail, lblEmail.Text, errorProvider1) &&
                             Validacao.PreenchimentoCampo(mtxtTelefone, lblTelefone.Text, errorProvider1) &&
                             Validacao.PreenchimentoCampo(mtxtDocumento, lblDocumento.Text, errorProvider1) &&
                             Validacao.PreenchimentoCampo(mtxtCEP, lblCEP.Text, errorProvider1) &&
@@ -148,6 +148,21 @@ namespace CadastroImobiliaria
         {
             this.Close();
             _formPrincipal.Close();
+        }
+
+        private void btnLimparCampos_Click(object sender, EventArgs e)
+        {
+            txtNome.Text = string.Empty;
+            txtEmail.Text = "";
+            mtxtDocumento.Text = "";
+            mtxtTelefone.Text = "";
+            mtxtCEP.Text = "";
+            txtEstado.Text = "";
+            txtCidade.Text = "";
+            txtBairro.Text = "";
+            txtLogradouro.Text = "";
+            txtNumero.Text = "";
+            errorProvider1.Clear();
         }
     }
 }

@@ -174,6 +174,7 @@
             errorProvider1.SetIconPadding(btnLimparCampos, (int)resources.GetObject("btnLimparCampos.IconPadding"));
             btnLimparCampos.Name = "btnLimparCampos";
             btnLimparCampos.UseVisualStyleBackColor = false;
+            btnLimparCampos.Click += btnLimparCampos_Click;
             // 
             // pnlConteudo
             // 
@@ -363,7 +364,7 @@
             // menuStrip
             // 
             resources.ApplyResources(menuStrip, "menuStrip");
-            menuStrip.BackColor = Color.FromArgb(155, 0, 70);
+            menuStrip.BackColor = Color.SteelBlue;
             errorProvider1.SetError(menuStrip, resources.GetString("menuStrip.Error"));
             errorProvider1.SetIconAlignment(menuStrip, (ErrorIconAlignment)resources.GetObject("menuStrip.IconAlignment"));
             errorProvider1.SetIconPadding(menuStrip, (int)resources.GetObject("menuStrip.IconPadding"));
