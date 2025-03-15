@@ -20,7 +20,7 @@ namespace CadastroImobiliaria
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form listaPessoas = new ListaPessoas(this);
+            Form listaPessoas = new Pessoas(this);
             listaPessoas.Show();
         }
     }

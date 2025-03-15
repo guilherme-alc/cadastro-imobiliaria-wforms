@@ -5,16 +5,16 @@ using CadastroImobiliaria.Validators;
 
 namespace CadastroImobiliaria
 {
-    public partial class ListaPessoas : Form
+    public partial class Pessoas : Form
     {
         private readonly Principal _formPrincipal;
         private readonly Cadastro _formCadastro;
-        public ListaPessoas(Principal formPrincipal)
+        public Pessoas(Principal formPrincipal)
         {
             InitializeComponent();
             _formPrincipal = formPrincipal;
         }
-        public ListaPessoas()
+        public Pessoas()
         {
             InitializeComponent();
         }
