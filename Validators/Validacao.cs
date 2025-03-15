@@ -105,7 +105,7 @@ namespace CadastroImobiliaria.Validators
         {
             string erro;
 
-            if (txt == null && string.IsNullOrWhiteSpace(txt.Text))
+            if (string.IsNullOrWhiteSpace(txt.Text))
                 erro = $"Preenchimento do campo obrigatório!";
             else
                 erro = "";
@@ -116,7 +116,7 @@ namespace CadastroImobiliaria.Validators
         {
             string erro;
 
-            if (txt == null && string.IsNullOrWhiteSpace(txt.Text))
+            if (string.IsNullOrWhiteSpace(txt.Text))
                 erro = $"Preenchimento do campo obrigatório!";
             else if (!txt.MaskFull)
                 erro = "Preenchimento incompleto!";
@@ -130,7 +130,19 @@ namespace CadastroImobiliaria.Validators
         {
             bool camposValidos = true;
 
-            if (string.IsNullOrEmpty(campo.Text))
+            if (campo is MaskedTextBox)
+            {
+                if (string.IsNullOrEmpty(campo.Text) || campo.Text.Length < 14)
+                {
+                    erro.SetError(campo, $"O campo {nomeCampo} é obrigatório.");
+                    camposValidos = false;
+                }
+                else
+                {
+                    erro.SetError(campo, "");
+                }
+            }
+            else if (string.IsNullOrEmpty(campo.Text))
             {
                 erro.SetError(campo, $"O campo {nomeCampo} é obrigatório.");
                 camposValidos = false;
