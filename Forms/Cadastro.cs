@@ -29,7 +29,8 @@ namespace CadastroImobiliaria
         {
             try
             {
-                validarPreenchimento(out bool camposValidos);
+                bool camposValidos = false;
+                validarPreenchimento(out camposValidos);
 
                 if (!camposValidos)
                 {
@@ -70,13 +71,7 @@ namespace CadastroImobiliaria
                     Nome = txtNome.Text.ToUpper().Trim(),
                     Email = txtEmail.Text.ToLower().Trim(),
                     Tipo = radFisica.Checked ? 'F' : 'J',
-                    Documento = mtxtDocumento.Text
-                        .Replace("-", "")
-                        .Replace(",", "")
-                        .Replace(".", "")
-                        .Replace(@"\", "")
-                        .Replace("/", "")
-                        .Replace(" ", ""),
+                    Documento = Formatacao.formataDocumento(mtxtDocumento.Text),
                     Telefone = mtxtTelefone.Text.Trim(),
                     CEP = mtxtCEP.Text.Trim().Replace("-", ""),
                     Estado = txtEstado.Text.Trim(),
@@ -104,21 +99,17 @@ namespace CadastroImobiliaria
             }
         }
 
+        // Validação após tentar cadastrar pessoa
         private bool validarPreenchimento(out bool camposValidos)
         {
             errorProvider1.Clear();
-            var documentoFormatado = mtxtDocumento.Text
-                .Replace(".", "")
-                .Replace(",", "")
-                .Replace("-", "")
-                .Replace("/", "")
-                .Replace(@"\", "")
-                .Replace(" ", "");
+            var documentoFormatado = Formatacao.formataDocumento(mtxtDocumento.Text);
+            mtxtDocumento.Text = documentoFormatado;
 
 
             camposValidos = Validacao.PreenchimentoCampo(txtNome, lblNome.Text, errorProvider1) &&
                             Validacao.PreenchimentoCampo(mtxtTelefone, lblTelefone.Text, errorProvider1) &&
-                            Validacao.PreenchimentoCampo(mtxtDocumento, documentoFormatado, errorProvider1) &&
+                            Validacao.PreenchimentoCampo(mtxtDocumento, lblDocumento.Text, errorProvider1) &&
                             Validacao.PreenchimentoCampo(txtEstado, lblEstado.Text, errorProvider1) &&
                             Validacao.PreenchimentoCampo(txtCidade, lblCidade.Text, errorProvider1) &&
                             Validacao.PreenchimentoCampo(txtBairro, lblBairro.Text, errorProvider1) &&
