@@ -14,7 +14,8 @@ namespace CadastroImobiliaria.Repositorio
                                 [Id], [Nome], [Email], [Tipo], [Documento], 
                                 [Telefone], [CEP], [Estado], [Cidade], [Bairro], 
                                 [Logradouro], [Numero], [DataCadastro]
-                            FROM [Pessoa]";
+                            FROM [Pessoa]
+                            ORDER BY [DataCadastro] DESC";
             try
             {
                 using (SqlConnection connection = Conexao.ObterConexao())
@@ -129,6 +130,83 @@ namespace CadastroImobiliaria.Repositorio
             catch (Exception ex)
             {
                 throw new Exception($"Falha ao inserir pessoa: {ex.Message}");
+            }
+            return linhasAfetadas > 0 ? true : false;
+        }
+
+        public static bool AlterarPessoa(Guid id, PessoaDTO pessoaTemp)
+        {
+            var query = @"UPDATE 
+	                        Pessoa 
+                        SET [Nome] = @Nome, [Email] = @Email, [Tipo] = @Tipo, 
+                            [Documento] = @Documento, [Telefone] = @Telefone, 
+	                        [CEP] = @Cep, [Estado] = @Estado, [Cidade] = @Cidade, 
+                            [Bairro] = @Bairro, [Logradouro] = @Logradouro, [Numero] = @Numero
+                        WHERE [Id] = @Id;";
+            int linhasAfetadas;
+            try
+            {
+                Pessoa pessoa = BuscarTodasPessoas().Where(p => p.Id == id).FirstOrDefault();
+
+                pessoa.Nome = pessoaTemp.Nome;
+                pessoa.Email = pessoaTemp.Email;
+                pessoa.Tipo = pessoaTemp.Tipo;
+                pessoa.Documento = pessoaTemp.Documento;
+                pessoa.Telefone = pessoaTemp.Telefone;
+                pessoa.CEP = pessoaTemp.CEP;
+                pessoa.Estado = pessoaTemp.Estado;
+                pessoa.Cidade = pessoaTemp.Cidade;
+                pessoa.Bairro = pessoaTemp.Bairro;
+                pessoa.Logradouro = pessoaTemp.Logradouro;
+                pessoa.Numero = pessoaTemp.Numero;
+
+                using (SqlConnection connection = Conexao.ObterConexao())
+                {
+                    using(SqlCommand comando = new SqlCommand(query, connection))
+                    {
+                        comando.Parameters.AddWithValue("@Id", id);
+                        comando.Parameters.AddWithValue("@Nome", pessoa.Nome);
+                        comando.Parameters.AddWithValue("@Email", pessoa.Email);
+                        comando.Parameters.AddWithValue("@Tipo", pessoa.Tipo);
+                        comando.Parameters.AddWithValue("@Documento", pessoa.Documento);
+                        comando.Parameters.AddWithValue("@Telefone", pessoa.Telefone);
+                        comando.Parameters.AddWithValue("@CEP", pessoa.CEP);
+                        comando.Parameters.AddWithValue("@Estado", pessoa.Estado);
+                        comando.Parameters.AddWithValue("@Cidade", pessoa.Cidade);
+                        comando.Parameters.AddWithValue("@Bairro", pessoa.Bairro);
+                        comando.Parameters.AddWithValue("@Logradouro", pessoa.Logradouro);
+                        comando.Parameters.AddWithValue("@Numero", pessoa.Numero);
+                        linhasAfetadas = comando.ExecuteNonQuery();
+                    }
+                }
+            } 
+            catch (Exception ex)
+            {
+                throw new Exception($"Falha ao alterar pessoa: {ex.Message}");
+            }
+            return linhasAfetadas > 0 ? true : false;
+        }
+
+        public static bool ExcluirPessoa(Guid id)
+        {
+            var query = @"DELETE FROM 
+	                        Pessoa 
+                        WHERE [Id] = @Id;";
+            int linhasAfetadas;
+            try
+            {
+                using (SqlConnection connection = Conexao.ObterConexao())
+                {
+                    using (SqlCommand comando = new SqlCommand(query, connection))
+                    {
+                        comando.Parameters.AddWithValue("@Id", id);
+                        linhasAfetadas = comando.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Falha ao alterar pessoa: {ex.Message}");
             }
             return linhasAfetadas > 0 ? true : false;
         }
