@@ -27,7 +27,7 @@ namespace CadastroImobiliaria
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Falha interna no servidor {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Falha interna no servidor:\n{ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }
@@ -64,7 +64,7 @@ namespace CadastroImobiliaria
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Falha interna no servidor {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Falha interna no servidor\n{ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }
@@ -155,7 +155,7 @@ namespace CadastroImobiliaria
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Falha interna no servidor:\n {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Falha interna no servidor:\n{ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -178,7 +178,7 @@ namespace CadastroImobiliaria
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Falha interna no servidor:\n {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Falha interna no servidor:\n{ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

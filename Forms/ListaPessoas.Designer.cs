@@ -87,7 +87,7 @@
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(5, 2, 0, 2);
             menuStrip1.Size = new Size(831, 25);
-            menuStrip1.TabIndex = 1;
+            menuStrip1.TabIndex = 20;
             menuStrip1.Text = "menuStrip1";
             // 
             // menuPrincipalToolStripMenuItem
@@ -137,7 +137,7 @@
             dgvPessoas.Name = "dgvPessoas";
             dgvPessoas.RowHeadersWidth = 51;
             dgvPessoas.Size = new Size(831, 188);
-            dgvPessoas.TabIndex = 2;
+            dgvPessoas.TabIndex = 19;
             dgvPessoas.CellContentDoubleClick += preencheCampos_CellContentDoubleClick;
             // 
             // txtPesquisa
@@ -146,6 +146,7 @@
             txtPesquisa.Name = "txtPesquisa";
             txtPesquisa.Size = new Size(325, 23);
             txtPesquisa.TabIndex = 0;
+            txtPesquisa.Enter += btnPesquisa_Click;
             // 
             // btnPesquisa
             // 
@@ -169,7 +170,7 @@
             lblPesquisar.Location = new Point(16, 37);
             lblPesquisar.Name = "lblPesquisar";
             lblPesquisar.Size = new Size(173, 25);
-            lblPesquisar.TabIndex = 5;
+            lblPesquisar.TabIndex = 21;
             lblPesquisar.Text = "Pesquisar Cadastro";
             // 
             // lblInstruPesquisa
@@ -180,7 +181,7 @@
             lblInstruPesquisa.Location = new Point(16, 73);
             lblInstruPesquisa.Name = "lblInstruPesquisa";
             lblInstruPesquisa.Size = new Size(228, 15);
-            lblInstruPesquisa.TabIndex = 6;
+            lblInstruPesquisa.TabIndex = 22;
             lblInstruPesquisa.Text = "Digite o nome ou documento (CPF/CNPJ)";
             // 
             // btnSalvar
@@ -205,7 +206,7 @@
             lblNome.Location = new Point(14, 361);
             lblNome.Name = "lblNome";
             lblNome.Size = new Size(40, 15);
-            lblNome.TabIndex = 8;
+            lblNome.TabIndex = 24;
             lblNome.Text = "Nome";
             // 
             // txtNome
@@ -235,7 +236,7 @@
             lblEmail.Location = new Point(14, 404);
             lblEmail.Name = "lblEmail";
             lblEmail.Size = new Size(41, 15);
-            lblEmail.TabIndex = 8;
+            lblEmail.TabIndex = 25;
             lblEmail.Text = "E-mail";
             // 
             // lblDocumento
@@ -245,7 +246,7 @@
             lblDocumento.Location = new Point(14, 483);
             lblDocumento.Name = "lblDocumento";
             lblDocumento.Size = new Size(71, 15);
-            lblDocumento.TabIndex = 8;
+            lblDocumento.TabIndex = 26;
             lblDocumento.Text = "Documento";
             // 
             // radFisica
@@ -279,7 +280,7 @@
             lblCEP.Location = new Point(298, 361);
             lblCEP.Name = "lblCEP";
             lblCEP.Size = new Size(27, 15);
-            lblCEP.TabIndex = 8;
+            lblCEP.TabIndex = 30;
             lblCEP.Text = "CEP";
             // 
             // mtxtCEP
@@ -298,7 +299,7 @@
             label1.Location = new Point(506, 361);
             label1.Name = "label1";
             label1.Size = new Size(42, 15);
-            label1.TabIndex = 8;
+            label1.TabIndex = 34;
             label1.Text = "Estado";
             // 
             // label2
@@ -308,7 +309,7 @@
             label2.Location = new Point(298, 404);
             label2.Name = "label2";
             label2.Size = new Size(43, 15);
-            label2.TabIndex = 8;
+            label2.TabIndex = 31;
             label2.Text = "Cidade";
             // 
             // label3
@@ -318,7 +319,7 @@
             label3.Location = new Point(298, 443);
             label3.Name = "label3";
             label3.Size = new Size(38, 15);
-            label3.TabIndex = 8;
+            label3.TabIndex = 32;
             label3.Text = "Bairro";
             // 
             // lblLogradouro
@@ -328,7 +329,7 @@
             lblLogradouro.Location = new Point(298, 483);
             lblLogradouro.Name = "lblLogradouro";
             lblLogradouro.Size = new Size(69, 15);
-            lblLogradouro.TabIndex = 8;
+            lblLogradouro.TabIndex = 33;
             lblLogradouro.Text = "Logradouro";
             // 
             // lblNumero
@@ -338,7 +339,7 @@
             lblNumero.Location = new Point(506, 483);
             lblNumero.Name = "lblNumero";
             lblNumero.Size = new Size(51, 15);
-            lblNumero.TabIndex = 8;
+            lblNumero.TabIndex = 0;
             lblNumero.Text = "Número";
             // 
             // mtxtDocumento
@@ -406,7 +407,7 @@
             btnExcluir.Location = new Point(777, 347);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(41, 36);
-            btnExcluir.TabIndex = 15;
+            btnExcluir.TabIndex = 16;
             btnExcluir.UseVisualStyleBackColor = false;
             btnExcluir.Click += btnExcluir_Click;
             // 
@@ -419,7 +420,7 @@
             lblExcluir.Location = new Point(727, 329);
             lblExcluir.Name = "lblExcluir";
             lblExcluir.Size = new Size(91, 15);
-            lblExcluir.TabIndex = 19;
+            lblExcluir.TabIndex = 1;
             lblExcluir.Text = "Excluir Cadastro";
             // 
             // lblTelefone
@@ -429,7 +430,7 @@
             lblTelefone.Location = new Point(14, 526);
             lblTelefone.Name = "lblTelefone";
             lblTelefone.Size = new Size(52, 15);
-            lblTelefone.TabIndex = 8;
+            lblTelefone.TabIndex = 27;
             lblTelefone.Text = "Telefone";
             // 
             // mtxtTelefone
@@ -453,7 +454,7 @@
             btnLimparCampos.Margin = new Padding(3, 2, 3, 2);
             btnLimparCampos.Name = "btnLimparCampos";
             btnLimparCampos.Size = new Size(82, 28);
-            btnLimparCampos.TabIndex = 16;
+            btnLimparCampos.TabIndex = 15;
             btnLimparCampos.Text = "Limpar";
             btnLimparCampos.UseVisualStyleBackColor = false;
             btnLimparCampos.Click += btnLimparCampos_Click;
@@ -466,7 +467,7 @@
             lblAlterarCadastro.Location = new Point(14, 326);
             lblAlterarCadastro.Name = "lblAlterarCadastro";
             lblAlterarCadastro.Size = new Size(133, 21);
-            lblAlterarCadastro.TabIndex = 13;
+            lblAlterarCadastro.TabIndex = 23;
             lblAlterarCadastro.Text = "Alterar Cadastro";
             // 
             // lblTituloGuid
@@ -477,7 +478,7 @@
             lblTituloGuid.Location = new Point(14, 557);
             lblTituloGuid.Name = "lblTituloGuid";
             lblTituloGuid.Size = new Size(35, 15);
-            lblTituloGuid.TabIndex = 20;
+            lblTituloGuid.TabIndex = 28;
             lblTituloGuid.Text = "Guid:";
             // 
             // lblGuid
@@ -487,7 +488,7 @@
             lblGuid.Location = new Point(58, 557);
             lblGuid.Name = "lblGuid";
             lblGuid.Size = new Size(0, 15);
-            lblGuid.TabIndex = 21;
+            lblGuid.TabIndex = 29;
             // 
             // ListaPessoas
             // 
