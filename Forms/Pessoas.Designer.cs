@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pessoas));
             menuStrip1 = new MenuStrip();
             menuPrincipalToolStripMenuItem = new ToolStripMenuItem();
@@ -119,17 +119,17 @@
             // 
             // dgvPessoas
             // 
-            dgvPessoas.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            dgvPessoas.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvPessoas.BackgroundColor = SystemColors.GradientActiveCaption;
             dgvPessoas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = SystemColors.Window;
-            dataGridViewCellStyle5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle5.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(155, 0, 70);
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
-            dgvPessoas.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Window;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(155, 0, 70);
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            dgvPessoas.DefaultCellStyle = dataGridViewCellStyle1;
             dgvPessoas.Location = new Point(0, 123);
             dgvPessoas.Margin = new Padding(3, 2, 3, 2);
             dgvPessoas.MaximumSize = new Size(1239, 188);
@@ -201,7 +201,7 @@
             // 
             // lblNome
             // 
-            lblNome.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            lblNome.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblNome.AutoSize = true;
             lblNome.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             lblNome.Location = new Point(14, 361);
@@ -212,7 +212,7 @@
             // 
             // txtNome
             // 
-            txtNome.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            txtNome.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             txtNome.DataBindings.Add(new Binding("Text", pessoaBindingSource, "Nome", true));
             txtNome.Location = new Point(66, 357);
             txtNome.Name = "txtNome";
@@ -225,7 +225,7 @@
             // 
             // txtEmail
             // 
-            txtEmail.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            txtEmail.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             txtEmail.DataBindings.Add(new Binding("Text", pessoaBindingSource, "Email", true));
             txtEmail.Location = new Point(66, 400);
             txtEmail.Name = "txtEmail";
@@ -234,7 +234,7 @@
             // 
             // lblEmail
             // 
-            lblEmail.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            lblEmail.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblEmail.AutoSize = true;
             lblEmail.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             lblEmail.Location = new Point(14, 404);
@@ -245,7 +245,7 @@
             // 
             // lblDocumento
             // 
-            lblDocumento.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            lblDocumento.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblDocumento.AutoSize = true;
             lblDocumento.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             lblDocumento.Location = new Point(14, 483);
@@ -256,7 +256,7 @@
             // 
             // radFisica
             // 
-            radFisica.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            radFisica.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             radFisica.AutoSize = true;
             radFisica.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             radFisica.Location = new Point(14, 441);
@@ -269,7 +269,7 @@
             // 
             // radJuridica
             // 
-            radJuridica.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            radJuridica.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             radJuridica.AutoSize = true;
             radJuridica.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             radJuridica.Location = new Point(141, 441);
@@ -282,7 +282,7 @@
             // 
             // lblCEP
             // 
-            lblCEP.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            lblCEP.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblCEP.AutoSize = true;
             lblCEP.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             lblCEP.Location = new Point(298, 361);
@@ -293,7 +293,7 @@
             // 
             // mtxtCEP
             // 
-            mtxtCEP.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            mtxtCEP.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             mtxtCEP.DataBindings.Add(new Binding("Text", pessoaBindingSource, "CEP", true));
             mtxtCEP.Location = new Point(342, 357);
             mtxtCEP.Mask = "00000-000";
@@ -303,7 +303,7 @@
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label1.Location = new Point(506, 361);
@@ -314,7 +314,7 @@
             // 
             // label2
             // 
-            label2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label2.Location = new Point(298, 404);
@@ -325,7 +325,7 @@
             // 
             // label3
             // 
-            label3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label3.Location = new Point(298, 443);
@@ -336,7 +336,7 @@
             // 
             // lblLogradouro
             // 
-            lblLogradouro.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            lblLogradouro.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblLogradouro.AutoSize = true;
             lblLogradouro.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             lblLogradouro.Location = new Point(298, 483);
@@ -347,7 +347,7 @@
             // 
             // lblNumero
             // 
-            lblNumero.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            lblNumero.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblNumero.AutoSize = true;
             lblNumero.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             lblNumero.Location = new Point(585, 483);
@@ -358,7 +358,7 @@
             // 
             // mtxtDocumento
             // 
-            mtxtDocumento.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            mtxtDocumento.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             mtxtDocumento.DataBindings.Add(new Binding("Text", pessoaBindingSource, "Documento", true));
             mtxtDocumento.Location = new Point(97, 479);
             mtxtDocumento.Name = "mtxtDocumento";
@@ -367,7 +367,7 @@
             // 
             // txtCidade
             // 
-            txtCidade.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            txtCidade.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             txtCidade.DataBindings.Add(new Binding("Text", pessoaBindingSource, "Cidade", true));
             txtCidade.Location = new Point(342, 400);
             txtCidade.Name = "txtCidade";
@@ -376,7 +376,7 @@
             // 
             // txtLogradouro
             // 
-            txtLogradouro.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            txtLogradouro.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             txtLogradouro.DataBindings.Add(new Binding("Text", pessoaBindingSource, "Logradouro", true));
             txtLogradouro.Location = new Point(371, 479);
             txtLogradouro.Name = "txtLogradouro";
@@ -385,7 +385,7 @@
             // 
             // txtNumero
             // 
-            txtNumero.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            txtNumero.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             txtNumero.DataBindings.Add(new Binding("Text", pessoaBindingSource, "Numero", true));
             txtNumero.Location = new Point(642, 479);
             txtNumero.Name = "txtNumero";
@@ -394,7 +394,7 @@
             // 
             // txtBairro
             // 
-            txtBairro.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            txtBairro.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             txtBairro.DataBindings.Add(new Binding("Text", pessoaBindingSource, "Bairro", true));
             txtBairro.Location = new Point(342, 439);
             txtBairro.Name = "txtBairro";
@@ -403,7 +403,7 @@
             // 
             // txtEstado
             // 
-            txtEstado.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            txtEstado.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             txtEstado.DataBindings.Add(new Binding("Text", pessoaBindingSource, "Estado", true));
             txtEstado.Location = new Point(554, 357);
             txtEstado.Name = "txtEstado";
@@ -445,7 +445,7 @@
             // 
             // lblTelefone
             // 
-            lblTelefone.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            lblTelefone.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblTelefone.AutoSize = true;
             lblTelefone.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             lblTelefone.Location = new Point(14, 526);
@@ -456,7 +456,7 @@
             // 
             // mtxtTelefone
             // 
-            mtxtTelefone.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            mtxtTelefone.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             mtxtTelefone.DataBindings.Add(new Binding("Text", pessoaBindingSource, "Telefone", true));
             mtxtTelefone.Location = new Point(97, 522);
             mtxtTelefone.Mask = "(00) 00000-0000";
@@ -483,6 +483,7 @@
             // 
             // lblAlterarCadastro
             // 
+            lblAlterarCadastro.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblAlterarCadastro.AutoSize = true;
             lblAlterarCadastro.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblAlterarCadastro.ForeColor = SystemColors.ControlText;
@@ -494,7 +495,7 @@
             // 
             // lblTituloGuid
             // 
-            lblTituloGuid.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            lblTituloGuid.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblTituloGuid.AutoSize = true;
             lblTituloGuid.ForeColor = SystemColors.ControlDarkDark;
             lblTituloGuid.Location = new Point(14, 557);
@@ -505,7 +506,7 @@
             // 
             // lblGuid
             // 
-            lblGuid.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            lblGuid.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblGuid.AutoSize = true;
             lblGuid.ForeColor = SystemColors.ControlDarkDark;
             lblGuid.Location = new Point(58, 557);
@@ -513,7 +514,7 @@
             lblGuid.Size = new Size(0, 15);
             lblGuid.TabIndex = 29;
             // 
-            // ListaPessoas
+            // Pessoas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -560,8 +561,8 @@
             MainMenuStrip = menuStrip1;
             Margin = new Padding(3, 2, 3, 2);
             MaximumSize = new Size(1255, 700);
-            MinimumSize = new Size(812, 610);
-            Name = "ListaPessoas";
+            MinimumSize = new Size(812, 620);
+            Name = "Pessoas";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Pessoas";
             Load += ListaPessoas_Load;
