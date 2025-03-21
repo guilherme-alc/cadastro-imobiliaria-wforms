@@ -152,7 +152,7 @@ namespace CadastroImobiliaria.Repositorio
             {
                 throw new Exception($"Falha ao inserir pessoa:\n{ex.Message}");
             }
-            return linhasAfetadas > 0 ? true : false;
+            return linhasAfetadas > 0;
         }
 
         public static bool AlterarPessoa(Guid id, PessoaDTO pessoaTemp)
@@ -194,7 +194,7 @@ namespace CadastroImobiliaria.Repositorio
             {
                 throw new Exception($"Falha ao alterar pessoa:\n{ex.Message}");
             }
-            return linhasAfetadas > 0 ? true : false;
+            return linhasAfetadas > 0;
         }
 
         public static bool ExcluirPessoa(Guid id)
@@ -218,7 +218,7 @@ namespace CadastroImobiliaria.Repositorio
             {
                 throw new Exception($"Falha ao excluir pessoa:\n{ex.Message}");
             }
-            return linhasAfetadas > 0 ? true : false;
+            return linhasAfetadas > 0;
         }
     }
 }
