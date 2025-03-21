@@ -61,13 +61,14 @@ namespace CadastroImobiliaria.Repositorio
                                 [Telefone], [CEP], [Estado], [Cidade], [Bairro], 
                                 [Logradouro], [Numero], [DataCadastro]
                             FROM [Pessoa]
-                            WHERE Nome LIKE @pesquisa OR Documento LIKE @pesquisa";
+                            WHERE CONCAT([Nome], [Email], [Telefone], [Tipo], [Documento], [CEP], [Estado], [Cidade], [Bairro], [Logradouro], [Numero], [DataCadastro]) LIKE '%' + @pesquisa + '%';
+                            ";
 
             try
             {
                 using SqlConnection connection = Conexao.ObterConexao();
                 using SqlCommand comando = new(query, connection);
-                comando.Parameters.AddWithValue("@pesquisa", $"%{pesquisaUsuario}%");
+                comando.Parameters.AddWithValue("@pesquisa", pesquisaUsuario);
 
                 using SqlDataReader reader = comando.ExecuteReader();
 

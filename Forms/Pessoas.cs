@@ -1,5 +1,4 @@
-﻿using System.Data.SqlTypes;
-using CadastroImobiliaria.Models;
+﻿using CadastroImobiliaria.Models;
 using CadastroImobiliaria.Repositorio;
 using CadastroImobiliaria.Validators;
 
@@ -24,6 +23,7 @@ namespace CadastroImobiliaria
             try
             {
                 dgvPessoas.DataSource = PessoaRepositorio.BuscarTodasPessoas();
+                dgvPessoas.Columns["Id"].Visible = false;
             }
             catch (Exception ex)
             {
@@ -55,11 +55,14 @@ namespace CadastroImobiliaria
             try
             {
                 string pesquisaUsuario = txtPesquisa.Text.Trim().ToUpper();
-                string pesquisaFormatada = pesquisaUsuario
-                    .Replace("-", "")
-                    .Replace(".", "")
-                    .Replace(",", "");
-                dgvPessoas.DataSource = PessoaRepositorio.BuscarPessoa(pesquisaFormatada);
+                if(!pesquisaUsuario.Contains("@"))
+                {
+                    pesquisaUsuario = pesquisaUsuario
+                        .Replace(".", "")
+                        .Replace("-", "");
+                }              
+ 
+                dgvPessoas.DataSource = PessoaRepositorio.BuscarPessoa(pesquisaUsuario);
 
             }
             catch (Exception ex)
