@@ -85,6 +85,7 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Principal";
+            Load += Principal_Load;
             menuHeader.ResumeLayout(false);
             menuHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picGroupLogo).EndInit();

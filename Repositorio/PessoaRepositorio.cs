@@ -46,7 +46,7 @@ namespace CadastroImobiliaria.Repositorio
             }
             catch (Exception ex)
             {
-                throw new Exception($"Falha ao buscar pessoas:\n{ex.Message}");
+                throw new Exception($"Falha ao carregar os cadastros:\n{ex.Message}");
             }
             return listaPessoas;
         }
