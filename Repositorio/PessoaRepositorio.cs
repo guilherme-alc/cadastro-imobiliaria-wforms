@@ -8,7 +8,7 @@ namespace CadastroImobiliaria.Repositorio
     {
         public static List<Pessoa> BuscarTodasPessoas()
         {
-            List<Pessoa> listaPessoas = new List<Pessoa>();
+            List<Pessoa> listaPessoas = new();
             string query = @"SELECT 
                                 [Id], [Nome], [Email], [Tipo], [Documento], 
                                 [Telefone], [CEP], [Estado], [Cidade], [Bairro], 
@@ -25,7 +25,7 @@ namespace CadastroImobiliaria.Repositorio
 
                     while (reader.Read())
                     {
-                        Pessoa pessoa = new Pessoa
+                        listaPessoas.Add(new Pessoa
                         {
                             Id = reader.GetGuid(0),
                             Nome = reader.GetString(1),
@@ -40,8 +40,7 @@ namespace CadastroImobiliaria.Repositorio
                             Logradouro = reader.GetString(10),
                             Numero = reader.GetString(11),
                             DataCadastro = reader.GetDateTime(12)
-                        };
-                        listaPessoas.Add(pessoa);
+                        });
                     }
                 }
             }
@@ -52,18 +51,16 @@ namespace CadastroImobiliaria.Repositorio
             return listaPessoas;
         }
 
-        public static List<Pessoa> BuscarPessoa(string pesquisaUsuario)
+        public static List<Pessoa> PesquisaRegistros(string pesquisaUsuario)
         {
 
-            List<Pessoa> registroEncontrados = new List<Pessoa>();
+            List<Pessoa> registroEncontrados = new();
             string query = @"SELECT 
                                 [Id], [Nome], [Email], [Tipo], [Documento], 
                                 [Telefone], [CEP], [Estado], [Cidade], [Bairro], 
                                 [Logradouro], [Numero], [DataCadastro]
                             FROM [Pessoa]
-                            WHERE CONCAT([Nome], [Email], [Telefone], [Tipo], [Documento], [CEP], [Estado], [Cidade], [Bairro], [Logradouro], [Numero], [DataCadastro]) LIKE '%' + @pesquisa + '%';
-                            ";
-
+                            WHERE CONCAT([Nome], [Email], [Telefone], [Tipo], [Documento], [CEP], [Estado], [Cidade], [Bairro], [Logradouro], [Numero], [DataCadastro]) LIKE '%' + @pesquisa + '%'";
             try
             {
                 using SqlConnection connection = Conexao.ObterConexao();
@@ -91,9 +88,6 @@ namespace CadastroImobiliaria.Repositorio
                         DataCadastro = reader.GetDateTime(12)
                     });
                 }
-
-                if (registroEncontrados == null)
-                    return new List<Pessoa>();
             }
             catch (Exception ex)
             {
@@ -101,6 +95,52 @@ namespace CadastroImobiliaria.Repositorio
             }
 
             return registroEncontrados;
+        }
+
+        public static Pessoa BuscarPessoaPeloId(Guid id)
+        {
+            string query = @"SELECT [Id], [Nome], [Email], [Tipo], [Documento], 
+                                [Telefone], [CEP], [Estado], [Cidade], [Bairro], 
+                                [Logradouro], [Numero], [DataCadastro]
+                            FROM [Pessoa]
+                            WHERE [Id] = @Id";
+            Pessoa pessoa = new Pessoa();
+            try
+            {
+                using SqlConnection connection = Conexao.ObterConexao();
+                using SqlCommand comando = new(query, connection);
+                comando.Parameters.AddWithValue("@Id", id);
+                using (SqlDataReader reader = comando.ExecuteReader())
+                {
+                    if(reader.HasRows)
+                    {
+                        while(reader.Read())
+                        {
+                            pessoa.Id = reader.GetGuid(0);
+                            pessoa.Nome = reader.GetString(1);
+                            pessoa.Email = reader.GetString(2);
+                            pessoa.Tipo = reader.GetString(3)[0];
+                            pessoa.Documento = reader.GetString(4);
+                            pessoa.Telefone = reader.GetString(5);
+                            pessoa.CEP = reader.GetString(6);
+                            pessoa.Estado = reader.GetString(7);
+                            pessoa.Cidade = reader.GetString(8);
+                            pessoa.Bairro = reader.GetString(9);
+                            pessoa.Logradouro = reader.GetString(10);
+                            pessoa.Numero = reader.GetString(11);
+                            pessoa.DataCadastro = reader.GetDateTime(12);
+                        }
+                    } else
+                    {
+                        throw new Exception("Nenhum registro encontrado");
+                    }
+                }
+                return pessoa;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Falha ao buscar pessoa:\n{ex.Message}");
+            }
         }
 
         public static bool AdicionarPessoa(Pessoa pessoa)
@@ -156,7 +196,7 @@ namespace CadastroImobiliaria.Repositorio
             return linhasAfetadas > 0;
         }
 
-        public static bool AlterarPessoa(Guid id, PessoaDTO pessoaTemp)
+        public static bool AlterarPessoa(PessoaDTO pessoaTemp)
         {
             var query = @"UPDATE 
 	                        Pessoa 
@@ -174,7 +214,7 @@ namespace CadastroImobiliaria.Repositorio
                 {
                     using(SqlCommand comando = new SqlCommand(query, connection))
                     {
-                        comando.Parameters.AddWithValue("@Id", id);
+                        comando.Parameters.AddWithValue("@Id", pessoaTemp.Id);
                         comando.Parameters.AddWithValue("@Nome", pessoaTemp.Nome);
                         comando.Parameters.AddWithValue("@Email", pessoaTemp.Email);
                         comando.Parameters.AddWithValue("@Tipo", pessoaTemp.Tipo);
@@ -198,7 +238,7 @@ namespace CadastroImobiliaria.Repositorio
             return linhasAfetadas > 0;
         }
 
-        public static bool ExcluirPessoa(Guid id)
+        public static bool ExcluirPessoa(Pessoa pessoa)
         {
             var query = @"DELETE FROM 
 	                        Pessoa 
@@ -210,7 +250,7 @@ namespace CadastroImobiliaria.Repositorio
                 {
                     using (SqlCommand comando = new SqlCommand(query, connection))
                     {
-                        comando.Parameters.AddWithValue("@Id", id);
+                        comando.Parameters.AddWithValue("@Id", pessoa.Id);
                         linhasAfetadas = comando.ExecuteNonQuery();
                     }
                 }

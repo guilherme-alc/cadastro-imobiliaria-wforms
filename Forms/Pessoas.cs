@@ -62,7 +62,7 @@ namespace CadastroImobiliaria
                         .Replace("-", "");
                 }              
  
-                dgvPessoas.DataSource = PessoaRepositorio.BuscarPessoa(pesquisaUsuario);
+                dgvPessoas.DataSource = PessoaRepositorio.PesquisaRegistros(pesquisaUsuario);
 
             }
             catch (Exception ex)
@@ -131,6 +131,7 @@ namespace CadastroImobiliaria
             {
                 PessoaDTO pessoaTemp = new PessoaDTO
                 {
+                    Id = Guid.Parse(lblGuid.Text),
                     Nome = txtNome.Text.ToUpper(),
                     Email = txtEmail.Text,
                     Tipo = radFisica.Checked ? 'F' : 'J',
@@ -143,8 +144,7 @@ namespace CadastroImobiliaria
                     Logradouro = txtLogradouro.Text,
                     Numero = txtNumero.Text,
                 };
-                Guid guid = Guid.Parse(lblGuid.Text);
-                var sucesso = PessoaRepositorio.AlterarPessoa(guid, pessoaTemp);
+                var sucesso = PessoaRepositorio.AlterarPessoa(pessoaTemp);
 
                 if (!sucesso)
                 {
@@ -167,7 +167,8 @@ namespace CadastroImobiliaria
             try
             {
                 Guid guid = Guid.Parse(lblGuid.Text);
-                var sucesso = PessoaRepositorio.ExcluirPessoa(guid);
+                var pessoa = PessoaRepositorio.BuscarPessoaPeloId(guid);
+                var sucesso = PessoaRepositorio.ExcluirPessoa(pessoa);
 
                 if (!sucesso)
                 {
