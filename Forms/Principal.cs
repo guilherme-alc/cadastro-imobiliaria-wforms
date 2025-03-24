@@ -14,7 +14,7 @@ namespace CadastroImobiliaria
         {
             try
             {
-                using SqlConnection connection = Conexao.ObterConexao();
+                SqlConnection connection = Conexao.ObterConexao();
             }
             catch (SqlException ex)
             {
@@ -30,6 +30,7 @@ namespace CadastroImobiliaria
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Conexao.FecharConexao();
             this.Close();
         }
 

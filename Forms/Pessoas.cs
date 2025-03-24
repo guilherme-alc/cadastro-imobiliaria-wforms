@@ -1,4 +1,5 @@
-﻿using CadastroImobiliaria.Models;
+﻿using CadastroImobiliaria.Database;
+using CadastroImobiliaria.Models;
 using CadastroImobiliaria.Repositorio;
 using CadastroImobiliaria.Validators;
 
@@ -47,6 +48,7 @@ namespace CadastroImobiliaria
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+            Conexao.FecharConexao();
             _formPrincipal.Close();
         }
 

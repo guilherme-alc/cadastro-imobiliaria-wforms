@@ -18,30 +18,29 @@ namespace CadastroImobiliaria.Repositorio
 
             try
             {
-                using (SqlConnection connection = Conexao.ObterConexao())
-                {
-                    using SqlCommand comando = new SqlCommand(query, connection);
-                    using SqlDataReader reader = comando.ExecuteReader();
+                SqlConnection connection = Conexao.ObterConexao();
 
-                    while (reader.Read())
+                using SqlCommand comando = new SqlCommand(query, connection);
+                using SqlDataReader reader = comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    listaPessoas.Add(new Pessoa
                     {
-                        listaPessoas.Add(new Pessoa
-                        {
-                            Id = reader.GetGuid(0),
-                            Nome = reader.GetString(1),
-                            Email = reader.GetString(2),
-                            Tipo = reader.GetString(3)[0],
-                            Documento = reader.GetString(4),
-                            Telefone = reader.GetString(5),
-                            CEP = reader.GetString(6),
-                            Estado = reader.GetString(7),
-                            Cidade = reader.GetString(8),
-                            Bairro = reader.GetString(9),
-                            Logradouro = reader.GetString(10),
-                            Numero = reader.GetString(11),
-                            DataCadastro = reader.GetDateTime(12)
-                        });
-                    }
+                        Id = reader.GetGuid(0),
+                        Nome = reader.GetString(1),
+                        Email = reader.GetString(2),
+                        Tipo = reader.GetString(3)[0],
+                        Documento = reader.GetString(4),
+                        Telefone = reader.GetString(5),
+                        CEP = reader.GetString(6),
+                        Estado = reader.GetString(7),
+                        Cidade = reader.GetString(8),
+                        Bairro = reader.GetString(9),
+                        Logradouro = reader.GetString(10),
+                        Numero = reader.GetString(11),
+                        DataCadastro = reader.GetDateTime(12)
+                    });
                 }
             }
             catch (Exception ex)
@@ -63,7 +62,8 @@ namespace CadastroImobiliaria.Repositorio
                             WHERE CONCAT([Nome], [Email], [Telefone], [Tipo], [Documento], [CEP], [Estado], [Cidade], [Bairro], [Logradouro], [Numero], [DataCadastro]) LIKE '%' + @pesquisa + '%'";
             try
             {
-                using SqlConnection connection = Conexao.ObterConexao();
+                SqlConnection connection = Conexao.ObterConexao();
+
                 using SqlCommand comando = new(query, connection);
                 comando.Parameters.AddWithValue("@pesquisa", pesquisaUsuario);
 
@@ -107,9 +107,11 @@ namespace CadastroImobiliaria.Repositorio
             Pessoa pessoa = new Pessoa();
             try
             {
-                using SqlConnection connection = Conexao.ObterConexao();
+                SqlConnection connection = Conexao.ObterConexao();
+
                 using SqlCommand comando = new(query, connection);
                 comando.Parameters.AddWithValue("@Id", id);
+
                 using (SqlDataReader reader = comando.ExecuteReader())
                 {
                     if(reader.HasRows)
@@ -156,37 +158,36 @@ namespace CadastroImobiliaria.Repositorio
            
             try
             {
-                using (SqlConnection connection = Conexao.ObterConexao())
+                SqlConnection connection = Conexao.ObterConexao();
+
+                using(SqlCommand SeExisteComando = new SqlCommand(querySeExiste, connection))
                 {
-                    using(SqlCommand SeExisteComando = new SqlCommand(querySeExiste, connection))
-                    {
-                        SeExisteComando.Parameters.AddWithValue("@Documento", pessoa.Documento);
-                        registroEncontrado = (int) SeExisteComando.ExecuteScalar();
-                    }
+                    SeExisteComando.Parameters.AddWithValue("@Documento", pessoa.Documento);
+                    registroEncontrado = (int) SeExisteComando.ExecuteScalar();
+                }
 
-                    if (registroEncontrado > 0)
-                    {
-                        throw new Exception($"Já existe uma pessoa cadastrada com o documento {pessoa.Documento}");
-                    }
+                if (registroEncontrado > 0)
+                {
+                    throw new Exception($"Já existe uma pessoa cadastrada com o documento {pessoa.Documento}");
+                }
 
-                    using(SqlCommand comando = new SqlCommand(query, connection))
-                    {
-                        comando.Parameters.AddWithValue("@Id", pessoa.Id);
-                        comando.Parameters.AddWithValue("@Nome", pessoa.Nome);
-                        comando.Parameters.AddWithValue("@Email", pessoa.Email);
-                        comando.Parameters.AddWithValue("@Tipo", pessoa.Tipo);
-                        comando.Parameters.AddWithValue("@Documento", pessoa.Documento);
-                        comando.Parameters.AddWithValue("@Telefone", pessoa.Telefone);
-                        comando.Parameters.AddWithValue("@CEP", pessoa.CEP);
-                        comando.Parameters.AddWithValue("@Estado", pessoa.Estado);
-                        comando.Parameters.AddWithValue("@Cidade", pessoa.Cidade);
-                        comando.Parameters.AddWithValue("@Bairro", pessoa.Bairro);
-                        comando.Parameters.AddWithValue("@Logradouro", pessoa.Logradouro);
-                        comando.Parameters.AddWithValue("@Numero", pessoa.Numero);
-                        comando.Parameters.AddWithValue("@DataCadastro", pessoa.DataCadastro);
+                using(SqlCommand comando = new SqlCommand(query, connection))
+                {
+                    comando.Parameters.AddWithValue("@Id", pessoa.Id);
+                    comando.Parameters.AddWithValue("@Nome", pessoa.Nome);
+                    comando.Parameters.AddWithValue("@Email", pessoa.Email);
+                    comando.Parameters.AddWithValue("@Tipo", pessoa.Tipo);
+                    comando.Parameters.AddWithValue("@Documento", pessoa.Documento);
+                    comando.Parameters.AddWithValue("@Telefone", pessoa.Telefone);
+                    comando.Parameters.AddWithValue("@CEP", pessoa.CEP);
+                    comando.Parameters.AddWithValue("@Estado", pessoa.Estado);
+                    comando.Parameters.AddWithValue("@Cidade", pessoa.Cidade);
+                    comando.Parameters.AddWithValue("@Bairro", pessoa.Bairro);
+                    comando.Parameters.AddWithValue("@Logradouro", pessoa.Logradouro);
+                    comando.Parameters.AddWithValue("@Numero", pessoa.Numero);
+                    comando.Parameters.AddWithValue("@DataCadastro", pessoa.DataCadastro);
 
-                        linhasAfetadas = comando.ExecuteNonQuery();
-                    }
+                    linhasAfetadas = comando.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)
@@ -210,25 +211,24 @@ namespace CadastroImobiliaria.Repositorio
 
             try
             {
-                using (SqlConnection connection = Conexao.ObterConexao())
-                {
-                    using(SqlCommand comando = new SqlCommand(query, connection))
-                    {
-                        comando.Parameters.AddWithValue("@Id", pessoaTemp.Id);
-                        comando.Parameters.AddWithValue("@Nome", pessoaTemp.Nome);
-                        comando.Parameters.AddWithValue("@Email", pessoaTemp.Email);
-                        comando.Parameters.AddWithValue("@Tipo", pessoaTemp.Tipo);
-                        comando.Parameters.AddWithValue("@Documento", pessoaTemp.Documento);
-                        comando.Parameters.AddWithValue("@Telefone", pessoaTemp.Telefone);
-                        comando.Parameters.AddWithValue("@CEP", pessoaTemp.CEP);
-                        comando.Parameters.AddWithValue("@Estado", pessoaTemp.Estado);
-                        comando.Parameters.AddWithValue("@Cidade", pessoaTemp.Cidade);
-                        comando.Parameters.AddWithValue("@Bairro", pessoaTemp.Bairro);
-                        comando.Parameters.AddWithValue("@Logradouro", pessoaTemp.Logradouro);
-                        comando.Parameters.AddWithValue("@Numero", pessoaTemp.Numero);
+                SqlConnection connection = Conexao.ObterConexao();
 
-                        linhasAfetadas = comando.ExecuteNonQuery();
-                    }
+                using(SqlCommand comando = new SqlCommand(query, connection))
+                {
+                    comando.Parameters.AddWithValue("@Id", pessoaTemp.Id);
+                    comando.Parameters.AddWithValue("@Nome", pessoaTemp.Nome);
+                    comando.Parameters.AddWithValue("@Email", pessoaTemp.Email);
+                    comando.Parameters.AddWithValue("@Tipo", pessoaTemp.Tipo);
+                    comando.Parameters.AddWithValue("@Documento", pessoaTemp.Documento);
+                    comando.Parameters.AddWithValue("@Telefone", pessoaTemp.Telefone);
+                    comando.Parameters.AddWithValue("@CEP", pessoaTemp.CEP);
+                    comando.Parameters.AddWithValue("@Estado", pessoaTemp.Estado);
+                    comando.Parameters.AddWithValue("@Cidade", pessoaTemp.Cidade);
+                    comando.Parameters.AddWithValue("@Bairro", pessoaTemp.Bairro);
+                    comando.Parameters.AddWithValue("@Logradouro", pessoaTemp.Logradouro);
+                    comando.Parameters.AddWithValue("@Numero", pessoaTemp.Numero);
+
+                    linhasAfetadas = comando.ExecuteNonQuery();
                 }
             } 
             catch (Exception ex)
@@ -246,13 +246,12 @@ namespace CadastroImobiliaria.Repositorio
             int linhasAfetadas;
             try
             {
-                using (SqlConnection connection = Conexao.ObterConexao())
+                SqlConnection connection = Conexao.ObterConexao();
+
+                using (SqlCommand comando = new SqlCommand(query, connection))
                 {
-                    using (SqlCommand comando = new SqlCommand(query, connection))
-                    {
-                        comando.Parameters.AddWithValue("@Id", pessoa.Id);
-                        linhasAfetadas = comando.ExecuteNonQuery();
-                    }
+                    comando.Parameters.AddWithValue("@Id", pessoa.Id);
+                    linhasAfetadas = comando.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)
