@@ -42,7 +42,6 @@
             btnCadastrar = new Button();
             btnLimparCampos = new Button();
             pnlConteudo = new Panel();
-            pictureBox1 = new PictureBox();
             mtxtDocumento = new MaskedTextBox();
             txtBairro = new TextBox();
             txtCidade = new TextBox();
@@ -57,17 +56,8 @@
             mtxtCEP = new MaskedTextBox();
             lblTitulo = new Label();
             mtxtTelefone = new MaskedTextBox();
-            menuStrip1 = new MenuStrip();
-            panel1 = new Panel();
-            menuStrip = new MenuStrip();
-            menuPrincipalToolStripMenuItem = new ToolStripMenuItem();
-            pessoasToolStripMenuItem = new ToolStripMenuItem();
-            sairToolStripMenuItem = new ToolStripMenuItem();
             errorProvider1 = new ErrorProvider(components);
             pnlConteudo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panel1.SuspendLayout();
-            menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
@@ -178,7 +168,6 @@
             // 
             resources.ApplyResources(pnlConteudo, "pnlConteudo");
             pnlConteudo.BackColor = SystemColors.ControlLight;
-            pnlConteudo.Controls.Add(pictureBox1);
             pnlConteudo.Controls.Add(mtxtDocumento);
             pnlConteudo.Controls.Add(txtBairro);
             pnlConteudo.Controls.Add(txtCidade);
@@ -204,21 +193,10 @@
             pnlConteudo.Controls.Add(radFisica);
             pnlConteudo.Controls.Add(lblDocumento);
             pnlConteudo.Controls.Add(radJuridica);
-            pnlConteudo.Controls.Add(menuStrip1);
             errorProvider1.SetError(pnlConteudo, resources.GetString("pnlConteudo.Error"));
             errorProvider1.SetIconAlignment(pnlConteudo, (ErrorIconAlignment)resources.GetObject("pnlConteudo.IconAlignment"));
             errorProvider1.SetIconPadding(pnlConteudo, (int)resources.GetObject("pnlConteudo.IconPadding"));
             pnlConteudo.Name = "pnlConteudo";
-            // 
-            // pictureBox1
-            // 
-            resources.ApplyResources(pictureBox1, "pictureBox1");
-            errorProvider1.SetError(pictureBox1, resources.GetString("pictureBox1.Error"));
-            errorProvider1.SetIconAlignment(pictureBox1, (ErrorIconAlignment)resources.GetObject("pictureBox1.IconAlignment"));
-            errorProvider1.SetIconPadding(pictureBox1, (int)resources.GetObject("pictureBox1.IconPadding"));
-            pictureBox1.Image = Properties.Resources.group_banner;
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.TabStop = false;
             // 
             // mtxtDocumento
             // 
@@ -341,56 +319,6 @@
             mtxtTelefone.Name = "mtxtTelefone";
             mtxtTelefone.Validated += maskedTextBox_Validated;
             // 
-            // menuStrip1
-            // 
-            resources.ApplyResources(menuStrip1, "menuStrip1");
-            errorProvider1.SetError(menuStrip1, resources.GetString("menuStrip1.Error"));
-            errorProvider1.SetIconAlignment(menuStrip1, (ErrorIconAlignment)resources.GetObject("menuStrip1.IconAlignment"));
-            errorProvider1.SetIconPadding(menuStrip1, (int)resources.GetObject("menuStrip1.IconPadding"));
-            menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Name = "menuStrip1";
-            // 
-            // panel1
-            // 
-            resources.ApplyResources(panel1, "panel1");
-            panel1.Controls.Add(menuStrip);
-            errorProvider1.SetError(panel1, resources.GetString("panel1.Error"));
-            errorProvider1.SetIconAlignment(panel1, (ErrorIconAlignment)resources.GetObject("panel1.IconAlignment"));
-            errorProvider1.SetIconPadding(panel1, (int)resources.GetObject("panel1.IconPadding"));
-            panel1.Name = "panel1";
-            // 
-            // menuStrip
-            // 
-            resources.ApplyResources(menuStrip, "menuStrip");
-            menuStrip.BackColor = Color.SteelBlue;
-            errorProvider1.SetError(menuStrip, resources.GetString("menuStrip.Error"));
-            errorProvider1.SetIconAlignment(menuStrip, (ErrorIconAlignment)resources.GetObject("menuStrip.IconAlignment"));
-            errorProvider1.SetIconPadding(menuStrip, (int)resources.GetObject("menuStrip.IconPadding"));
-            menuStrip.ImageScalingSize = new Size(20, 20);
-            menuStrip.Items.AddRange(new ToolStripItem[] { menuPrincipalToolStripMenuItem, pessoasToolStripMenuItem, sairToolStripMenuItem });
-            menuStrip.Name = "menuStrip";
-            // 
-            // menuPrincipalToolStripMenuItem
-            // 
-            resources.ApplyResources(menuPrincipalToolStripMenuItem, "menuPrincipalToolStripMenuItem");
-            menuPrincipalToolStripMenuItem.ForeColor = SystemColors.Control;
-            menuPrincipalToolStripMenuItem.Name = "menuPrincipalToolStripMenuItem";
-            menuPrincipalToolStripMenuItem.Click += menuPrincipalToolStripMenuItem_Click_1;
-            // 
-            // pessoasToolStripMenuItem
-            // 
-            resources.ApplyResources(pessoasToolStripMenuItem, "pessoasToolStripMenuItem");
-            pessoasToolStripMenuItem.ForeColor = SystemColors.Control;
-            pessoasToolStripMenuItem.Name = "pessoasToolStripMenuItem";
-            pessoasToolStripMenuItem.Click += pessoasToolStripMenuItem_Click;
-            // 
-            // sairToolStripMenuItem
-            // 
-            resources.ApplyResources(sairToolStripMenuItem, "sairToolStripMenuItem");
-            sairToolStripMenuItem.ForeColor = SystemColors.Control;
-            sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
-            // 
             // errorProvider1
             // 
             errorProvider1.ContainerControl = this;
@@ -400,17 +328,10 @@
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(panel1);
             Controls.Add(pnlConteudo);
-            MainMenuStrip = menuStrip;
             Name = "Cadastro";
             pnlConteudo.ResumeLayout(false);
             pnlConteudo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            menuStrip.ResumeLayout(false);
-            menuStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
         }
@@ -429,7 +350,6 @@
         private Button btnCadastrar;
         private Button btnLimparCampos;
         private Panel pnlConteudo;
-        private Panel panel1;
         private MaskedTextBox mtxtTelefone;
         private Label lblTitulo;
         private Label lblLogradouro;
@@ -443,13 +363,7 @@
         private Label lblBairro;
         private Label lblCidade;
         private Label lblEstado;
-        private MenuStrip menuStrip;
-        private ToolStripMenuItem menuPrincipalToolStripMenuItem;
         private ErrorProvider errorProvider1;
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem sairToolStripMenuItem;
         private MaskedTextBox mtxtDocumento;
-        private ToolStripMenuItem pessoasToolStripMenuItem;
-        private PictureBox pictureBox1;
     }
 }

@@ -7,12 +7,9 @@ namespace CadastroImobiliaria
 {
     public partial class Pessoas : Form
     {
-        private readonly Principal _formPrincipal;
-        private readonly Cadastro _formCadastro;
         public Pessoas(Principal formPrincipal)
         {
             InitializeComponent();
-            _formPrincipal = formPrincipal;
         }
         public Pessoas()
         {
@@ -30,24 +27,6 @@ namespace CadastroImobiliaria
                 MessageBox.Show($"Falha interna no servidor:\n{ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-        }
-
-        private void menuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            _formPrincipal.Show();
-            this.Close();
-        }
-
-        private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form cadastro = new Cadastro(_formPrincipal);
-            cadastro.Show();
-        }
-
-        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            _formPrincipal.Close();
         }
 
         private void btnPesquisa_Click(object sender, EventArgs e)
@@ -202,7 +181,7 @@ namespace CadastroImobiliaria
             txtLogradouro.Text = "";
             txtNumero.Text = "";
             lblGuid.Text = "";
-            errorProvider1.Clear();
+            errorProvider.Clear();
         }
     }
 }
