@@ -1,4 +1,5 @@
-﻿using CadastroImobiliaria.Models;
+﻿using CadastroImobiliaria.Database;
+using CadastroImobiliaria.Models;
 using CadastroImobiliaria.Repositorio;
 using CadastroImobiliaria.Validators;
 
@@ -29,6 +30,28 @@ namespace CadastroImobiliaria
             }
         }
 
+<<<<<<< HEAD
+        private void menuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _formPrincipal.Show();
+            this.Close();
+        }
+
+        private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form cadastro = new Cadastro(_formPrincipal);
+            cadastro.Show();
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Conexao.FecharConexao();
+            _formPrincipal.Close();
+        }
+
+=======
+>>>>>>> 663c2f1e02b9b4d0e38cc67d163b7ead0826356b
         private void btnPesquisa_Click(object sender, EventArgs e)
         {
             try

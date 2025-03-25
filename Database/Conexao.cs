@@ -5,32 +5,38 @@ namespace CadastroImobiliaria.Database
 {
     public class Conexao
     {
-        private static readonly string connectionString = @"Server=;Database=imobiliaria;User Id=;Password=;Trust Server Certificate=True";
+        private static SqlConnection _connection;
+        private static readonly string _connectionString = @"Server=;Database=;User Id=;Password=;TrustServerCertificate=;";
+        private Conexao() { }
         public static SqlConnection ObterConexao()
         {
+            if (_connection == null)
+                _connection = new SqlConnection(_connectionString);
 
-            SqlConnection connection = new SqlConnection(connectionString);
-            try
+            if(_connection.State != ConnectionState.Open)
             {
-                connection.Open();
-                return connection;
+                try
+                {
+                    _connection.Open();
+                }
+                catch (SqlException ex)
+                {
+                    throw new Exception("Erro ao conectar ao banco de dados. Verifique a conexão.", ex);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Ocorreu um erro inesperado ao obter a conexão.", ex);
+                }
             }
-            catch (SqlException ex)
-            {
-                throw new Exception("Erro ao conectar ao banco de dados. Verifique a conexão.", ex);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Ocorreu um erro inesperado ao obter a conexão.", ex);
-            }
+            return _connection;
         }
-        public static void FecharConexao(SqlConnection connection)
+        public static void FecharConexao()
         {
             try
             {
-                if (connection != null && connection.State == ConnectionState.Open)
+                if (_connection != null && _connection.State == ConnectionState.Open)
                 {
-                    connection.Close();
+                    _connection.Close();
                 }
             }
             catch (SqlException ex)
