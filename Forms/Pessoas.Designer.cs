@@ -31,15 +31,11 @@
             components = new System.ComponentModel.Container();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pessoas));
-            menuStrip1 = new MenuStrip();
-            menuPrincipalToolStripMenuItem = new ToolStripMenuItem();
-            cadastroToolStripMenuItem = new ToolStripMenuItem();
-            sairToolStripMenuItem = new ToolStripMenuItem();
             dgvPessoas = new DataGridView();
             txtPesquisa = new TextBox();
             btnPesquisa = new Button();
             lblPesquisar = new Label();
-            lblInstruPesquisa = new Label();
+            lblInstrucaoPesquisa = new Label();
             btnSalvar = new Button();
             lblNome = new Label();
             txtNome = new TextBox();
@@ -51,9 +47,9 @@
             radJuridica = new RadioButton();
             lblCEP = new Label();
             mtxtCEP = new MaskedTextBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
+            lblEstado = new Label();
+            lblCidade = new Label();
+            lblBairro = new Label();
             lblLogradouro = new Label();
             lblNumero = new Label();
             mtxtDocumento = new MaskedTextBox();
@@ -62,7 +58,7 @@
             txtNumero = new TextBox();
             txtBairro = new TextBox();
             txtEstado = new TextBox();
-            errorProvider1 = new ErrorProvider(components);
+            errorProvider = new ErrorProvider(components);
             btnExcluir = new Button();
             lblExcluir = new Label();
             lblTelefone = new Label();
@@ -71,51 +67,10 @@
             lblAlterarCadastro = new Label();
             lblTituloGuid = new Label();
             lblGuid = new Label();
-            menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvPessoas).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pessoaBindingSource).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider).BeginInit();
             SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            menuStrip1.BackColor = Color.SteelBlue;
-            menuStrip1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
-            menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { menuPrincipalToolStripMenuItem, cadastroToolStripMenuItem, sairToolStripMenuItem });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(5, 2, 0, 2);
-            menuStrip1.Size = new Size(831, 25);
-            menuStrip1.TabIndex = 20;
-            menuStrip1.Text = "menuStrip1";
-            // 
-            // menuPrincipalToolStripMenuItem
-            // 
-            menuPrincipalToolStripMenuItem.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
-            menuPrincipalToolStripMenuItem.ForeColor = SystemColors.Control;
-            menuPrincipalToolStripMenuItem.Name = "menuPrincipalToolStripMenuItem";
-            menuPrincipalToolStripMenuItem.Size = new Size(110, 21);
-            menuPrincipalToolStripMenuItem.Text = "Menu Principal";
-            menuPrincipalToolStripMenuItem.Click += menuPrincipalToolStripMenuItem_Click;
-            // 
-            // cadastroToolStripMenuItem
-            // 
-            cadastroToolStripMenuItem.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
-            cadastroToolStripMenuItem.ForeColor = SystemColors.Control;
-            cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            cadastroToolStripMenuItem.Size = new Size(74, 21);
-            cadastroToolStripMenuItem.Text = "Cadastro";
-            cadastroToolStripMenuItem.Click += cadastroToolStripMenuItem_Click;
-            // 
-            // sairToolStripMenuItem
-            // 
-            sairToolStripMenuItem.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
-            sairToolStripMenuItem.ForeColor = SystemColors.Control;
-            sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            sairToolStripMenuItem.Size = new Size(42, 21);
-            sairToolStripMenuItem.Text = "Sair";
-            sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
             // dgvPessoas
             // 
@@ -130,19 +85,19 @@
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
             dgvPessoas.DefaultCellStyle = dataGridViewCellStyle1;
-            dgvPessoas.Location = new Point(0, 123);
+            dgvPessoas.Location = new Point(0, 95);
             dgvPessoas.Margin = new Padding(3, 2, 3, 2);
             dgvPessoas.MaximumSize = new Size(1239, 188);
-            dgvPessoas.MinimumSize = new Size(796, 188);
+            dgvPessoas.MinimumSize = new Size(796, 200);
             dgvPessoas.Name = "dgvPessoas";
             dgvPessoas.RowHeadersWidth = 51;
-            dgvPessoas.Size = new Size(831, 188);
+            dgvPessoas.Size = new Size(831, 200);
             dgvPessoas.TabIndex = 19;
             dgvPessoas.CellContentDoubleClick += preencheCampos_CellContentDoubleClick;
             // 
             // txtPesquisa
             // 
-            txtPesquisa.Location = new Point(16, 91);
+            txtPesquisa.Location = new Point(12, 63);
             txtPesquisa.Name = "txtPesquisa";
             txtPesquisa.Size = new Size(325, 23);
             txtPesquisa.TabIndex = 0;
@@ -154,7 +109,7 @@
             btnPesquisa.FlatStyle = FlatStyle.Flat;
             btnPesquisa.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnPesquisa.ForeColor = Color.White;
-            btnPesquisa.Location = new Point(359, 87);
+            btnPesquisa.Location = new Point(355, 59);
             btnPesquisa.Name = "btnPesquisa";
             btnPesquisa.Size = new Size(89, 31);
             btnPesquisa.TabIndex = 1;
@@ -167,22 +122,22 @@
             lblPesquisar.AutoSize = true;
             lblPesquisar.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblPesquisar.ForeColor = Color.Black;
-            lblPesquisar.Location = new Point(16, 37);
+            lblPesquisar.Location = new Point(12, 9);
             lblPesquisar.Name = "lblPesquisar";
             lblPesquisar.Size = new Size(173, 25);
             lblPesquisar.TabIndex = 21;
             lblPesquisar.Text = "Pesquisar Cadastro";
             // 
-            // lblInstruPesquisa
+            // lblInstrucaoPesquisa
             // 
-            lblInstruPesquisa.AutoSize = true;
-            lblInstruPesquisa.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblInstruPesquisa.ForeColor = SystemColors.ControlDarkDark;
-            lblInstruPesquisa.Location = new Point(16, 73);
-            lblInstruPesquisa.Name = "lblInstruPesquisa";
-            lblInstruPesquisa.Size = new Size(228, 15);
-            lblInstruPesquisa.TabIndex = 22;
-            lblInstruPesquisa.Text = "Digite o nome ou documento (CPF/CNPJ)";
+            lblInstrucaoPesquisa.AutoSize = true;
+            lblInstrucaoPesquisa.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblInstrucaoPesquisa.ForeColor = SystemColors.ControlDarkDark;
+            lblInstrucaoPesquisa.Location = new Point(12, 45);
+            lblInstrucaoPesquisa.Name = "lblInstrucaoPesquisa";
+            lblInstrucaoPesquisa.Size = new Size(228, 15);
+            lblInstrucaoPesquisa.TabIndex = 22;
+            lblInstrucaoPesquisa.Text = "Digite o nome ou documento (CPF/CNPJ)";
             // 
             // btnSalvar
             // 
@@ -191,7 +146,7 @@
             btnSalvar.FlatStyle = FlatStyle.Flat;
             btnSalvar.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSalvar.ForeColor = Color.White;
-            btnSalvar.Location = new Point(717, 557);
+            btnSalvar.Location = new Point(714, 544);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(102, 40);
             btnSalvar.TabIndex = 14;
@@ -204,7 +159,7 @@
             lblNome.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblNome.AutoSize = true;
             lblNome.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            lblNome.Location = new Point(14, 361);
+            lblNome.Location = new Point(12, 348);
             lblNome.Name = "lblNome";
             lblNome.Size = new Size(40, 15);
             lblNome.TabIndex = 24;
@@ -214,7 +169,7 @@
             // 
             txtNome.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             txtNome.DataBindings.Add(new Binding("Text", pessoaBindingSource, "Nome", true));
-            txtNome.Location = new Point(66, 357);
+            txtNome.Location = new Point(64, 344);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(180, 23);
             txtNome.TabIndex = 2;
@@ -227,7 +182,7 @@
             // 
             txtEmail.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             txtEmail.DataBindings.Add(new Binding("Text", pessoaBindingSource, "Email", true));
-            txtEmail.Location = new Point(66, 400);
+            txtEmail.Location = new Point(64, 387);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(180, 23);
             txtEmail.TabIndex = 3;
@@ -237,7 +192,7 @@
             lblEmail.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblEmail.AutoSize = true;
             lblEmail.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            lblEmail.Location = new Point(14, 404);
+            lblEmail.Location = new Point(12, 391);
             lblEmail.Name = "lblEmail";
             lblEmail.Size = new Size(41, 15);
             lblEmail.TabIndex = 25;
@@ -248,7 +203,7 @@
             lblDocumento.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblDocumento.AutoSize = true;
             lblDocumento.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            lblDocumento.Location = new Point(14, 483);
+            lblDocumento.Location = new Point(12, 470);
             lblDocumento.Name = "lblDocumento";
             lblDocumento.Size = new Size(71, 15);
             lblDocumento.TabIndex = 26;
@@ -259,7 +214,7 @@
             radFisica.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             radFisica.AutoSize = true;
             radFisica.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            radFisica.Location = new Point(14, 441);
+            radFisica.Location = new Point(12, 428);
             radFisica.Name = "radFisica";
             radFisica.Size = new Size(93, 19);
             radFisica.TabIndex = 4;
@@ -272,7 +227,7 @@
             radJuridica.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             radJuridica.AutoSize = true;
             radJuridica.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            radJuridica.Location = new Point(141, 441);
+            radJuridica.Location = new Point(139, 428);
             radJuridica.Name = "radJuridica";
             radJuridica.Size = new Size(105, 19);
             radJuridica.TabIndex = 5;
@@ -285,7 +240,7 @@
             lblCEP.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblCEP.AutoSize = true;
             lblCEP.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            lblCEP.Location = new Point(298, 361);
+            lblCEP.Location = new Point(296, 348);
             lblCEP.Name = "lblCEP";
             lblCEP.Size = new Size(27, 15);
             lblCEP.TabIndex = 30;
@@ -295,51 +250,51 @@
             // 
             mtxtCEP.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             mtxtCEP.DataBindings.Add(new Binding("Text", pessoaBindingSource, "CEP", true));
-            mtxtCEP.Location = new Point(342, 357);
+            mtxtCEP.Location = new Point(340, 344);
             mtxtCEP.Mask = "00000-000";
             mtxtCEP.Name = "mtxtCEP";
             mtxtCEP.Size = new Size(152, 23);
             mtxtCEP.TabIndex = 8;
             // 
-            // label1
+            // lblEstado
             // 
-            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            label1.Location = new Point(506, 361);
-            label1.Name = "label1";
-            label1.Size = new Size(42, 15);
-            label1.TabIndex = 34;
-            label1.Text = "Estado";
+            lblEstado.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            lblEstado.AutoSize = true;
+            lblEstado.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            lblEstado.Location = new Point(504, 348);
+            lblEstado.Name = "lblEstado";
+            lblEstado.Size = new Size(42, 15);
+            lblEstado.TabIndex = 34;
+            lblEstado.Text = "Estado";
             // 
-            // label2
+            // lblCidade
             // 
-            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            label2.Location = new Point(298, 404);
-            label2.Name = "label2";
-            label2.Size = new Size(43, 15);
-            label2.TabIndex = 31;
-            label2.Text = "Cidade";
+            lblCidade.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            lblCidade.AutoSize = true;
+            lblCidade.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            lblCidade.Location = new Point(296, 391);
+            lblCidade.Name = "lblCidade";
+            lblCidade.Size = new Size(43, 15);
+            lblCidade.TabIndex = 31;
+            lblCidade.Text = "Cidade";
             // 
-            // label3
+            // lblBairro
             // 
-            label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            label3.Location = new Point(298, 443);
-            label3.Name = "label3";
-            label3.Size = new Size(38, 15);
-            label3.TabIndex = 32;
-            label3.Text = "Bairro";
+            lblBairro.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            lblBairro.AutoSize = true;
+            lblBairro.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            lblBairro.Location = new Point(296, 430);
+            lblBairro.Name = "lblBairro";
+            lblBairro.Size = new Size(38, 15);
+            lblBairro.TabIndex = 32;
+            lblBairro.Text = "Bairro";
             // 
             // lblLogradouro
             // 
             lblLogradouro.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblLogradouro.AutoSize = true;
             lblLogradouro.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            lblLogradouro.Location = new Point(298, 483);
+            lblLogradouro.Location = new Point(296, 470);
             lblLogradouro.Name = "lblLogradouro";
             lblLogradouro.Size = new Size(69, 15);
             lblLogradouro.TabIndex = 33;
@@ -350,7 +305,7 @@
             lblNumero.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblNumero.AutoSize = true;
             lblNumero.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            lblNumero.Location = new Point(585, 483);
+            lblNumero.Location = new Point(583, 470);
             lblNumero.Name = "lblNumero";
             lblNumero.Size = new Size(51, 15);
             lblNumero.TabIndex = 0;
@@ -360,7 +315,7 @@
             // 
             mtxtDocumento.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             mtxtDocumento.DataBindings.Add(new Binding("Text", pessoaBindingSource, "Documento", true));
-            mtxtDocumento.Location = new Point(97, 479);
+            mtxtDocumento.Location = new Point(95, 466);
             mtxtDocumento.Name = "mtxtDocumento";
             mtxtDocumento.Size = new Size(149, 23);
             mtxtDocumento.TabIndex = 6;
@@ -369,7 +324,7 @@
             // 
             txtCidade.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             txtCidade.DataBindings.Add(new Binding("Text", pessoaBindingSource, "Cidade", true));
-            txtCidade.Location = new Point(342, 400);
+            txtCidade.Location = new Point(340, 387);
             txtCidade.Name = "txtCidade";
             txtCidade.Size = new Size(152, 23);
             txtCidade.TabIndex = 10;
@@ -378,7 +333,7 @@
             // 
             txtLogradouro.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             txtLogradouro.DataBindings.Add(new Binding("Text", pessoaBindingSource, "Logradouro", true));
-            txtLogradouro.Location = new Point(371, 479);
+            txtLogradouro.Location = new Point(369, 466);
             txtLogradouro.Name = "txtLogradouro";
             txtLogradouro.Size = new Size(208, 23);
             txtLogradouro.TabIndex = 12;
@@ -387,7 +342,7 @@
             // 
             txtNumero.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             txtNumero.DataBindings.Add(new Binding("Text", pessoaBindingSource, "Numero", true));
-            txtNumero.Location = new Point(642, 479);
+            txtNumero.Location = new Point(640, 466);
             txtNumero.Name = "txtNumero";
             txtNumero.Size = new Size(64, 23);
             txtNumero.TabIndex = 13;
@@ -396,7 +351,7 @@
             // 
             txtBairro.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             txtBairro.DataBindings.Add(new Binding("Text", pessoaBindingSource, "Bairro", true));
-            txtBairro.Location = new Point(342, 439);
+            txtBairro.Location = new Point(340, 426);
             txtBairro.Name = "txtBairro";
             txtBairro.Size = new Size(152, 23);
             txtBairro.TabIndex = 11;
@@ -405,26 +360,26 @@
             // 
             txtEstado.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             txtEstado.DataBindings.Add(new Binding("Text", pessoaBindingSource, "Estado", true));
-            txtEstado.Location = new Point(554, 357);
+            txtEstado.Location = new Point(552, 344);
             txtEstado.Name = "txtEstado";
             txtEstado.Size = new Size(152, 23);
             txtEstado.TabIndex = 9;
             // 
-            // errorProvider1
+            // errorProvider
             // 
-            errorProvider1.ContainerControl = this;
+            errorProvider.ContainerControl = this;
             // 
             // btnExcluir
             // 
             btnExcluir.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnExcluir.BackColor = SystemColors.ControlLight;
             btnExcluir.BackgroundImage = (Image)resources.GetObject("btnExcluir.BackgroundImage");
-            btnExcluir.BackgroundImageLayout = ImageLayout.Stretch;
+            btnExcluir.BackgroundImageLayout = ImageLayout.Zoom;
             btnExcluir.FlatStyle = FlatStyle.Flat;
             btnExcluir.ForeColor = SystemColors.ControlLight;
             btnExcluir.Image = (Image)resources.GetObject("btnExcluir.Image");
             btnExcluir.ImageAlign = ContentAlignment.TopCenter;
-            btnExcluir.Location = new Point(777, 347);
+            btnExcluir.Location = new Point(775, 334);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(41, 36);
             btnExcluir.TabIndex = 16;
@@ -437,7 +392,7 @@
             lblExcluir.AutoSize = true;
             lblExcluir.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblExcluir.ForeColor = SystemColors.ControlDarkDark;
-            lblExcluir.Location = new Point(727, 329);
+            lblExcluir.Location = new Point(725, 316);
             lblExcluir.Name = "lblExcluir";
             lblExcluir.Size = new Size(91, 15);
             lblExcluir.TabIndex = 1;
@@ -448,7 +403,7 @@
             lblTelefone.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblTelefone.AutoSize = true;
             lblTelefone.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            lblTelefone.Location = new Point(14, 526);
+            lblTelefone.Location = new Point(12, 513);
             lblTelefone.Name = "lblTelefone";
             lblTelefone.Size = new Size(52, 15);
             lblTelefone.TabIndex = 27;
@@ -458,7 +413,7 @@
             // 
             mtxtTelefone.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             mtxtTelefone.DataBindings.Add(new Binding("Text", pessoaBindingSource, "Telefone", true));
-            mtxtTelefone.Location = new Point(97, 522);
+            mtxtTelefone.Location = new Point(95, 509);
             mtxtTelefone.Mask = "(00) 00000-0000";
             mtxtTelefone.Name = "mtxtTelefone";
             mtxtTelefone.Size = new Size(149, 23);
@@ -472,7 +427,7 @@
             btnLimparCampos.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             btnLimparCampos.ForeColor = SystemColors.MenuBar;
             btnLimparCampos.ImeMode = ImeMode.NoControl;
-            btnLimparCampos.Location = new Point(737, 35);
+            btnLimparCampos.Location = new Point(733, 7);
             btnLimparCampos.Margin = new Padding(3, 2, 3, 2);
             btnLimparCampos.Name = "btnLimparCampos";
             btnLimparCampos.Size = new Size(82, 28);
@@ -487,7 +442,7 @@
             lblAlterarCadastro.AutoSize = true;
             lblAlterarCadastro.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblAlterarCadastro.ForeColor = SystemColors.ControlText;
-            lblAlterarCadastro.Location = new Point(14, 326);
+            lblAlterarCadastro.Location = new Point(12, 313);
             lblAlterarCadastro.Name = "lblAlterarCadastro";
             lblAlterarCadastro.Size = new Size(133, 21);
             lblAlterarCadastro.TabIndex = 23;
@@ -498,7 +453,7 @@
             lblTituloGuid.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblTituloGuid.AutoSize = true;
             lblTituloGuid.ForeColor = SystemColors.ControlDarkDark;
-            lblTituloGuid.Location = new Point(14, 557);
+            lblTituloGuid.Location = new Point(12, 544);
             lblTituloGuid.Name = "lblTituloGuid";
             lblTituloGuid.Size = new Size(35, 15);
             lblTituloGuid.TabIndex = 28;
@@ -509,7 +464,7 @@
             lblGuid.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblGuid.AutoSize = true;
             lblGuid.ForeColor = SystemColors.ControlDarkDark;
-            lblGuid.Location = new Point(58, 557);
+            lblGuid.Location = new Point(56, 544);
             lblGuid.Name = "lblGuid";
             lblGuid.Size = new Size(0, 15);
             lblGuid.TabIndex = 29;
@@ -543,22 +498,20 @@
             Controls.Add(lblEmail);
             Controls.Add(lblNumero);
             Controls.Add(lblLogradouro);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(lblBairro);
+            Controls.Add(lblCidade);
+            Controls.Add(lblEstado);
             Controls.Add(lblCEP);
             Controls.Add(txtNome);
             Controls.Add(lblNome);
             Controls.Add(btnSalvar);
-            Controls.Add(lblInstruPesquisa);
+            Controls.Add(lblInstrucaoPesquisa);
             Controls.Add(lblPesquisar);
             Controls.Add(btnPesquisa);
             Controls.Add(txtPesquisa);
             Controls.Add(dgvPessoas);
-            Controls.Add(menuStrip1);
             ForeColor = SystemColors.ControlText;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            MainMenuStrip = menuStrip1;
             Margin = new Padding(3, 2, 3, 2);
             MaximumSize = new Size(1255, 700);
             MinimumSize = new Size(812, 620);
@@ -566,25 +519,19 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Pessoas";
             Load += ListaPessoas_Load;
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvPessoas).EndInit();
             ((System.ComponentModel.ISupportInitialize)pessoaBindingSource).EndInit();
-            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem menuPrincipalToolStripMenuItem;
-        private ToolStripMenuItem cadastroToolStripMenuItem;
-        private ToolStripMenuItem sairToolStripMenuItem;
         private DataGridView dgvPessoas;
         private TextBox txtPesquisa;
         private Button btnPesquisa;
         private Label lblPesquisar;
-        private Label lblInstruPesquisa;
+        private Label lblInstrucaoPesquisa;
         private Button btnSalvar;
         private Label lblNome;
         private TextBox txtNome;
@@ -595,9 +542,9 @@
         private RadioButton radJuridica;
         private Label lblCEP;
         private MaskedTextBox mtxtCEP;
-        private Label label1;
-        private Label label2;
-        private Label label3;
+        private Label lblEstado;
+        private Label lblCidade;
+        private Label lblBairro;
         private Label lblLogradouro;
         private Label lblNumero;
         private MaskedTextBox mtxtDocumento;
@@ -606,7 +553,7 @@
         private TextBox txtNumero;
         private TextBox txtBairro;
         private TextBox txtEstado;
-        private ErrorProvider errorProvider1;
+        private ErrorProvider errorProvider;
         private Button btnExcluir;
         private Label lblExcluir;
         private MaskedTextBox mtxtTelefone;

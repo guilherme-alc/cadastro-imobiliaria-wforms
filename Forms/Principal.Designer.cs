@@ -70,6 +70,7 @@
             // picGroupLogo
             // 
             resources.ApplyResources(picGroupLogo, "picGroupLogo");
+            picGroupLogo.BackColor = Color.WhiteSmoke;
             picGroupLogo.Image = Properties.Resources.group_banner;
             picGroupLogo.Name = "picGroupLogo";
             picGroupLogo.TabStop = false;
@@ -81,10 +82,12 @@
             BackColor = SystemColors.ControlLight;
             Controls.Add(picGroupLogo);
             Controls.Add(menuHeader);
+            IsMdiContainer = true;
             MainMenuStrip = menuHeader;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Principal";
+            WindowState = FormWindowState.Maximized;
             Load += Principal_Load;
             menuHeader.ResumeLayout(false);
             menuHeader.PerformLayout();
@@ -98,7 +101,7 @@
         private MenuStrip menuHeader;
         private ToolStripMenuItem cadastroToolStripMenuItem;
         private ToolStripMenuItem sairToolStripMenuItem;
-        private PictureBox picGroupLogo;
         private ToolStripMenuItem clientesToolStripMenuItem;
+        private PictureBox picGroupLogo;
     }
 }

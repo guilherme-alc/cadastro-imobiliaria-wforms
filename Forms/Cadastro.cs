@@ -7,11 +7,9 @@ namespace CadastroImobiliaria
 {
     public partial class Cadastro : Form
     {
-        private readonly Principal _formPrincipal;
         public Cadastro(Principal formPrincipal)
         {
             InitializeComponent();
-            _formPrincipal = formPrincipal;
         }
 
         private void textBox_Validated(object sender, EventArgs e)
@@ -137,6 +135,7 @@ namespace CadastroImobiliaria
             mtxtDocumento.Mask = @"000\.000\.000-00";
         }
 
+<<<<<<< HEAD
         private void menuPrincipalToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             _formPrincipal.Show();
@@ -156,6 +155,8 @@ namespace CadastroImobiliaria
             _formPrincipal.Close();
         }
 
+=======
+>>>>>>> 663c2f1e02b9b4d0e38cc67d163b7ead0826356b
         private void btnLimparCampos_Click(object sender, EventArgs e)
         {
             limparCampos();

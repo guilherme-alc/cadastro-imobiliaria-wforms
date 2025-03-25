@@ -7,12 +7,9 @@ namespace CadastroImobiliaria
 {
     public partial class Pessoas : Form
     {
-        private readonly Principal _formPrincipal;
-        private readonly Cadastro _formCadastro;
         public Pessoas(Principal formPrincipal)
         {
             InitializeComponent();
-            _formPrincipal = formPrincipal;
         }
         public Pessoas()
         {
@@ -33,6 +30,7 @@ namespace CadastroImobiliaria
             }
         }
 
+<<<<<<< HEAD
         private void menuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             _formPrincipal.Show();
@@ -52,6 +50,8 @@ namespace CadastroImobiliaria
             _formPrincipal.Close();
         }
 
+=======
+>>>>>>> 663c2f1e02b9b4d0e38cc67d163b7ead0826356b
         private void btnPesquisa_Click(object sender, EventArgs e)
         {
             try
@@ -208,7 +208,7 @@ namespace CadastroImobiliaria
             txtLogradouro.Text = "";
             txtNumero.Text = "";
             lblGuid.Text = "";
-            errorProvider1.Clear();
+            errorProvider.Clear();
         }
     }
 }
