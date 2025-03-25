@@ -1,5 +1,4 @@
-﻿using System.Data.SqlTypes;
-using CadastroImobiliaria.Models;
+﻿using CadastroImobiliaria.Models;
 using CadastroImobiliaria.Repositorio;
 using CadastroImobiliaria.Validators;
 
@@ -7,12 +6,9 @@ namespace CadastroImobiliaria
 {
     public partial class Pessoas : Form
     {
-        private readonly Principal _formPrincipal;
-        private readonly Cadastro _formCadastro;
         public Pessoas(Principal formPrincipal)
         {
             InitializeComponent();
-            _formPrincipal = formPrincipal;
         }
         public Pessoas()
         {
@@ -24,30 +20,13 @@ namespace CadastroImobiliaria
             try
             {
                 dgvPessoas.DataSource = PessoaRepositorio.BuscarTodasPessoas();
+                dgvPessoas.Columns["Id"].Visible = false;
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Falha interna no servidor:\n{ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"{ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-        }
-
-        private void menuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            _formPrincipal.Show();
-            this.Close();
-        }
-
-        private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form cadastro = new Cadastro(_formPrincipal);
-            cadastro.Show();
-        }
-
-        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            _formPrincipal.Close();
         }
 
         private void btnPesquisa_Click(object sender, EventArgs e)
@@ -55,11 +34,14 @@ namespace CadastroImobiliaria
             try
             {
                 string pesquisaUsuario = txtPesquisa.Text.Trim().ToUpper();
-                string pesquisaFormatada = pesquisaUsuario
-                    .Replace("-", "")
-                    .Replace(".", "")
-                    .Replace(",", "");
-                dgvPessoas.DataSource = PessoaRepositorio.BuscarPessoa(pesquisaFormatada);
+                if(!pesquisaUsuario.Contains("@"))
+                {
+                    pesquisaUsuario = pesquisaUsuario
+                        .Replace(".", "")
+                        .Replace("-", "");
+                }              
+ 
+                dgvPessoas.DataSource = PessoaRepositorio.PesquisaRegistros(pesquisaUsuario);
 
             }
             catch (Exception ex)
@@ -128,6 +110,7 @@ namespace CadastroImobiliaria
             {
                 PessoaDTO pessoaTemp = new PessoaDTO
                 {
+                    Id = Guid.Parse(lblGuid.Text),
                     Nome = txtNome.Text.ToUpper(),
                     Email = txtEmail.Text,
                     Tipo = radFisica.Checked ? 'F' : 'J',
@@ -140,8 +123,7 @@ namespace CadastroImobiliaria
                     Logradouro = txtLogradouro.Text,
                     Numero = txtNumero.Text,
                 };
-                Guid guid = Guid.Parse(lblGuid.Text);
-                var sucesso = PessoaRepositorio.AlterarPessoa(guid, pessoaTemp);
+                var sucesso = PessoaRepositorio.AlterarPessoa(pessoaTemp);
 
                 if (!sucesso)
                 {
@@ -164,7 +146,8 @@ namespace CadastroImobiliaria
             try
             {
                 Guid guid = Guid.Parse(lblGuid.Text);
-                var sucesso = PessoaRepositorio.ExcluirPessoa(guid);
+                var pessoa = PessoaRepositorio.BuscarPessoaPeloId(guid);
+                var sucesso = PessoaRepositorio.ExcluirPessoa(pessoa);
 
                 if (!sucesso)
                 {
@@ -202,7 +185,7 @@ namespace CadastroImobiliaria
             txtLogradouro.Text = "";
             txtNumero.Text = "";
             lblGuid.Text = "";
-            errorProvider1.Clear();
+            errorProvider.Clear();
         }
     }
 }
