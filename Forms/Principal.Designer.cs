@@ -87,10 +87,7 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Principal";
-<<<<<<< HEAD
             WindowState = FormWindowState.Maximized;
-=======
->>>>>>> 5f40194bd8953c45031995c57c3232f256bfec29
             Load += Principal_Load;
             menuHeader.ResumeLayout(false);
             menuHeader.PerformLayout();

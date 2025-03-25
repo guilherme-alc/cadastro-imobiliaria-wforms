@@ -117,7 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-<<<<<<< HEAD
   <data name="&gt;&gt;clientesToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -158,7 +157,7 @@
   </data>
   <data name="&gt;&gt;menuHeader.Parent" xml:space="preserve">
     <value>$this</value>
-=======
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>8, 20</value>
@@ -171,12 +170,10 @@
   </data>
   <data name="menuHeader.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
->>>>>>> 5f40194bd8953c45031995c57c3232f256bfec29
   </data>
   <data name="menuHeader.Size" type="System.Drawing.Size, System.Drawing">
     <value>800, 28</value>
   </data>
-<<<<<<< HEAD
   <data name="sairToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 24</value>
   </data>
@@ -216,7 +213,7 @@
   </data>
   <data name="menuHeader.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
-=======
+  </data>
   <data name="sairToolStripMenuItem.Text" xml:space="preserve">
     <value>Sair</value>
   </data>
@@ -241,13 +238,10 @@
   </data>
   <data name="cadastroToolStripMenuItem.Text" xml:space="preserve">
     <value>Cadastro</value>
->>>>>>> 5f40194bd8953c45031995c57c3232f256bfec29
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-<<<<<<< HEAD
-=======
   <data name="&gt;&gt;menuHeader.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -266,7 +260,6 @@
   <data name="&gt;&gt;sairToolStripMenuItem.Name" xml:space="preserve">
     <value>sairToolStripMenuItem</value>
   </data>
->>>>>>> 5f40194bd8953c45031995c57c3232f256bfec29
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -274,13 +267,12 @@
   <data name="&gt;&gt;cadastroToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-<<<<<<< HEAD
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>812, 544</value>
   </data>
   <data name="&gt;&gt;clientesToolStripMenuItem.Name" xml:space="preserve">
     <value>clientesToolStripMenuItem</value>
-=======
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="menuHeader.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -299,15 +291,13 @@
   </data>
   <data name="picGroupLogo.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
->>>>>>> 5f40194bd8953c45031995c57c3232f256bfec29
   </data>
   <data name="&gt;&gt;sairToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-<<<<<<< HEAD
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-=======
+  </metadata>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Principal</value>
   </data>
@@ -322,7 +312,6 @@
   </data>
   <metadata name="menuHeader.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
->>>>>>> 5f40194bd8953c45031995c57c3232f256bfec29
   </metadata>
   <metadata name="menuHeader.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -333,10 +322,7 @@
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>79</value>
   </metadata>
-<<<<<<< HEAD
-=======
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
->>>>>>> 5f40194bd8953c45031995c57c3232f256bfec29
 </root>
