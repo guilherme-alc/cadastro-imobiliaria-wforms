@@ -10,25 +10,22 @@ namespace CadastroImobiliaria.Database
         private Conexao() { }
         public static SqlConnection ObterConexao()
         {
-            if (_connection == null)
-                _connection = new SqlConnection(_connectionString);
-
-            if(_connection.State != ConnectionState.Open)
+            try
             {
-                try
-                {
+                if (_connection == null)
+                    _connection = new SqlConnection(_connectionString);
+                if (_connection.State != ConnectionState.Open)
                     _connection.Open();
-                }
-                catch (SqlException ex)
-                {
-                    throw new Exception("Erro ao conectar ao banco de dados. Verifique a conexão.", ex);
-                }
-                catch (Exception ex)
-                {
-                    throw new Exception("Ocorreu um erro inesperado ao obter a conexão.", ex);
-                }
+                return _connection;
             }
-            return _connection;
+            catch (SqlException ex)
+            {
+                throw new Exception("Erro ao conectar ao banco de dados. Verifique a conexão.", ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro inesperado ao obter a conexão.", ex);
+            }
         }
         public static void FecharConexao()
         {
