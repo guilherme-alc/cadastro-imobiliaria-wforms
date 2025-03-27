@@ -1,8 +1,8 @@
 ﻿namespace CadastroImobiliaria.Negocio
 {
-    public static class ValidaDocumento
+    public static class ValidarDocumento
     {
-        public static bool ValidaCPF(string cpf)
+        public static bool ValidarCPF(string cpf)
         {
             cpf = cpf.Replace(",", "").Replace(".", "").Replace("-", "");
 
@@ -40,7 +40,7 @@
             return eValido;
         }
 
-        public static bool ValidaCNPJ(string cnpj)
+        public static bool ValidarCNPJ(string cnpj)
         {
             cnpj = cnpj
                 .Replace(".", "")

@@ -50,7 +50,7 @@ namespace CadastroImobiliaria.Repositorio
             return listaPessoas;
         }
 
-        public static List<Pessoa> PesquisaRegistros(string pesquisaUsuario)
+        public static List<Pessoa> PesquisarRegistros(string pesquisaUsuario)
         {
 
             List<Pessoa> registroEncontrados = new();
@@ -197,7 +197,7 @@ namespace CadastroImobiliaria.Repositorio
             return linhasAfetadas > 0;
         }
 
-        public static bool AlterarPessoa(PessoaDTO pessoaTemp)
+        public static bool AtualizarPessoa(Pessoa pessoa)
         {
             var query = @"UPDATE 
 	                        Pessoa 
@@ -215,25 +215,25 @@ namespace CadastroImobiliaria.Repositorio
 
                 using(SqlCommand comando = new SqlCommand(query, connection))
                 {
-                    comando.Parameters.AddWithValue("@Id", pessoaTemp.Id);
-                    comando.Parameters.AddWithValue("@Nome", pessoaTemp.Nome);
-                    comando.Parameters.AddWithValue("@Email", pessoaTemp.Email);
-                    comando.Parameters.AddWithValue("@Tipo", pessoaTemp.Tipo);
-                    comando.Parameters.AddWithValue("@Documento", pessoaTemp.Documento);
-                    comando.Parameters.AddWithValue("@Telefone", pessoaTemp.Telefone);
-                    comando.Parameters.AddWithValue("@CEP", pessoaTemp.CEP);
-                    comando.Parameters.AddWithValue("@Estado", pessoaTemp.Estado);
-                    comando.Parameters.AddWithValue("@Cidade", pessoaTemp.Cidade);
-                    comando.Parameters.AddWithValue("@Bairro", pessoaTemp.Bairro);
-                    comando.Parameters.AddWithValue("@Logradouro", pessoaTemp.Logradouro);
-                    comando.Parameters.AddWithValue("@Numero", pessoaTemp.Numero);
+                    comando.Parameters.AddWithValue("@Id", pessoa.Id);
+                    comando.Parameters.AddWithValue("@Nome", pessoa.Nome);
+                    comando.Parameters.AddWithValue("@Email", pessoa.Email);
+                    comando.Parameters.AddWithValue("@Tipo", pessoa.Tipo);
+                    comando.Parameters.AddWithValue("@Documento", pessoa.Documento);
+                    comando.Parameters.AddWithValue("@Telefone", pessoa.Telefone);
+                    comando.Parameters.AddWithValue("@CEP", pessoa.CEP);
+                    comando.Parameters.AddWithValue("@Estado", pessoa.Estado);
+                    comando.Parameters.AddWithValue("@Cidade", pessoa.Cidade);
+                    comando.Parameters.AddWithValue("@Bairro", pessoa.Bairro);
+                    comando.Parameters.AddWithValue("@Logradouro", pessoa.Logradouro);
+                    comando.Parameters.AddWithValue("@Numero", pessoa.Numero);
 
                     linhasAfetadas = comando.ExecuteNonQuery();
                 }
             } 
             catch (Exception ex)
             {
-                throw new Exception($"Falha ao alterar pessoa:\n{ex.Message}");
+                throw new Exception($"Falha ao atualizar cadastro:\n{ex.Message}");
             }
             return linhasAfetadas > 0;
         }
