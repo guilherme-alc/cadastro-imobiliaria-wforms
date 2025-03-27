@@ -1,26 +1,22 @@
-﻿using CadastroImobiliaria.Database;
-using CadastroImobiliaria.Models;
+﻿using CadastroImobiliaria.Models;
+using CadastroImobiliaria.Negocio;
 using CadastroImobiliaria.Repositorio;
-using CadastroImobiliaria.Validators;
+using CadastroImobiliaria.Helpers;
 
 namespace CadastroImobiliaria
 {
-    public partial class Pessoas : Form
+    public partial class FormRegistros : Form
     {
-        public Pessoas(Principal formPrincipal)
-        {
-            InitializeComponent();
-        }
-        public Pessoas()
+        public FormRegistros()
         {
             InitializeComponent();
         }
 
-        private void ListaPessoas_Load(object sender, EventArgs e)
+        private void CarregaFormularioPessoas(object sender, EventArgs e)
         {
             try
             {
-                dgvPessoas.DataSource = PessoaRepositorio.BuscarTodasPessoas();
+                dgvPessoas.DataSource = PessoaRepository.BuscarTodasPessoas();
                 dgvPessoas.Columns["Id"].Visible = false;
             }
             catch (Exception ex)
@@ -30,29 +26,7 @@ namespace CadastroImobiliaria
             }
         }
 
-<<<<<<< HEAD
-        private void menuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            _formPrincipal.Show();
-            this.Close();
-        }
-
-        private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form cadastro = new Cadastro(_formPrincipal);
-            cadastro.Show();
-        }
-
-        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Conexao.FecharConexao();
-            _formPrincipal.Close();
-        }
-
-=======
->>>>>>> 663c2f1e02b9b4d0e38cc67d163b7ead0826356b
-        private void btnPesquisa_Click(object sender, EventArgs e)
+        private void BotaoPesquisar(object sender, EventArgs e)
         {
             try
             {
@@ -64,7 +38,7 @@ namespace CadastroImobiliaria
                         .Replace("-", "");
                 }              
  
-                dgvPessoas.DataSource = PessoaRepositorio.PesquisaRegistros(pesquisaUsuario);
+                dgvPessoas.DataSource = PessoaRepository.PesquisaRegistros(pesquisaUsuario);
 
             }
             catch (Exception ex)
@@ -74,7 +48,7 @@ namespace CadastroImobiliaria
             }
         }
 
-        private void preencheCampos_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void PreencheCampos(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView dgv = (DataGridView)sender;
             DataGridViewRow row = dgv.Rows[e.RowIndex];
@@ -101,11 +75,11 @@ namespace CadastroImobiliaria
             txtNumero.Text = (string)listaValores[11].Value;
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e)
+        private void BotaoSalvar(object sender, EventArgs e)
         {
             if (radFisica.Checked)
             {
-                if (!Validacao.CPF(mtxtDocumento.Text))
+                if (!ValidaDocumento.ValidaCPF(mtxtDocumento.Text))
                 {
                     MessageBox.Show("CPF inválido", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -113,21 +87,11 @@ namespace CadastroImobiliaria
             }
             else if (radJuridica.Checked)
             {
-                if (!Validacao.CNPJ(mtxtDocumento.Text))
+                if (!ValidaDocumento.ValidaCNPJ(mtxtDocumento.Text))
                 {
                     MessageBox.Show("CNPJ inválido", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-            }
-            if (!Validacao.Email(txtEmail.Text))
-            {
-                MessageBox.Show("E-mail inválido", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (!Validacao.CEP(mtxtCEP.Text))
-            {
-                MessageBox.Show("CEP inválido", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
             }
             try
             {
@@ -137,16 +101,16 @@ namespace CadastroImobiliaria
                     Nome = txtNome.Text.ToUpper(),
                     Email = txtEmail.Text,
                     Tipo = radFisica.Checked ? 'F' : 'J',
-                    Documento = Formatacao.formataDocumento(mtxtDocumento.Text),
+                    Documento = FormataHelper.FormataDocumento(mtxtDocumento.Text),
                     Telefone = mtxtTelefone.Text,
-                    CEP = Formatacao.formataCEP(mtxtCEP.Text),
+                    CEP = FormataHelper.FormataCEP(mtxtCEP.Text),
                     Estado = txtEstado.Text,
                     Cidade = txtCidade.Text,
                     Bairro = txtBairro.Text,
                     Logradouro = txtLogradouro.Text,
                     Numero = txtNumero.Text,
                 };
-                var sucesso = PessoaRepositorio.AlterarPessoa(pessoaTemp);
+                var sucesso = PessoaRepository.AlterarPessoa(pessoaTemp);
 
                 if (!sucesso)
                 {
@@ -155,8 +119,8 @@ namespace CadastroImobiliaria
                 }
 
                 MessageBox.Show("Cadastro alterado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                limparCampos();
-                dgvPessoas.DataSource = PessoaRepositorio.BuscarTodasPessoas();
+                LimparCampos();
+                dgvPessoas.DataSource = PessoaRepository.BuscarTodasPessoas();
             }
             catch (Exception ex)
             {
@@ -164,13 +128,13 @@ namespace CadastroImobiliaria
             }
         }
 
-        private void btnExcluir_Click(object sender, EventArgs e)
+        private void BotaoExcluir(object sender, EventArgs e)
         {
             try
             {
                 Guid guid = Guid.Parse(lblGuid.Text);
-                var pessoa = PessoaRepositorio.BuscarPessoaPeloId(guid);
-                var sucesso = PessoaRepositorio.ExcluirPessoa(pessoa);
+                var pessoa = PessoaRepository.BuscarPessoaPeloId(guid);
+                var sucesso = PessoaRepository.ExcluirPessoa(pessoa);
 
                 if (!sucesso)
                 {
@@ -179,8 +143,8 @@ namespace CadastroImobiliaria
                 }
 
                 MessageBox.Show("Cadastro excluido com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                limparCampos();
-                dgvPessoas.DataSource = PessoaRepositorio.BuscarTodasPessoas();
+                LimparCampos();
+                dgvPessoas.DataSource = PessoaRepository.BuscarTodasPessoas();
             }
             catch (Exception ex)
             {
@@ -188,12 +152,12 @@ namespace CadastroImobiliaria
             }
         }
 
-        private void btnLimparCampos_Click(object sender, EventArgs e)
+        private void BotaoLimparCampos(object sender, EventArgs e)
         {
-            limparCampos();
+            LimparCampos();
         }
 
-        private void limparCampos()
+        private void LimparCampos()
         {
             txtNome.Text = string.Empty;
             txtEmail.Text = "";

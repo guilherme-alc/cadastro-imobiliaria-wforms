@@ -1,6 +1,6 @@
 ﻿namespace CadastroImobiliaria
 {
-    partial class Principal
+    partial class FormPrincipal
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             menuHeader = new MenuStrip();
-            cadastroToolStripMenuItem = new ToolStripMenuItem();
-            clientesToolStripMenuItem = new ToolStripMenuItem();
+            cadastrarMenuItem = new ToolStripMenuItem();
+            registrosMenuItem = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
             picGroupLogo = new PictureBox();
             menuHeader.SuspendLayout();
@@ -43,29 +43,29 @@
             resources.ApplyResources(menuHeader, "menuHeader");
             menuHeader.BackColor = Color.SteelBlue;
             menuHeader.ImageScalingSize = new Size(20, 20);
-            menuHeader.Items.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem, clientesToolStripMenuItem, sairToolStripMenuItem });
+            menuHeader.Items.AddRange(new ToolStripItem[] { cadastrarMenuItem, registrosMenuItem, sairToolStripMenuItem });
             menuHeader.Name = "menuHeader";
             // 
-            // cadastroToolStripMenuItem
+            // cadastrarMenuItem
             // 
-            resources.ApplyResources(cadastroToolStripMenuItem, "cadastroToolStripMenuItem");
-            cadastroToolStripMenuItem.ForeColor = SystemColors.Control;
-            cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            cadastroToolStripMenuItem.Click += cadastroToolStripMenuItem_Click;
+            resources.ApplyResources(cadastrarMenuItem, "cadastrarMenuItem");
+            cadastrarMenuItem.ForeColor = SystemColors.Control;
+            cadastrarMenuItem.Name = "cadastrarMenuItem";
+            cadastrarMenuItem.Click += MenuItemCadastrar;
             // 
-            // clientesToolStripMenuItem
+            // registrosMenuItem
             // 
-            resources.ApplyResources(clientesToolStripMenuItem, "clientesToolStripMenuItem");
-            clientesToolStripMenuItem.ForeColor = SystemColors.Control;
-            clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            clientesToolStripMenuItem.Click += clientesToolStripMenuItem_Click;
+            resources.ApplyResources(registrosMenuItem, "registrosMenuItem");
+            registrosMenuItem.ForeColor = SystemColors.Control;
+            registrosMenuItem.Name = "registrosMenuItem";
+            registrosMenuItem.Click += MenuItemPessoas;
             // 
             // sairToolStripMenuItem
             // 
             resources.ApplyResources(sairToolStripMenuItem, "sairToolStripMenuItem");
             sairToolStripMenuItem.ForeColor = SystemColors.Control;
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
+            sairToolStripMenuItem.Click += MenuItemSair;
             // 
             // picGroupLogo
             // 
@@ -88,7 +88,7 @@
             MinimizeBox = false;
             Name = "Principal";
             WindowState = FormWindowState.Maximized;
-            Load += Principal_Load;
+            Load += CarregaFormularioPrincipal;
             menuHeader.ResumeLayout(false);
             menuHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picGroupLogo).EndInit();
@@ -99,9 +99,9 @@
         #endregion
 
         private MenuStrip menuHeader;
-        private ToolStripMenuItem cadastroToolStripMenuItem;
+        private ToolStripMenuItem cadastrarMenuItem;
         private ToolStripMenuItem sairToolStripMenuItem;
-        private ToolStripMenuItem clientesToolStripMenuItem;
+        private ToolStripMenuItem registrosMenuItem;
         private PictureBox picGroupLogo;
     }
 }

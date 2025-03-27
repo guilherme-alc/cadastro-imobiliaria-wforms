@@ -3,14 +3,14 @@ using Microsoft.Data.SqlClient;
 
 namespace CadastroImobiliaria
 {
-    public partial class Principal : Form
+    public partial class FormPrincipal : Form
     {
-        public Principal()
+        public FormPrincipal()
         {
             InitializeComponent();
         }
 
-        private void Principal_Load(object sender, EventArgs e)
+        private void CarregaFormularioPrincipal(object sender, EventArgs e)
         {
             foreach (Control control in this.Controls)
             {
@@ -36,17 +36,17 @@ namespace CadastroImobiliaria
             }
         }
 
-        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        private void MenuItemSair(object sender, EventArgs e)
         {
             Conexao.FecharConexao();
             this.Close();
         }
 
-        private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
+        private void MenuItemCadastrar(object sender, EventArgs e)
         {
             foreach (Form form in MdiChildren)
             {
-                if (form is Cadastro)
+                if (form is FormCadastro)
                 {
                     form.Activate();
                     form.BringToFront();
@@ -54,18 +54,18 @@ namespace CadastroImobiliaria
                     return;
                 }
             }
-            Form cadastro = new Cadastro(this);
-            cadastro.MdiParent = this;
-            cadastro.Show();
-            cadastro.BringToFront();
+            Form cadastrar = new FormCadastro();
+            cadastrar.MdiParent = this;
+            cadastrar.Show();
+            cadastrar.BringToFront();
             picGroupLogo.SendToBack();
         }
 
-        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void MenuItemPessoas(object sender, EventArgs e)
         {
             foreach (Form form in MdiChildren)
             {
-                if (form is Pessoas)
+                if (form is FormRegistros)
                 {
                     form.Activate();
                     form.BringToFront();
@@ -73,10 +73,10 @@ namespace CadastroImobiliaria
                     return;
                 }
             }
-            Form pessoas = new Pessoas(this);
-            pessoas.MdiParent = this;
-            pessoas.Show();
-            pessoas.BringToFront();
+            Form registros = new FormRegistros();
+            registros.MdiParent = this;
+            registros.Show();
+            registros.BringToFront();
             picGroupLogo.SendToBack();
         }
     }

@@ -4,7 +4,7 @@ using Microsoft.Data.SqlClient;
 
 namespace CadastroImobiliaria.Repositorio
 {
-    public class PessoaRepositorio
+    public class PessoaRepository
     {
         public static List<Pessoa> BuscarTodasPessoas()
         {
