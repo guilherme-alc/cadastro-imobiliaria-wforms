@@ -1,8 +1,8 @@
-﻿namespace CadastroImobiliaria.Validators
+﻿namespace CadastroImobiliaria.Helpers
 {
-    public static class Formatacao
+    public static class FormataHelper
     {
-        public static string formataDocumento(string documento)
+        public static string FormataDocumento(string documento)
         {
             string documentoFormatado = documento
                 .Replace(".", "")
@@ -13,7 +13,7 @@
 
             return documentoFormatado;
         }
-        public static string formataCEP(string cep)
+        public static string FormataCEP(string cep)
         {
             string cepFormatado = cep
                 .Replace("-", "")

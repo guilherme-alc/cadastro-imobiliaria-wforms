@@ -1,6 +1,6 @@
 ﻿namespace CadastroImobiliaria
 {
-    partial class Pessoas
+    partial class FormRegistros
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pessoas));
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegistros));
             dgvPessoas = new DataGridView();
             txtPesquisa = new TextBox();
             btnPesquisa = new Button();
@@ -77,14 +77,14 @@
             dgvPessoas.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvPessoas.BackgroundColor = SystemColors.GradientActiveCaption;
             dgvPessoas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Window;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(155, 0, 70);
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
-            dgvPessoas.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(155, 0, 70);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvPessoas.DefaultCellStyle = dataGridViewCellStyle2;
             dgvPessoas.Location = new Point(0, 95);
             dgvPessoas.Margin = new Padding(3, 2, 3, 2);
             dgvPessoas.MaximumSize = new Size(1239, 188);
@@ -93,7 +93,7 @@
             dgvPessoas.RowHeadersWidth = 51;
             dgvPessoas.Size = new Size(831, 200);
             dgvPessoas.TabIndex = 19;
-            dgvPessoas.CellContentDoubleClick += preencheCampos_CellContentDoubleClick;
+            dgvPessoas.CellContentDoubleClick += PreencheCampos;
             // 
             // txtPesquisa
             // 
@@ -101,7 +101,7 @@
             txtPesquisa.Name = "txtPesquisa";
             txtPesquisa.Size = new Size(325, 23);
             txtPesquisa.TabIndex = 0;
-            txtPesquisa.Enter += btnPesquisa_Click;
+            txtPesquisa.Enter += BotaoPesquisar;
             // 
             // btnPesquisa
             // 
@@ -115,7 +115,7 @@
             btnPesquisa.TabIndex = 1;
             btnPesquisa.Text = "Pesquisar";
             btnPesquisa.UseVisualStyleBackColor = false;
-            btnPesquisa.Click += btnPesquisa_Click;
+            btnPesquisa.Click += BotaoPesquisar;
             // 
             // lblPesquisar
             // 
@@ -152,7 +152,7 @@
             btnSalvar.TabIndex = 14;
             btnSalvar.Text = "Salvar";
             btnSalvar.UseVisualStyleBackColor = false;
-            btnSalvar.Click += btnSalvar_Click;
+            btnSalvar.Click += BotaoSalvar;
             // 
             // lblNome
             // 
@@ -384,7 +384,7 @@
             btnExcluir.Size = new Size(41, 36);
             btnExcluir.TabIndex = 16;
             btnExcluir.UseVisualStyleBackColor = false;
-            btnExcluir.Click += btnExcluir_Click;
+            btnExcluir.Click += BotaoExcluir;
             // 
             // lblExcluir
             // 
@@ -434,7 +434,7 @@
             btnLimparCampos.TabIndex = 15;
             btnLimparCampos.Text = "Limpar";
             btnLimparCampos.UseVisualStyleBackColor = false;
-            btnLimparCampos.Click += btnLimparCampos_Click;
+            btnLimparCampos.Click += BotaoLimparCampos;
             // 
             // lblAlterarCadastro
             // 
@@ -469,7 +469,7 @@
             lblGuid.Size = new Size(0, 15);
             lblGuid.TabIndex = 29;
             // 
-            // Pessoas
+            // Registros
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -511,14 +511,15 @@
             Controls.Add(txtPesquisa);
             Controls.Add(dgvPessoas);
             ForeColor = SystemColors.ControlText;
+            FormBorderStyle = FormBorderStyle.SizableToolWindow;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
             MaximumSize = new Size(1255, 700);
             MinimumSize = new Size(812, 620);
-            Name = "Pessoas";
+            Name = "Registros";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Pessoas";
-            Load += ListaPessoas_Load;
+            Text = "Registros";
+            Load += CarregaFormularioPessoas;
             ((System.ComponentModel.ISupportInitialize)dgvPessoas).EndInit();
             ((System.ComponentModel.ISupportInitialize)pessoaBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)errorProvider).EndInit();

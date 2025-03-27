@@ -118,58 +118,223 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="cadastroToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 9.75pt, style=Bold</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>812, 518</value>
   </data>
-  <data name="cadastroToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 21</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblRadError.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="clientesToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 9.75pt, style=Bold</value>
+  <data name="lblRadError.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 15</value>
   </data>
-  <data name="clientesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 21</value>
+  <data name="lblRadError.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="clientesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Pessoas</value>
+  <data name="mtxtDocumento.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
   </data>
-  <data name="sairToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 9.75pt, style=Bold</value>
+  <data name="mtxtDocumento.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 223</value>
   </data>
-  <data name="sairToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 21</value>
+  <data name="mtxtDocumento.Mask" xml:space="preserve">
+    <value />
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="menuHeader.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 2, 0, 2</value>
+  <data name="mtxtDocumento.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 25</value>
   </data>
-  <data name="menuHeader.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1184, 25</value>
+  <data name="txtBairro.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="txtBairro.Location" type="System.Drawing.Point, System.Drawing">
+    <value>633, 326</value>
+  </data>
+  <data name="txtBairro.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 25</value>
+  </data>
+  <data name="txtCidade.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="txtCidade.Location" type="System.Drawing.Point, System.Drawing">
+    <value>436, 326</value>
+  </data>
+  <data name="txtCidade.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 25</value>
+  </data>
+  <data name="txtEstado.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="txtEstado.Location" type="System.Drawing.Point, System.Drawing">
+    <value>231, 326</value>
+  </data>
+  <data name="txtEstado.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 25</value>
+  </data>
+  <data name="lblBairro.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 11.25pt, style=Bold</value>
+  </data>
+  <data name="lblBairro.Location" type="System.Drawing.Point, System.Drawing">
+    <value>563, 328</value>
+  </data>
+  <data name="lblBairro.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 20</value>
+  </data>
+  <data name="lblCidade.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 11.25pt, style=Bold</value>
+  </data>
+  <data name="lblCidade.Location" type="System.Drawing.Point, System.Drawing">
+    <value>359, 328</value>
+  </data>
+  <data name="lblEstado.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 11.25pt, style=Bold</value>
+  </data>
+  <data name="lblEstado.Location" type="System.Drawing.Point, System.Drawing">
+    <value>155, 328</value>
+  </data>
+  <data name="lblNumero.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 11.25pt, style=Bold</value>
+  </data>
+  <data name="lblNumero.Location" type="System.Drawing.Point, System.Drawing">
+    <value>391, 366</value>
+  </data>
+  <data name="lblNumero.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 20</value>
+  </data>
+  <data name="txtNumero.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="txtNumero.Location" type="System.Drawing.Point, System.Drawing">
+    <value>391, 388</value>
+  </data>
+  <data name="txtNumero.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 25</value>
+  </data>
+  <data name="txtLogradouro.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="txtLogradouro.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 388</value>
+  </data>
+  <data name="txtLogradouro.Size" type="System.Drawing.Size, System.Drawing">
+    <value>342, 25</value>
+  </data>
+  <data name="lblLogradouro.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 11.25pt, style=Bold</value>
+  </data>
+  <data name="lblLogradouro.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 366</value>
+  </data>
+  <data name="lblLogradouro.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 20</value>
+  </data>
+  <data name="mtxtCEP.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="mtxtCEP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>67, 326</value>
+  </data>
+  <data name="mtxtCEP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 25</value>
+  </data>
+  <data name="lblTitulo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 11</value>
+  </data>
+  <data name="mtxtTelefone.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="mtxtTelefone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 281</value>
+  </data>
+  <data name="mtxtTelefone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 25</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="picGroupLogo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
+  <data name="btnLimparCampos.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
-  <data name="picGroupLogo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="btnLimparCampos.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 9pt, style=Bold</value>
   </data>
-  <data name="picGroupLogo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>986, 608</value>
+  <data name="btnLimparCampos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>702, 11</value>
   </data>
-  <data name="picGroupLogo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+  <data name="btnLimparCampos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 28</value>
   </data>
-  <data name="picGroupLogo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>186, 61</value>
+  <data name="btnCadastrar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>313, 443</value>
   </data>
-  <data name="picGroupLogo.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
+  <data name="txtEmail.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
+  <data name="txtEmail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 122</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1184, 741</value>
+  <data name="txtEmail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>342, 25</value>
+  </data>
+  <data name="txtNome.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="txtNome.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 69</value>
+  </data>
+  <data name="txtNome.Size" type="System.Drawing.Size, System.Drawing">
+    <value>342, 25</value>
+  </data>
+  <data name="lblTelefone.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 11.25pt, style=Bold</value>
+  </data>
+  <data name="lblTelefone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 260</value>
+  </data>
+  <data name="lblTelefone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 20</value>
+  </data>
+  <data name="lblCEP.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 11.25pt, style=Bold</value>
+  </data>
+  <data name="lblCEP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 328</value>
+  </data>
+  <data name="lblCEP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 20</value>
+  </data>
+  <data name="lblEmail.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 11.25pt, style=Bold</value>
+  </data>
+  <data name="lblEmail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 101</value>
+  </data>
+  <data name="radFisica.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 11.25pt, style=Bold</value>
+  </data>
+  <data name="radFisica.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 162</value>
+  </data>
+  <data name="radFisica.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 24</value>
+  </data>
+  <data name="lblDocumento.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 11.25pt, style=Bold</value>
+  </data>
+  <data name="lblDocumento.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 201</value>
+  </data>
+  <data name="lblDocumento.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 20</value>
+  </data>
+  <data name="radJuridica.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 11.25pt, style=Bold</value>
+  </data>
+  <data name="radJuridica.Location" type="System.Drawing.Point, System.Drawing">
+    <value>141, 162</value>
+  </data>
+  <data name="radJuridica.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 24</value>
+  </data>
+  <data name="pnlConteudo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>812, 518</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -816,7 +981,25 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 </value>
   </data>
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1255, 700</value>
+  </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1200, 780</value>
+    <value>812, 557</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Cadastrar</value>
+  </data>
+  <data name="lblNome.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 11.25pt, style=Bold</value>
+  </data>
+  <data name="lblNome.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 48</value>
+  </data>
+  <data name="lblNome.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 20</value>
   </data>
 </root>
