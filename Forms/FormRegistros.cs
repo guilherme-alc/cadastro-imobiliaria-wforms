@@ -38,7 +38,7 @@ namespace CadastroImobiliaria
                         .Replace("-", "");
                 }              
  
-                dgvPessoas.DataSource = PessoaRepository.PesquisaRegistros(pesquisaUsuario);
+                dgvPessoas.DataSource = PessoaRepository.PesquisarRegistros(pesquisaUsuario);
 
             }
             catch (Exception ex)
@@ -50,6 +50,8 @@ namespace CadastroImobiliaria
 
         private void PreencheCampos(object sender, DataGridViewCellEventArgs e)
         {
+            errorProvider.Clear();
+
             DataGridView dgv = (DataGridView)sender;
             DataGridViewRow row = dgv.Rows[e.RowIndex];
             var listaValores = row.Cells;
@@ -77,25 +79,10 @@ namespace CadastroImobiliaria
 
         private void BotaoSalvar(object sender, EventArgs e)
         {
-            if (radFisica.Checked)
-            {
-                if (!ValidaDocumento.ValidaCPF(mtxtDocumento.Text))
-                {
-                    MessageBox.Show("CPF inválido", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-            }
-            else if (radJuridica.Checked)
-            {
-                if (!ValidaDocumento.ValidaCNPJ(mtxtDocumento.Text))
-                {
-                    MessageBox.Show("CNPJ inválido", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-            }
+            errorProvider.Clear();   
             try
             {
-                PessoaDTO pessoaTemp = new PessoaDTO
+                PessoaDTO pessoaDto = new PessoaDTO
                 {
                     Id = Guid.Parse(lblGuid.Text),
                     Nome = txtNome.Text.ToUpper(),
@@ -110,11 +97,39 @@ namespace CadastroImobiliaria
                     Logradouro = txtLogradouro.Text,
                     Numero = txtNumero.Text,
                 };
-                var sucesso = PessoaRepository.AlterarPessoa(pessoaTemp);
 
-                if (!sucesso)
+                var erros = CadastroPessoa.AtualizarPessoa(pessoaDto);
+
+                if (erros.Any())
                 {
-                    MessageBox.Show("Nenhuma cadastro foi alterada.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    foreach (var erro in erros)
+                    {
+                        if (erro.Contains("Nome"))
+                            errorProvider.SetError(txtNome, erro);
+                        else if (erro.Contains("E-mail"))
+                            errorProvider.SetError(txtEmail, erro);
+                        else if (erro.Contains("Documento"))
+                            errorProvider.SetError(mtxtDocumento, erro);
+                        else if (erro.Contains("CPF"))
+                            errorProvider.SetError(mtxtDocumento, erro);
+                        else if (erro.Contains("CNPJ"))
+                            errorProvider.SetError(mtxtDocumento, erro);
+                        else if (erro.Contains("Telefone"))
+                            errorProvider.SetError(mtxtTelefone, erro);
+                        else if (erro.Contains("CEP"))
+                            errorProvider.SetError(mtxtCEP, erro);
+                        else if (erro.Contains("Estado"))
+                            errorProvider.SetError(txtEstado, erro);
+                        else if (erro.Contains("Cidade"))
+                            errorProvider.SetError(txtCidade, erro);
+                        else if (erro.Contains("Bairro"))
+                            errorProvider.SetError(txtBairro, erro);
+                        else if (erro.Contains("Logradouro"))
+                            errorProvider.SetError(txtLogradouro, erro);
+                        else if (erro.Contains("Número"))
+                            errorProvider.SetError(txtNumero, erro);
+                    }
+                    MessageBox.Show("Não foi possível salvar as informações.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -133,8 +148,7 @@ namespace CadastroImobiliaria
             try
             {
                 Guid guid = Guid.Parse(lblGuid.Text);
-                var pessoa = PessoaRepository.BuscarPessoaPeloId(guid);
-                var sucesso = PessoaRepository.ExcluirPessoa(pessoa);
+                var sucesso = CadastroPessoa.ExcluirPessoa(guid);
 
                 if (!sucesso)
                 {

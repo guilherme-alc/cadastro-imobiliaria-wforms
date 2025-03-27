@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegistros));
             dgvPessoas = new DataGridView();
             txtPesquisa = new TextBox();
@@ -77,14 +77,14 @@
             dgvPessoas.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvPessoas.BackgroundColor = SystemColors.GradientActiveCaption;
             dgvPessoas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(155, 0, 70);
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgvPessoas.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Window;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(155, 0, 70);
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            dgvPessoas.DefaultCellStyle = dataGridViewCellStyle1;
             dgvPessoas.Location = new Point(0, 95);
             dgvPessoas.Margin = new Padding(3, 2, 3, 2);
             dgvPessoas.MaximumSize = new Size(1239, 188);
@@ -261,7 +261,7 @@
             lblEstado.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblEstado.AutoSize = true;
             lblEstado.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            lblEstado.Location = new Point(504, 348);
+            lblEstado.Location = new Point(530, 348);
             lblEstado.Name = "lblEstado";
             lblEstado.Size = new Size(42, 15);
             lblEstado.TabIndex = 34;
@@ -305,7 +305,7 @@
             lblNumero.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             lblNumero.AutoSize = true;
             lblNumero.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
-            lblNumero.Location = new Point(583, 470);
+            lblNumero.Location = new Point(609, 470);
             lblNumero.Name = "lblNumero";
             lblNumero.Size = new Size(51, 15);
             lblNumero.TabIndex = 0;
@@ -342,7 +342,7 @@
             // 
             txtNumero.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             txtNumero.DataBindings.Add(new Binding("Text", pessoaBindingSource, "Numero", true));
-            txtNumero.Location = new Point(640, 466);
+            txtNumero.Location = new Point(666, 466);
             txtNumero.Name = "txtNumero";
             txtNumero.Size = new Size(64, 23);
             txtNumero.TabIndex = 13;
@@ -360,7 +360,7 @@
             // 
             txtEstado.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             txtEstado.DataBindings.Add(new Binding("Text", pessoaBindingSource, "Estado", true));
-            txtEstado.Location = new Point(552, 344);
+            txtEstado.Location = new Point(578, 344);
             txtEstado.Name = "txtEstado";
             txtEstado.Size = new Size(152, 23);
             txtEstado.TabIndex = 9;
@@ -469,7 +469,7 @@
             lblGuid.Size = new Size(0, 15);
             lblGuid.TabIndex = 29;
             // 
-            // Registros
+            // FormRegistros
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -516,7 +516,7 @@
             Margin = new Padding(3, 2, 3, 2);
             MaximumSize = new Size(1255, 700);
             MinimumSize = new Size(812, 620);
-            Name = "Registros";
+            Name = "FormRegistros";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Registros";
             Load += CarregaFormularioPessoas;
