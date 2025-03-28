@@ -14,6 +14,13 @@ namespace CadastroImobiliaria
 
         private void CarregaFormularioPessoas(object sender, EventArgs e)
         {
+            Image iconLixeiraOriginal = Properties.Resources.lixeira_icon_removebg_preview;
+            Image iconLixeiraRedimensionado = new Bitmap(iconLixeiraOriginal, new Size(20, 20));
+
+            Image iconDisqueteOriginal = Properties.Resources.disquete_icon;
+            Image iconDiqueteRedimensionado = new Bitmap(iconDisqueteOriginal, new Size(20, 20));
+            btnExcluir.Image = iconLixeiraRedimensionado;
+            btnSalvar.Image = iconDiqueteRedimensionado;
             try
             {
                 dgvPessoas.DataSource = PessoaService.ObtemTodosRegistros();
