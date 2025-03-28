@@ -16,7 +16,7 @@ namespace CadastroImobiliaria
         {
             try
             {
-                dgvPessoas.DataSource = PessoaRepository.BuscarTodasPessoas();
+                dgvPessoas.DataSource = PessoaService.ObtemTodosRegistros();
                 dgvPessoas.Columns["Id"].Visible = false;
             }
             catch (Exception ex)
@@ -30,16 +30,8 @@ namespace CadastroImobiliaria
         {
             try
             {
-                string pesquisaUsuario = txtPesquisa.Text.Trim().ToUpper();
-                if(!pesquisaUsuario.Contains("@"))
-                {
-                    pesquisaUsuario = pesquisaUsuario
-                        .Replace(".", "")
-                        .Replace("-", "");
-                }              
- 
-                dgvPessoas.DataSource = PessoaRepository.PesquisarRegistros(pesquisaUsuario);
-
+                List<Pessoa> pessoas = PessoaService.ObtemRegistroPorPesquisa(txtPesquisa.Text);
+                dgvPessoas.DataSource = pessoas;
             }
             catch (Exception ex)
             {
@@ -79,7 +71,7 @@ namespace CadastroImobiliaria
 
         private void BotaoSalvar(object sender, EventArgs e)
         {
-            errorProvider.Clear();   
+            errorProvider.Clear();
             try
             {
                 PessoaDTO pessoaDto = new PessoaDTO
@@ -98,7 +90,7 @@ namespace CadastroImobiliaria
                     Numero = txtNumero.Text,
                 };
 
-                var erros = CadastroPessoa.AtualizarPessoa(pessoaDto);
+                var erros = PessoaService.AtualizarPessoa(pessoaDto);
 
                 if (erros.Any())
                 {
@@ -135,7 +127,7 @@ namespace CadastroImobiliaria
 
                 MessageBox.Show("Cadastro alterado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LimparCampos();
-                dgvPessoas.DataSource = PessoaRepository.BuscarTodasPessoas();
+                dgvPessoas.DataSource = PessoaRepository.BuscarTodosPessoas();
             }
             catch (Exception ex)
             {
@@ -148,7 +140,7 @@ namespace CadastroImobiliaria
             try
             {
                 Guid guid = Guid.Parse(lblGuid.Text);
-                var sucesso = CadastroPessoa.ExcluirPessoa(guid);
+                var sucesso = PessoaService.ExcluirPessoa(guid);
 
                 if (!sucesso)
                 {
@@ -158,7 +150,7 @@ namespace CadastroImobiliaria
 
                 MessageBox.Show("Cadastro excluido com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LimparCampos();
-                dgvPessoas.DataSource = PessoaRepository.BuscarTodasPessoas();
+                dgvPessoas.DataSource = PessoaRepository.BuscarTodosPessoas();
             }
             catch (Exception ex)
             {

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace CadastroImobiliaria.Negocio
 {
-    public static class CadastroPessoa
+    public static class PessoaService
     {
         private static List<string> ValidarInformacoes(PessoaDTO pessoaDTO)
         {
@@ -40,33 +40,40 @@ namespace CadastroImobiliaria.Negocio
         }
         public static List<string> SalvarPessoa(PessoaDTO pessoaDTO)
         {
-            var erros = ValidarInformacoes(pessoaDTO);
-
-            if (erros.Count == 0)
+            try
             {
-                var pessoa = new Pessoa
+                var erros = ValidarInformacoes(pessoaDTO);
+
+                if (erros.Count == 0)
                 {
-                    Id = Guid.NewGuid(),
-                    Nome = pessoaDTO.Nome,
-                    Email = pessoaDTO.Email,
-                    Tipo = pessoaDTO.Tipo,
-                    Documento = pessoaDTO.Documento,
-                    Telefone = pessoaDTO.Telefone,
-                    CEP = pessoaDTO.CEP.Replace("-", ""),
-                    Estado = pessoaDTO.Estado,
-                    Cidade = pessoaDTO.Cidade,
-                    Bairro = pessoaDTO.Bairro,
-                    Logradouro = pessoaDTO.Logradouro,
-                    Numero = pessoaDTO.Numero,
-                    DataCadastro = DateTime.Now
-                };
+                    var pessoa = new Pessoa
+                    {
+                        Id = Guid.NewGuid(),
+                        Nome = pessoaDTO.Nome,
+                        Email = pessoaDTO.Email,
+                        Tipo = pessoaDTO.Tipo,
+                        Documento = pessoaDTO.Documento,
+                        Telefone = pessoaDTO.Telefone,
+                        CEP = pessoaDTO.CEP.Replace("-", ""),
+                        Estado = pessoaDTO.Estado,
+                        Cidade = pessoaDTO.Cidade,
+                        Bairro = pessoaDTO.Bairro,
+                        Logradouro = pessoaDTO.Logradouro,
+                        Numero = pessoaDTO.Numero,
+                        DataCadastro = DateTime.Now
+                    };
 
-                var salvaCadastro = PessoaRepository.AdicionarPessoa(pessoa);
-                if (!salvaCadastro)
-                    erros.Add("Nenhum cadastro foi realizado.");
+                    var salvaCadastro = PessoaRepository.AdicionarPessoa(pessoa);
+                    if (!salvaCadastro)
+                        erros.Add("Nenhum cadastro foi realizado.");
+                }
+
+                return erros;
             }
-
-            return erros;
+            catch
+            {
+                throw;
+            }
         }
 
         public static List<string> AtualizarPessoa(PessoaDTO pessoaDTO)
@@ -102,9 +109,48 @@ namespace CadastroImobiliaria.Negocio
 
         public static bool ExcluirPessoa(Guid guid)
         {
-            var pessoa = PessoaRepository.BuscarPessoaPeloId(guid);
-            var sucesso = PessoaRepository.ExcluirPessoa(pessoa);
-            return sucesso;
+            try
+            {
+                var pessoa = PessoaRepository.BuscarPessoaPeloId(guid);
+                var sucesso = PessoaRepository.ExcluirPessoa(pessoa);
+                return sucesso;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public static List<Pessoa> ObtemTodosRegistros()
+        {
+            try
+            {
+                var pessoas = PessoaRepository.BuscarTodasPessoas();
+                return pessoas;
+            }
+            catch
+            {
+                throw;
+            } 
+        }
+
+        public static List<Pessoa> ObtemRegistroPorPesquisa(string pesquisaUsuario)
+        {
+            try
+            {
+                pesquisaUsuario.Trim().ToUpper();
+                if (!pesquisaUsuario.Contains("@"))
+                {
+                    pesquisaUsuario = pesquisaUsuario
+                        .Replace(".", "")
+                        .Replace("-", "");
+                }
+                return PessoaRepository.PesquisarRegistros(pesquisaUsuario);
+            }
+            catch
+            {
+                throw;
+            }
         }
     }
 }

@@ -56,7 +56,7 @@ namespace CadastroImobiliaria
                     Numero = txtNumero.Text.Trim(),
                 };
 
-                var erros = CadastroPessoa.SalvarPessoa(pessoaDto);
+                var erros = PessoaService.SalvarPessoa(pessoaDto);
 
                 if (erros.Any())
                 {

@@ -101,7 +101,6 @@
             txtPesquisa.Name = "txtPesquisa";
             txtPesquisa.Size = new Size(325, 23);
             txtPesquisa.TabIndex = 0;
-            txtPesquisa.Enter += BotaoPesquisar;
             // 
             // btnPesquisa
             // 
