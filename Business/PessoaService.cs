@@ -70,41 +70,52 @@ namespace CadastroImobiliaria.Negocio
 
                 return erros;
             }
-            catch
+            catch (InvalidOperationException ex)
             {
-                throw;
+                throw new InvalidOperationException("Não foi possível realizar o cadastro. Já existe uma pessoa cadastrada com esse documento.");
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Não foi possível realizar o cadastro. Revise os dados e verifique se o banco está em execução.");
             }
         }
 
         public static List<string> AtualizarPessoa(PessoaDTO pessoaDTO)
         {
-            var erros = ValidarInformacoes(pessoaDTO);
-
-            if (erros.Count == 0)
+            try
             {
-                var pessoa = new Pessoa
+                var erros = ValidarInformacoes(pessoaDTO);
+
+                if (erros.Count == 0)
                 {
-                    Id = pessoaDTO.Id,
-                    Nome = pessoaDTO.Nome,
-                    Email = pessoaDTO.Email,
-                    Tipo = pessoaDTO.Tipo,
-                    Documento = pessoaDTO.Documento,
-                    Telefone = pessoaDTO.Telefone,
-                    CEP = pessoaDTO.CEP.Replace("-", ""),
-                    Estado = pessoaDTO.Estado,
-                    Cidade = pessoaDTO.Cidade,
-                    Bairro = pessoaDTO.Bairro,
-                    Logradouro = pessoaDTO.Logradouro,
-                    Numero = pessoaDTO.Numero,
-                    DataCadastro = DateTime.Now
-                };
+                    var pessoa = new Pessoa
+                    {
+                        Id = pessoaDTO.Id,
+                        Nome = pessoaDTO.Nome,
+                        Email = pessoaDTO.Email,
+                        Tipo = pessoaDTO.Tipo,
+                        Documento = pessoaDTO.Documento,
+                        Telefone = pessoaDTO.Telefone,
+                        CEP = pessoaDTO.CEP.Replace("-", ""),
+                        Estado = pessoaDTO.Estado,
+                        Cidade = pessoaDTO.Cidade,
+                        Bairro = pessoaDTO.Bairro,
+                        Logradouro = pessoaDTO.Logradouro,
+                        Numero = pessoaDTO.Numero,
+                        DataCadastro = DateTime.Now
+                    };
 
-                var salvaCadastro = PessoaRepository.AtualizarPessoa(pessoa);
-                if (!salvaCadastro)
-                    erros.Add("Nenhum cadastro foi atualizado.");
+                    var salvaCadastro = PessoaRepository.AtualizarPessoa(pessoa);
+                    if (!salvaCadastro)
+                        erros.Add("Nenhum cadastro foi atualizado.");
+                }
+
+                return erros;
             }
-
-            return erros;
+            catch (Exception ex)
+            {
+                throw new Exception("Não foi possível atualizar o cadastro. Revise os dados e verifique se o banco está em execução.");
+            }
         }
 
         public static bool ExcluirPessoa(Guid guid)
@@ -115,9 +126,9 @@ namespace CadastroImobiliaria.Negocio
                 var sucesso = PessoaRepository.ExcluirPessoa(pessoa);
                 return sucesso;
             }
-            catch
+            catch (Exception ex)
             {
-                throw;
+                throw new Exception("Não foi possível excluir o cadastro. Verifique se o banco de dados está em execução.");
             }
         }
 
@@ -128,9 +139,9 @@ namespace CadastroImobiliaria.Negocio
                 var pessoas = PessoaRepository.BuscarTodasPessoas();
                 return pessoas;
             }
-            catch
+            catch (Exception ex)
             {
-                throw;
+                throw new Exception("Não foi possível carregar as pessoas cadastradas. Verifique se o servidor está em execução.");
             } 
         }
 
@@ -147,9 +158,9 @@ namespace CadastroImobiliaria.Negocio
                 }
                 return PessoaRepository.PesquisarRegistros(pesquisaUsuario);
             }
-            catch
+            catch (Exception ex)
             {
-                throw;
+                throw new Exception("Não foi possível realizar a pesquisa. Verifique se o servidor está em execução.");
             }
         }
     }

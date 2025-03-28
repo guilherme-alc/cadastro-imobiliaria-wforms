@@ -21,7 +21,7 @@ namespace CadastroImobiliaria
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"{ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"{ex.Message}", "Erro ao carregar registros", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }
@@ -35,7 +35,7 @@ namespace CadastroImobiliaria
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Falha interna no servidor\n{ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"{ex.Message}", "Erro ao realizar pesquisa", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }
@@ -121,17 +121,17 @@ namespace CadastroImobiliaria
                         else if (erro.Contains("Número"))
                             errorProvider.SetError(txtNumero, erro);
                     }
-                    MessageBox.Show("Não foi possível salvar as informações.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Não foi possível salvar as informações. Verifique os dados preenchidos", "Informações inválidas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
-                MessageBox.Show("Cadastro alterado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Cadastro alterado com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LimparCampos();
-                dgvPessoas.DataSource = PessoaRepository.BuscarTodosPessoas();
+                dgvPessoas.DataSource = PessoaRepository.BuscarTodasPessoas();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Falha interna no servidor:\n{ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"{ex.Message}", "Erro ao atualizar cadastro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -144,17 +144,21 @@ namespace CadastroImobiliaria
 
                 if (!sucesso)
                 {
-                    MessageBox.Show("Nenhuma cadastro foi excluido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Nenhuma cadastro foi excluido.", "Erro ao excluir", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                MessageBox.Show("Cadastro excluido com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Cadastro excluido com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LimparCampos();
-                dgvPessoas.DataSource = PessoaRepository.BuscarTodosPessoas();
+                dgvPessoas.DataSource = PessoaRepository.BuscarTodasPessoas();
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show($"Não há pessoas para excluir. Certifique-se de que uma pessoa foi selecionada.", "Nenhum registro selecionado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Falha interna no servidor:\n{ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"{ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

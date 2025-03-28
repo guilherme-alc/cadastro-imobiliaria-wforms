@@ -26,12 +26,12 @@ namespace CadastroImobiliaria
             }
             catch (SqlException ex)
             {
-                MessageBox.Show($"Falha interna no servidor:\n{ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Não foi possível conectar ao servidor SQL. Qualquer adição ou alteração de informações não terá efeito.\n\nDescrição: {ex.Message}", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Falha interna no servidor:\n{ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Não foi possível conectar ao servidor SQL. Qualquer adição ou alteração de informações não terá efeito.\n\nDescrição: {ex.Message}", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
         }

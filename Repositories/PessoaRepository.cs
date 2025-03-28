@@ -91,7 +91,7 @@ namespace CadastroImobiliaria.Repositorio
             }
             catch (Exception ex)
             {
-                throw new Exception($"Falha ao buscar pessoa:\n{ex.Message}");
+                throw new Exception($"Falha ao realizar pesquisa:\n{ex.Message}");
             }
 
             return registroEncontrados;
@@ -134,14 +134,14 @@ namespace CadastroImobiliaria.Repositorio
                         }
                     } else
                     {
-                        throw new Exception("Nenhum registro encontrado");
+                        throw new Exception($"Nenhum registro foi encontrado com o Id {id}");
                     }
                 }
                 return pessoa;
             }
             catch (Exception ex)
             {
-                throw new Exception($"Falha ao buscar pessoa:\n{ex.Message}");
+                throw new Exception($"Falha ao localizar registro:\n{ex.Message}");
             }
         }
 
@@ -168,7 +168,7 @@ namespace CadastroImobiliaria.Repositorio
 
                 if (registroEncontrado > 0)
                 {
-                    throw new Exception($"Já existe uma pessoa cadastrada com o documento {pessoa.Documento}");
+                    throw new InvalidOperationException($"Já existe uma pessoa cadastrada com o documento {pessoa.Documento}");
                 }
 
                 using(SqlCommand comando = new SqlCommand(query, connection))
@@ -189,6 +189,10 @@ namespace CadastroImobiliaria.Repositorio
 
                     linhasAfetadas = comando.ExecuteNonQuery();
                 }
+            }
+            catch (InvalidOperationException ex)
+            {
+                throw new InvalidOperationException($"Falha ao inserir pessoa:\n{ex.Message}");
             }
             catch (Exception ex)
             {

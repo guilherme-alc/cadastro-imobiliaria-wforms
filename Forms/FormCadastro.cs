@@ -92,16 +92,16 @@ namespace CadastroImobiliaria
                         else if (erro.Contains("Número"))
                             errorProvider.SetError(txtNumero, erro);
                     }
-                    MessageBox.Show("Nenhuma pessoa foi adicionada.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Não foi possível cadastrar pessoa. Verifique os dados preenchidos", "Informações inválidas", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                MessageBox.Show("Pessoa cadastrada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Pessoa cadastrada com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LimparCampos();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Falha interna no servidor:\n{ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"{ex.Message}", "Erro ao cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
