@@ -75,7 +75,7 @@
             picGroupLogo.Name = "picGroupLogo";
             picGroupLogo.TabStop = false;
             // 
-            // Principal
+            // FormPrincipal
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
@@ -86,7 +86,7 @@
             MainMenuStrip = menuHeader;
             MaximizeBox = false;
             MinimizeBox = false;
-            Name = "Principal";
+            Name = "FormPrincipal";
             WindowState = FormWindowState.Maximized;
             Load += CarregaFormularioPrincipal;
             menuHeader.ResumeLayout(false);

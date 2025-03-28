@@ -121,17 +121,11 @@
   <data name="cadastrarMenuItem.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI Semibold, 9.75pt, style=Bold</value>
   </data>
-  <data name="cadastrarMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 21</value>
-  </data>
   <data name="cadastrarMenuItem.Text" xml:space="preserve">
     <value>Cadastrar</value>
   </data>
   <data name="registrosMenuItem.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI Semibold, 9.75pt, style=Bold</value>
-  </data>
-  <data name="registrosMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 21</value>
   </data>
   <data name="registrosMenuItem.Text" xml:space="preserve">
     <value>Registros</value>
@@ -820,6 +814,6 @@
 </value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1200, 780</value>
+    <value>1200, 718</value>
   </data>
 </root>

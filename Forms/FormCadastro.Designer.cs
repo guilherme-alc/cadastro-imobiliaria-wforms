@@ -42,23 +42,27 @@
             btnCadastrar = new Button();
             btnLimparCampos = new Button();
             pnlConteudo = new Panel();
-            lblRadError = new Label();
-            mtxtDocumento = new MaskedTextBox();
+            grupoEndereco = new GroupBox();
+            mtxtCEP = new MaskedTextBox();
             txtBairro = new TextBox();
+            lblLogradouro = new Label();
             txtCidade = new TextBox();
+            txtLogradouro = new TextBox();
             txtEstado = new TextBox();
+            txtNumero = new TextBox();
             lblBairro = new Label();
+            lblNumero = new Label();
             lblCidade = new Label();
             lblEstado = new Label();
-            lblNumero = new Label();
-            txtNumero = new TextBox();
-            txtLogradouro = new TextBox();
-            lblLogradouro = new Label();
-            mtxtCEP = new MaskedTextBox();
-            lblTitulo = new Label();
+            grupoDadosPessoais = new GroupBox();
+            lblRadError = new Label();
+            mtxtDocumento = new MaskedTextBox();
             mtxtTelefone = new MaskedTextBox();
+            lblTitulo = new Label();
             errorProvider = new ErrorProvider(components);
             pnlConteudo.SuspendLayout();
+            grupoEndereco.SuspendLayout();
+            grupoDadosPessoais.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)errorProvider).BeginInit();
             SuspendLayout();
             // 
@@ -169,36 +173,150 @@
             // 
             resources.ApplyResources(pnlConteudo, "pnlConteudo");
             pnlConteudo.BackColor = SystemColors.ControlLight;
-            pnlConteudo.Controls.Add(lblRadError);
-            pnlConteudo.Controls.Add(mtxtDocumento);
-            pnlConteudo.Controls.Add(txtBairro);
-            pnlConteudo.Controls.Add(txtCidade);
-            pnlConteudo.Controls.Add(txtEstado);
-            pnlConteudo.Controls.Add(lblBairro);
-            pnlConteudo.Controls.Add(lblCidade);
-            pnlConteudo.Controls.Add(lblEstado);
-            pnlConteudo.Controls.Add(lblNumero);
-            pnlConteudo.Controls.Add(txtNumero);
-            pnlConteudo.Controls.Add(txtLogradouro);
-            pnlConteudo.Controls.Add(lblLogradouro);
-            pnlConteudo.Controls.Add(mtxtCEP);
+            pnlConteudo.Controls.Add(grupoEndereco);
+            pnlConteudo.Controls.Add(grupoDadosPessoais);
             pnlConteudo.Controls.Add(lblTitulo);
-            pnlConteudo.Controls.Add(mtxtTelefone);
             pnlConteudo.Controls.Add(btnLimparCampos);
             pnlConteudo.Controls.Add(btnCadastrar);
-            pnlConteudo.Controls.Add(lblNome);
-            pnlConteudo.Controls.Add(txtEmail);
-            pnlConteudo.Controls.Add(txtNome);
-            pnlConteudo.Controls.Add(lblTelefone);
-            pnlConteudo.Controls.Add(lblCEP);
-            pnlConteudo.Controls.Add(lblEmail);
-            pnlConteudo.Controls.Add(radFisica);
-            pnlConteudo.Controls.Add(lblDocumento);
-            pnlConteudo.Controls.Add(radJuridica);
             errorProvider.SetError(pnlConteudo, resources.GetString("pnlConteudo.Error"));
             errorProvider.SetIconAlignment(pnlConteudo, (ErrorIconAlignment)resources.GetObject("pnlConteudo.IconAlignment"));
             errorProvider.SetIconPadding(pnlConteudo, (int)resources.GetObject("pnlConteudo.IconPadding"));
             pnlConteudo.Name = "pnlConteudo";
+            // 
+            // grupoEndereco
+            // 
+            resources.ApplyResources(grupoEndereco, "grupoEndereco");
+            grupoEndereco.Controls.Add(lblCEP);
+            grupoEndereco.Controls.Add(mtxtCEP);
+            grupoEndereco.Controls.Add(txtBairro);
+            grupoEndereco.Controls.Add(lblLogradouro);
+            grupoEndereco.Controls.Add(txtCidade);
+            grupoEndereco.Controls.Add(txtLogradouro);
+            grupoEndereco.Controls.Add(txtEstado);
+            grupoEndereco.Controls.Add(txtNumero);
+            grupoEndereco.Controls.Add(lblBairro);
+            grupoEndereco.Controls.Add(lblNumero);
+            grupoEndereco.Controls.Add(lblCidade);
+            grupoEndereco.Controls.Add(lblEstado);
+            errorProvider.SetError(grupoEndereco, resources.GetString("grupoEndereco.Error"));
+            errorProvider.SetIconAlignment(grupoEndereco, (ErrorIconAlignment)resources.GetObject("grupoEndereco.IconAlignment"));
+            errorProvider.SetIconPadding(grupoEndereco, (int)resources.GetObject("grupoEndereco.IconPadding"));
+            grupoEndereco.Name = "grupoEndereco";
+            grupoEndereco.TabStop = false;
+            // 
+            // mtxtCEP
+            // 
+            resources.ApplyResources(mtxtCEP, "mtxtCEP");
+            errorProvider.SetError(mtxtCEP, resources.GetString("mtxtCEP.Error"));
+            errorProvider.SetIconAlignment(mtxtCEP, (ErrorIconAlignment)resources.GetObject("mtxtCEP.IconAlignment"));
+            errorProvider.SetIconPadding(mtxtCEP, (int)resources.GetObject("mtxtCEP.IconPadding"));
+            mtxtCEP.Name = "mtxtCEP";
+            mtxtCEP.Validated += ValidaCamposMascara;
+            // 
+            // txtBairro
+            // 
+            resources.ApplyResources(txtBairro, "txtBairro");
+            errorProvider.SetError(txtBairro, resources.GetString("txtBairro.Error"));
+            errorProvider.SetIconAlignment(txtBairro, (ErrorIconAlignment)resources.GetObject("txtBairro.IconAlignment"));
+            errorProvider.SetIconPadding(txtBairro, (int)resources.GetObject("txtBairro.IconPadding"));
+            txtBairro.Name = "txtBairro";
+            txtBairro.Validated += ValidaCamposTexto;
+            // 
+            // lblLogradouro
+            // 
+            resources.ApplyResources(lblLogradouro, "lblLogradouro");
+            errorProvider.SetError(lblLogradouro, resources.GetString("lblLogradouro.Error"));
+            errorProvider.SetIconAlignment(lblLogradouro, (ErrorIconAlignment)resources.GetObject("lblLogradouro.IconAlignment"));
+            errorProvider.SetIconPadding(lblLogradouro, (int)resources.GetObject("lblLogradouro.IconPadding"));
+            lblLogradouro.Name = "lblLogradouro";
+            // 
+            // txtCidade
+            // 
+            resources.ApplyResources(txtCidade, "txtCidade");
+            errorProvider.SetError(txtCidade, resources.GetString("txtCidade.Error"));
+            errorProvider.SetIconAlignment(txtCidade, (ErrorIconAlignment)resources.GetObject("txtCidade.IconAlignment"));
+            errorProvider.SetIconPadding(txtCidade, (int)resources.GetObject("txtCidade.IconPadding"));
+            txtCidade.Name = "txtCidade";
+            txtCidade.Validated += ValidaCamposTexto;
+            // 
+            // txtLogradouro
+            // 
+            resources.ApplyResources(txtLogradouro, "txtLogradouro");
+            errorProvider.SetError(txtLogradouro, resources.GetString("txtLogradouro.Error"));
+            errorProvider.SetIconAlignment(txtLogradouro, (ErrorIconAlignment)resources.GetObject("txtLogradouro.IconAlignment"));
+            errorProvider.SetIconPadding(txtLogradouro, (int)resources.GetObject("txtLogradouro.IconPadding"));
+            txtLogradouro.Name = "txtLogradouro";
+            txtLogradouro.Validated += ValidaCamposTexto;
+            // 
+            // txtEstado
+            // 
+            resources.ApplyResources(txtEstado, "txtEstado");
+            errorProvider.SetError(txtEstado, resources.GetString("txtEstado.Error"));
+            errorProvider.SetIconAlignment(txtEstado, (ErrorIconAlignment)resources.GetObject("txtEstado.IconAlignment"));
+            errorProvider.SetIconPadding(txtEstado, (int)resources.GetObject("txtEstado.IconPadding"));
+            txtEstado.Name = "txtEstado";
+            txtEstado.Validated += ValidaCamposTexto;
+            // 
+            // txtNumero
+            // 
+            resources.ApplyResources(txtNumero, "txtNumero");
+            errorProvider.SetError(txtNumero, resources.GetString("txtNumero.Error"));
+            errorProvider.SetIconAlignment(txtNumero, (ErrorIconAlignment)resources.GetObject("txtNumero.IconAlignment"));
+            errorProvider.SetIconPadding(txtNumero, (int)resources.GetObject("txtNumero.IconPadding"));
+            txtNumero.Name = "txtNumero";
+            txtNumero.Validated += ValidaCamposTexto;
+            // 
+            // lblBairro
+            // 
+            resources.ApplyResources(lblBairro, "lblBairro");
+            errorProvider.SetError(lblBairro, resources.GetString("lblBairro.Error"));
+            errorProvider.SetIconAlignment(lblBairro, (ErrorIconAlignment)resources.GetObject("lblBairro.IconAlignment"));
+            errorProvider.SetIconPadding(lblBairro, (int)resources.GetObject("lblBairro.IconPadding"));
+            lblBairro.Name = "lblBairro";
+            // 
+            // lblNumero
+            // 
+            resources.ApplyResources(lblNumero, "lblNumero");
+            errorProvider.SetError(lblNumero, resources.GetString("lblNumero.Error"));
+            errorProvider.SetIconAlignment(lblNumero, (ErrorIconAlignment)resources.GetObject("lblNumero.IconAlignment"));
+            errorProvider.SetIconPadding(lblNumero, (int)resources.GetObject("lblNumero.IconPadding"));
+            lblNumero.Name = "lblNumero";
+            // 
+            // lblCidade
+            // 
+            resources.ApplyResources(lblCidade, "lblCidade");
+            errorProvider.SetError(lblCidade, resources.GetString("lblCidade.Error"));
+            errorProvider.SetIconAlignment(lblCidade, (ErrorIconAlignment)resources.GetObject("lblCidade.IconAlignment"));
+            errorProvider.SetIconPadding(lblCidade, (int)resources.GetObject("lblCidade.IconPadding"));
+            lblCidade.Name = "lblCidade";
+            // 
+            // lblEstado
+            // 
+            resources.ApplyResources(lblEstado, "lblEstado");
+            errorProvider.SetError(lblEstado, resources.GetString("lblEstado.Error"));
+            errorProvider.SetIconAlignment(lblEstado, (ErrorIconAlignment)resources.GetObject("lblEstado.IconAlignment"));
+            errorProvider.SetIconPadding(lblEstado, (int)resources.GetObject("lblEstado.IconPadding"));
+            lblEstado.Name = "lblEstado";
+            // 
+            // grupoDadosPessoais
+            // 
+            resources.ApplyResources(grupoDadosPessoais, "grupoDadosPessoais");
+            grupoDadosPessoais.Controls.Add(lblNome);
+            grupoDadosPessoais.Controls.Add(lblRadError);
+            grupoDadosPessoais.Controls.Add(radJuridica);
+            grupoDadosPessoais.Controls.Add(mtxtDocumento);
+            grupoDadosPessoais.Controls.Add(lblDocumento);
+            grupoDadosPessoais.Controls.Add(radFisica);
+            grupoDadosPessoais.Controls.Add(lblEmail);
+            grupoDadosPessoais.Controls.Add(lblTelefone);
+            grupoDadosPessoais.Controls.Add(txtNome);
+            grupoDadosPessoais.Controls.Add(txtEmail);
+            grupoDadosPessoais.Controls.Add(mtxtTelefone);
+            errorProvider.SetError(grupoDadosPessoais, resources.GetString("grupoDadosPessoais.Error"));
+            errorProvider.SetIconAlignment(grupoDadosPessoais, (ErrorIconAlignment)resources.GetObject("grupoDadosPessoais.IconAlignment"));
+            errorProvider.SetIconPadding(grupoDadosPessoais, (int)resources.GetObject("grupoDadosPessoais.IconPadding"));
+            grupoDadosPessoais.Name = "grupoDadosPessoais";
+            grupoDadosPessoais.TabStop = false;
             // 
             // lblRadError
             // 
@@ -218,99 +336,14 @@
             mtxtDocumento.Name = "mtxtDocumento";
             mtxtDocumento.Validated += ValidaCamposMascara;
             // 
-            // txtBairro
+            // mtxtTelefone
             // 
-            resources.ApplyResources(txtBairro, "txtBairro");
-            errorProvider.SetError(txtBairro, resources.GetString("txtBairro.Error"));
-            errorProvider.SetIconAlignment(txtBairro, (ErrorIconAlignment)resources.GetObject("txtBairro.IconAlignment"));
-            errorProvider.SetIconPadding(txtBairro, (int)resources.GetObject("txtBairro.IconPadding"));
-            txtBairro.Name = "txtBairro";
-            txtBairro.Validated += ValidaCamposTexto;
-            // 
-            // txtCidade
-            // 
-            resources.ApplyResources(txtCidade, "txtCidade");
-            errorProvider.SetError(txtCidade, resources.GetString("txtCidade.Error"));
-            errorProvider.SetIconAlignment(txtCidade, (ErrorIconAlignment)resources.GetObject("txtCidade.IconAlignment"));
-            errorProvider.SetIconPadding(txtCidade, (int)resources.GetObject("txtCidade.IconPadding"));
-            txtCidade.Name = "txtCidade";
-            txtCidade.Validated += ValidaCamposTexto;
-            // 
-            // txtEstado
-            // 
-            resources.ApplyResources(txtEstado, "txtEstado");
-            errorProvider.SetError(txtEstado, resources.GetString("txtEstado.Error"));
-            errorProvider.SetIconAlignment(txtEstado, (ErrorIconAlignment)resources.GetObject("txtEstado.IconAlignment"));
-            errorProvider.SetIconPadding(txtEstado, (int)resources.GetObject("txtEstado.IconPadding"));
-            txtEstado.Name = "txtEstado";
-            txtEstado.Validated += ValidaCamposTexto;
-            // 
-            // lblBairro
-            // 
-            resources.ApplyResources(lblBairro, "lblBairro");
-            errorProvider.SetError(lblBairro, resources.GetString("lblBairro.Error"));
-            errorProvider.SetIconAlignment(lblBairro, (ErrorIconAlignment)resources.GetObject("lblBairro.IconAlignment"));
-            errorProvider.SetIconPadding(lblBairro, (int)resources.GetObject("lblBairro.IconPadding"));
-            lblBairro.Name = "lblBairro";
-            // 
-            // lblCidade
-            // 
-            resources.ApplyResources(lblCidade, "lblCidade");
-            errorProvider.SetError(lblCidade, resources.GetString("lblCidade.Error"));
-            errorProvider.SetIconAlignment(lblCidade, (ErrorIconAlignment)resources.GetObject("lblCidade.IconAlignment"));
-            errorProvider.SetIconPadding(lblCidade, (int)resources.GetObject("lblCidade.IconPadding"));
-            lblCidade.Name = "lblCidade";
-            // 
-            // lblEstado
-            // 
-            resources.ApplyResources(lblEstado, "lblEstado");
-            errorProvider.SetError(lblEstado, resources.GetString("lblEstado.Error"));
-            errorProvider.SetIconAlignment(lblEstado, (ErrorIconAlignment)resources.GetObject("lblEstado.IconAlignment"));
-            errorProvider.SetIconPadding(lblEstado, (int)resources.GetObject("lblEstado.IconPadding"));
-            lblEstado.Name = "lblEstado";
-            // 
-            // lblNumero
-            // 
-            resources.ApplyResources(lblNumero, "lblNumero");
-            errorProvider.SetError(lblNumero, resources.GetString("lblNumero.Error"));
-            errorProvider.SetIconAlignment(lblNumero, (ErrorIconAlignment)resources.GetObject("lblNumero.IconAlignment"));
-            errorProvider.SetIconPadding(lblNumero, (int)resources.GetObject("lblNumero.IconPadding"));
-            lblNumero.Name = "lblNumero";
-            // 
-            // txtNumero
-            // 
-            resources.ApplyResources(txtNumero, "txtNumero");
-            errorProvider.SetError(txtNumero, resources.GetString("txtNumero.Error"));
-            errorProvider.SetIconAlignment(txtNumero, (ErrorIconAlignment)resources.GetObject("txtNumero.IconAlignment"));
-            errorProvider.SetIconPadding(txtNumero, (int)resources.GetObject("txtNumero.IconPadding"));
-            txtNumero.Name = "txtNumero";
-            txtNumero.Validated += ValidaCamposTexto;
-            // 
-            // txtLogradouro
-            // 
-            resources.ApplyResources(txtLogradouro, "txtLogradouro");
-            errorProvider.SetError(txtLogradouro, resources.GetString("txtLogradouro.Error"));
-            errorProvider.SetIconAlignment(txtLogradouro, (ErrorIconAlignment)resources.GetObject("txtLogradouro.IconAlignment"));
-            errorProvider.SetIconPadding(txtLogradouro, (int)resources.GetObject("txtLogradouro.IconPadding"));
-            txtLogradouro.Name = "txtLogradouro";
-            txtLogradouro.Validated += ValidaCamposTexto;
-            // 
-            // lblLogradouro
-            // 
-            resources.ApplyResources(lblLogradouro, "lblLogradouro");
-            errorProvider.SetError(lblLogradouro, resources.GetString("lblLogradouro.Error"));
-            errorProvider.SetIconAlignment(lblLogradouro, (ErrorIconAlignment)resources.GetObject("lblLogradouro.IconAlignment"));
-            errorProvider.SetIconPadding(lblLogradouro, (int)resources.GetObject("lblLogradouro.IconPadding"));
-            lblLogradouro.Name = "lblLogradouro";
-            // 
-            // mtxtCEP
-            // 
-            resources.ApplyResources(mtxtCEP, "mtxtCEP");
-            errorProvider.SetError(mtxtCEP, resources.GetString("mtxtCEP.Error"));
-            errorProvider.SetIconAlignment(mtxtCEP, (ErrorIconAlignment)resources.GetObject("mtxtCEP.IconAlignment"));
-            errorProvider.SetIconPadding(mtxtCEP, (int)resources.GetObject("mtxtCEP.IconPadding"));
-            mtxtCEP.Name = "mtxtCEP";
-            mtxtCEP.Validated += ValidaCamposMascara;
+            resources.ApplyResources(mtxtTelefone, "mtxtTelefone");
+            errorProvider.SetError(mtxtTelefone, resources.GetString("mtxtTelefone.Error"));
+            errorProvider.SetIconAlignment(mtxtTelefone, (ErrorIconAlignment)resources.GetObject("mtxtTelefone.IconAlignment"));
+            errorProvider.SetIconPadding(mtxtTelefone, (int)resources.GetObject("mtxtTelefone.IconPadding"));
+            mtxtTelefone.Name = "mtxtTelefone";
+            mtxtTelefone.Validated += ValidaCamposMascara;
             // 
             // lblTitulo
             // 
@@ -321,30 +354,25 @@
             errorProvider.SetIconPadding(lblTitulo, (int)resources.GetObject("lblTitulo.IconPadding"));
             lblTitulo.Name = "lblTitulo";
             // 
-            // mtxtTelefone
-            // 
-            resources.ApplyResources(mtxtTelefone, "mtxtTelefone");
-            errorProvider.SetError(mtxtTelefone, resources.GetString("mtxtTelefone.Error"));
-            errorProvider.SetIconAlignment(mtxtTelefone, (ErrorIconAlignment)resources.GetObject("mtxtTelefone.IconAlignment"));
-            errorProvider.SetIconPadding(mtxtTelefone, (int)resources.GetObject("mtxtTelefone.IconPadding"));
-            mtxtTelefone.Name = "mtxtTelefone";
-            mtxtTelefone.Validated += ValidaCamposMascara;
-            // 
             // errorProvider
             // 
             errorProvider.ContainerControl = this;
             resources.ApplyResources(errorProvider, "errorProvider");
             // 
-            // Cadastrar
+            // FormCadastro
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(pnlConteudo);
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
-            Name = "Cadastrar";
+            Name = "FormCadastro";
             Load += CarregaFormularioCadastro;
             pnlConteudo.ResumeLayout(false);
             pnlConteudo.PerformLayout();
+            grupoEndereco.ResumeLayout(false);
+            grupoEndereco.PerformLayout();
+            grupoDadosPessoais.ResumeLayout(false);
+            grupoDadosPessoais.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)errorProvider).EndInit();
             ResumeLayout(false);
         }
@@ -379,5 +407,7 @@
         private ErrorProvider errorProvider;
         private MaskedTextBox mtxtDocumento;
         private Label lblRadError;
+        private GroupBox grupoEndereco;
+        private GroupBox grupoDadosPessoais;
     }
 }
