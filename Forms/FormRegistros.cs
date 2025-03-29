@@ -1,7 +1,7 @@
-﻿using CadastroImobiliaria.Models;
-using CadastroImobiliaria.Negocio;
-using CadastroImobiliaria.Repositorio;
+﻿using CadastroImobiliaria.Business;
 using CadastroImobiliaria.Helpers;
+using CadastroImobiliaria.Models;
+using CadastroImobiliaria.Negocio;
 
 namespace CadastroImobiliaria
 {
@@ -134,7 +134,7 @@ namespace CadastroImobiliaria
 
                 MessageBox.Show("Cadastro alterado com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LimparCampos();
-                dgvPessoas.DataSource = PessoaRepository.BuscarTodasPessoas();
+                dgvPessoas.DataSource = PessoaService.ObtemTodosRegistros();
             }
             catch (Exception ex)
             {
@@ -157,7 +157,7 @@ namespace CadastroImobiliaria
 
                 MessageBox.Show("Cadastro excluido com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LimparCampos();
-                dgvPessoas.DataSource = PessoaRepository.BuscarTodasPessoas();
+                dgvPessoas.DataSource = PessoaService.ObtemTodosRegistros();
             }
             catch (FormatException ex)
             {
@@ -166,6 +166,30 @@ namespace CadastroImobiliaria
             catch (Exception ex)
             {
                 MessageBox.Show($"{ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private async void BuscaEndereco(object sender, EventArgs e)
+        {
+            try
+            {
+                string cep = FormataHelper.FormataCEP(mtxtCEP.Text);
+                Endereco endereco = await CEPService.BuscaEndereco(cep);
+
+                if (endereco == null)
+                {
+                    errorProvider.SetError(mtxtCEP, "CEP não encontrado.");
+                    MessageBox.Show("Endereço não encontrado. Verifique o CEP informado.");
+                    return;
+                }
+
+                txtEstado.Text = endereco.Estado;
+                txtCidade.Text = endereco.Cidade;
+                txtBairro.Text = endereco.Bairro;
+                txtLogradouro.Text = endereco.Logradouro;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

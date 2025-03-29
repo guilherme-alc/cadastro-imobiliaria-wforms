@@ -257,6 +257,7 @@
             mtxtCEP.Name = "mtxtCEP";
             mtxtCEP.Size = new Size(149, 23);
             mtxtCEP.TabIndex = 8;
+            mtxtCEP.Leave += BuscaEndereco;
             // 
             // lblEstado
             // 

@@ -118,25 +118,494 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="mtxtTelefone.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lblNome.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10.8pt</value>
+  </data>
+  <data name="&gt;&gt;radJuridica.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="grupoEndereco.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="menuStrip1.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="pessoasToolStripMenuItem.Text" xml:space="preserve">
+    <value>Pessoas</value>
+  </data>
+  <data name="&gt;&gt;lblTitulo.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblDocumento.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mtxtDocumento.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="mtxtDocumento.Mask" xml:space="preserve">
+    <value>000.000.000-00</value>
+  </data>
+  <data name="lblNome.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 72</value>
+  </data>
+  <data name="txtCidade.Location" type="System.Drawing.Point, System.Drawing">
+    <value>457, 333</value>
+  </data>
+  <data name="&gt;&gt;btnCadastrar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtCidade.Error" xml:space="preserve">
+    <value />
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;menuPrincipalToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="radJuridica.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblEmail.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>684, 443</value>
+  </data>
+  <data name="lblDocumento.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;btnLimparCampos.Name" xml:space="preserve">
+    <value>btnLimparCampos</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="mtxtCEP.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Cadastro</value>
+  </data>
+  <data name="lblTelefone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 20</value>
+  </data>
+  <data name="&gt;&gt;lblTelefone.Name" xml:space="preserve">
+    <value>lblTelefone</value>
+  </data>
+  <data name="&gt;&gt;menuStrip.Name" xml:space="preserve">
+    <value>menuStrip</value>
+  </data>
+  <data name="lblEstado.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;txtEstado.Parent" xml:space="preserve">
+    <value>grupoEndereco</value>
+  </data>
+  <data name="btnLimparCampos.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="txtNumero.MaxLength" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="radFisica.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 186</value>
+  </data>
+  <data name="lblEstado.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lblCidade.Name" xml:space="preserve">
+    <value>lblCidade</value>
+  </data>
+  <data name="&gt;&gt;lblNumero.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtCidade.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;grupoEndereco.Parent" xml:space="preserve">
+    <value>pnlConteudo</value>
+  </data>
+  <data name="lblCidade.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10.8pt</value>
+  </data>
+  <data name="&gt;&gt;pnlConteudo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtBairro.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtNumero.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtEstado.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;errorProvider1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblBairro.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblEmail.Name" xml:space="preserve">
+    <value>lblEmail</value>
+  </data>
+  <data name="pnlConteudo.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="radJuridica.Location" type="System.Drawing.Point, System.Drawing">
+    <value>162, 186</value>
+  </data>
+  <data name="btnLimparCampos.Text" xml:space="preserve">
+    <value>Limpar</value>
+  </data>
+  <data name="mtxtTelefone.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtNumero.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;btnCadastrar.Name" xml:space="preserve">
+    <value>btnCadastrar</value>
+  </data>
+  <data name="&gt;&gt;lblEstado.Name" xml:space="preserve">
+    <value>lblEstado</value>
+  </data>
+  <data name="lblBairro.Location" type="System.Drawing.Point, System.Drawing">
+    <value>584, 332</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnCadastrar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="radFisica.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10.2pt</value>
   </data>
-  <data name="&gt;&gt;grupoEndereco.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;sairToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtEmail.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="menuStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;lblLogradouro.Parent" xml:space="preserve">
+    <value>grupoEndereco</value>
+  </data>
+  <data name="lblDocumento.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mtxtTelefone.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lblEstado.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtEmail.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10.2pt</value>
+  </data>
+  <data name="lblTitulo.TabIndex" type="System.Int32, mscorlib">
+    <value>4213135</value>
+  </data>
+  <data name="lblEstado.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 20</value>
+  </data>
+  <data name="menuStrip1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtEmail.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnCadastrar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 10.8pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="mtxtCEP.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="lblLogradouro.Text" xml:space="preserve">
+    <value>Logradouro</value>
+  </data>
+  <data name="&gt;&gt;pnlConteudo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lblTelefone.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtEmail.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblLogradouro.TabIndex" type="System.Int32, mscorlib">
+    <value>4213137</value>
+  </data>
+  <data name="mtxtCEP.Mask" xml:space="preserve">
+    <value>00000-000</value>
+  </data>
+  <data name="txtLogradouro.Size" type="System.Drawing.Size, System.Drawing">
+    <value>342, 23</value>
+  </data>
+  <data name="btnLimparCampos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 23</value>
+  </data>
+  <data name="pnlConteudo.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mtxtCEP.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblLogradouro.Name" xml:space="preserve">
+    <value>lblLogradouro</value>
+  </data>
+  <data name="&gt;&gt;sairToolStripMenuItem.Name" xml:space="preserve">
+    <value>sairToolStripMenuItem</value>
+  </data>
+  <data name="radFisica.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>796, 490</value>
+  </data>
+  <data name="&gt;&gt;lblRadError.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtEmail.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="radFisica.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtNome.MaxLength" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="&gt;&gt;txtLogradouro.Parent" xml:space="preserve">
+    <value>grupoEndereco</value>
+  </data>
+  <data name="lblTelefone.TabIndex" type="System.Int32, mscorlib">
+    <value>13132</value>
+  </data>
+  <data name="lblLogradouro.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="btnCadastrar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>327, 436</value>
+  </data>
+  <data name="grupoEndereco.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="grupoEndereco.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;errorProvider1.Name" xml:space="preserve">
+    <value>errorProvider1</value>
+  </data>
+  <data name="lblEstado.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="radJuridica.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10.2pt</value>
+  </data>
+  <data name="mtxtDocumento.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 23</value>
+  </data>
+  <data name="lblBairro.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 20</value>
+  </data>
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1255, 610</value>
+  </data>
+  <data name="txtEstado.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 23</value>
+  </data>
+  <data name="&gt;&gt;lblBairro.Parent" xml:space="preserve">
+    <value>grupoEndereco</value>
+  </data>
+  <data name="txtCidade.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtEstado.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="mtxtDocumento.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnCadastrar.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtCidade.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblNumero.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;txtEmail.Parent" xml:space="preserve">
+    <value>grupoDadosPessoais</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="mtxtDocumento.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtEstado.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;txtLogradouro.Name" xml:space="preserve">
+    <value>txtLogradouro</value>
+  </data>
+  <data name="&gt;&gt;mtxtDocumento.Name" xml:space="preserve">
+    <value>mtxtDocumento</value>
+  </data>
+  <data name="pnlConteudo.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="pnlConteudo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>796, 490</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>4213135</value>
+  </data>
+  <data name="btnCadastrar.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;lblEstado.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="txtEmail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>342, 26</value>
+  </data>
+  <data name="lblLogradouro.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mtxtTelefone.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnLimparCampos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>704, 33</value>
+  </data>
+  <data name="menuStrip.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtNome.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtBairro.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="grupoDadosPessoais.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 42</value>
+  </data>
+  <data name="&gt;&gt;lblEstado.Parent" xml:space="preserve">
+    <value>grupoEndereco</value>
+  </data>
+  <data name="radJuridica.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblCEP.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10.8pt</value>
+  </data>
+  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>4213145</value>
+  </data>
+  <data name="radFisica.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;lblNumero.Parent" xml:space="preserve">
+    <value>grupoEndereco</value>
+  </data>
+  <data name="lblCidade.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;txtNome.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="lblCidade.Text" xml:space="preserve">
+    <value>Cidade</value>
+  </data>
+  <data name="mtxtDocumento.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 230</value>
+  </data>
+  <data name="lblTitulo.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblTitulo.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;lblEmail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtLogradouro.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>4213144</value>
+  </data>
+  <data name="txtCidade.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 23</value>
+  </data>
+  <data name="&gt;&gt;grupoEndereco.Name" xml:space="preserve">
+    <value>grupoEndereco</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="lblNumero.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10.2pt</value>
+  </data>
+  <data name="menuStrip1.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panel1.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblNumero.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;txtEstado.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtBairro.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;radFisica.Parent" xml:space="preserve">
+    <value>grupoDadosPessoais</value>
+  </data>
+  <data name="lblDocumento.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 208</value>
+  </data>
+  <data name="grupoDadosPessoais.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblBairro.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtNome.Parent" xml:space="preserve">
+    <value>grupoDadosPessoais</value>
   </data>
   <data name="lblEmail.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 125</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lblTitulo.TabIndex" type="System.Int32, mscorlib">
-    <value>4213135</value>
+  <data name="lblTitulo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="lblTitulo.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 15pt, style=Bold</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lblEmail.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
+  <data name="lblNome.TabIndex" type="System.Int32, mscorlib">
+    <value>2132321</value>
   </data>
   <data name="mtxtTelefone.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 288</value>
@@ -144,903 +613,374 @@
   <data name="txtEstado.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="lblCEP.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10.8pt</value>
+  <data name="radFisica.Text" xml:space="preserve">
+    <value>Pessoa Física</value>
   </data>
-  <data name="radFisica.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="grupoDadosPessoais.TabIndex" type="System.Int32, mscorlib">
+    <value>4213145</value>
   </data>
-  <data name="&gt;&gt;lblRadError.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="lblBairro.TabIndex" type="System.Int32, mscorlib">
+    <value>4213143</value>
   </data>
-  <data name="lblCidade.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="&gt;&gt;lblRadError.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;pessoasToolStripMenuItem.Name" xml:space="preserve">
     <value>pessoasToolStripMenuItem</value>
   </data>
-  <data name="pictureBox1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
+  <data name="mtxtDocumento.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
   </data>
-  <data name="btnLimparCampos.Error" xml:space="preserve">
+  <data name="btnLimparCampos.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mtxtCEP.Error" xml:space="preserve">
     <value />
   </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>4213135</value>
+  <data name="lblCEP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 20</value>
   </data>
-  <data name="&gt;&gt;lblEmail.Name" xml:space="preserve">
-    <value>lblEmail</value>
-  </data>
-  <data name="&gt;&gt;menuPrincipalToolStripMenuItem.Name" xml:space="preserve">
-    <value>menuPrincipalToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;lblEstado.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="sairToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>38, 20</value>
-  </data>
-  <data name="txtLogradouro.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 392</value>
-  </data>
-  <data name="menuPrincipalToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 20</value>
-  </data>
-  <data name="radFisica.Text" xml:space="preserve">
-    <value>Pessoa Física</value>
-  </data>
-  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>796, 24</value>
-  </data>
-  <data name="txtLogradouro.MaxLength" type="System.Int32, mscorlib">
-    <value>100</value>
-  </data>
-  <data name="btnLimparCampos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>704, 33</value>
-  </data>
-  <data name="txtLogradouro.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="lblNumero.Error" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;lblCidade.ZOrder" xml:space="preserve">
+    <value>10</value>
   </data>
   <data name="lblDocumento.TabIndex" type="System.Int32, mscorlib">
     <value>83213</value>
   </data>
-  <data name="pnlConteudo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>796, 490</value>
+  <data name="lblDocumento.Text" xml:space="preserve">
+    <value>Documento</value>
   </data>
-  <data name="&gt;&gt;grupoEndereco.Parent" xml:space="preserve">
+  <data name="txtLogradouro.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;lblCEP.Parent" xml:space="preserve">
+    <value>grupoEndereco</value>
+  </data>
+  <data name="menuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>796, 24</value>
+  </data>
+  <data name="txtBairro.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;radJuridica.Name" xml:space="preserve">
+    <value>radJuridica</value>
+  </data>
+  <data name="&gt;&gt;lblCEP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mtxtTelefone.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtEmail.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;btnCadastrar.Parent" xml:space="preserve">
     <value>pnlConteudo</value>
   </data>
-  <data name="&gt;&gt;btnLimparCampos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblNome.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 20</value>
+  <data name="menuStrip.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 2, 0, 2</value>
   </data>
   <data name="pictureBox1.Error" xml:space="preserve">
     <value />
   </data>
-  <data name="lblBairro.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 20</value>
+  <data name="txtNome.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 93</value>
   </data>
-  <data name="txtNome.Size" type="System.Drawing.Size, System.Drawing">
-    <value>342, 26</value>
-  </data>
-  <data name="&gt;&gt;txtBairro.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="mtxtTelefone.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 26</value>
-  </data>
-  <data name="&gt;&gt;txtLogradouro.Parent" xml:space="preserve">
-    <value>grupoEndereco</value>
-  </data>
-  <data name="txtNome.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+  <data name="pictureBox1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
-  <data name="&gt;&gt;lblTitulo.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtEstado.Name" xml:space="preserve">
+    <value>txtEstado</value>
+  </data>
+  <data name="&gt;&gt;txtEmail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblNumero.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtBairro.Parent" xml:space="preserve">
+    <value>grupoEndereco</value>
+  </data>
+  <data name="&gt;&gt;errorProvider.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnLimparCampos.Parent" xml:space="preserve">
     <value>pnlConteudo</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btnCadastrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+  <data name="lblEmail.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="lblLogradouro.Error" xml:space="preserve">
-    <value />
+  <data name="radFisica.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
   </data>
-  <data name="lblRadError.TabIndex" type="System.Int32, mscorlib">
-    <value>4213144</value>
+  <data name="&gt;&gt;txtCidade.Parent" xml:space="preserve">
+    <value>grupoEndereco</value>
   </data>
-  <data name="&gt;&gt;lblBairro.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;menuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;radJuridica.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="lblNumero.TabIndex" type="System.Int32, mscorlib">
+    <value>4213140</value>
   </data>
-  <data name="&gt;&gt;lblDocumento.Parent" xml:space="preserve">
-    <value>grupoDadosPessoais</value>
+  <data name="&gt;&gt;lblRadError.Name" xml:space="preserve">
+    <value>lblRadError</value>
   </data>
-  <data name="mtxtCEP.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+  <data name="&gt;&gt;mtxtDocumento.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
-  <data name="lblDocumento.Error" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;txtEmail.ZOrder" xml:space="preserve">
+    <value>9</value>
   </data>
-  <data name="&gt;&gt;lblNome.Name" xml:space="preserve">
-    <value>lblNome</value>
+  <data name="&gt;&gt;radJuridica.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lblDocumento.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10.8pt</value>
+  <data name="menuStrip.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblEmail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 20</value>
+  </data>
+  <data name="lblTitulo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 33</value>
+  </data>
+  <data name="txtLogradouro.MaxLength" type="System.Int32, mscorlib">
+    <value>100</value>
   </data>
   <data name="txtNome.Error" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;lblNumero.Parent" xml:space="preserve">
-    <value>grupoEndereco</value>
+  <data name="btnCadastrar.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
   </data>
-  <data name="&gt;&gt;txtCidade.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormCadastro</value>
+  </data>
+  <data name="&gt;&gt;lblNome.Name" xml:space="preserve">
+    <value>lblNome</value>
+  </data>
+  <data name="&gt;&gt;grupoDadosPessoais.Name" xml:space="preserve">
+    <value>grupoDadosPessoais</value>
+  </data>
+  <data name="btnLimparCampos.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="radJuridica.Text" xml:space="preserve">
+    <value>Pessoa Jurídica</value>
+  </data>
+  <data name="radJuridica.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblLogradouro.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;grupoEndereco.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblTitulo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 15pt, style=Bold</value>
+  </data>
+  <data name="btnLimparCampos.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;btnLimparCampos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnCadastrar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;txtNumero.Name" xml:space="preserve">
+    <value>txtNumero</value>
+  </data>
+  <data name="lblCEP.Text" xml:space="preserve">
+    <value>CEP</value>
+  </data>
+  <data name="mtxtCEP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>88, 332</value>
+  </data>
+  <data name="&gt;&gt;lblCEP.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblDocumento.Parent" xml:space="preserve">
+    <value>grupoDadosPessoais</value>
+  </data>
+  <data name="lblDocumento.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10.8pt</value>
+  </data>
+  <data name="mtxtCEP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 26</value>
+  </data>
+  <data name="lblNumero.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="&gt;&gt;pnlConteudo.Name" xml:space="preserve">
+    <value>pnlConteudo</value>
+  </data>
+  <data name="&gt;&gt;lblBairro.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="lblNome.Text" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="&gt;&gt;lblCidade.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="radJuridica.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
-  <data name="&gt;&gt;txtNome.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="&gt;&gt;txtNumero.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="btnLimparCampos.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+  <data name="&gt;&gt;mtxtTelefone.Name" xml:space="preserve">
+    <value>mtxtTelefone</value>
   </data>
-  <data name="grupoDadosPessoais.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 42</value>
-  </data>
-  <data name="lblLogradouro.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1255, 610</value>
-  </data>
-  <data name="grupoDadosPessoais.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;txtEmail.Parent" xml:space="preserve">
-    <value>grupoDadosPessoais</value>
-  </data>
-  <data name="&gt;&gt;menuStrip.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblTelefone.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;lblCEP.Name" xml:space="preserve">
+    <value>lblCEP</value>
   </data>
   <data name="lblCidade.TabIndex" type="System.Int32, mscorlib">
     <value>4213142</value>
   </data>
-  <data name="lblBairro.Location" type="System.Drawing.Point, System.Drawing">
-    <value>584, 332</value>
+  <data name="lblEstado.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10.8pt</value>
   </data>
-  <data name="lblRadError.Location" type="System.Drawing.Point, System.Drawing">
-    <value>276, 168</value>
+  <data name="btnCadastrar.Text" xml:space="preserve">
+    <value>Cadastrar</value>
   </data>
-  <data name="&gt;&gt;lblEmail.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="txtCidade.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 23</value>
+  <data name="menuStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;txtEstado.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="&gt;&gt;txtNome.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuStrip.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
     <value>panel1</value>
   </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 50</value>
-  </data>
-  <data name="mtxtTelefone.IconPadding" type="System.Int32, mscorlib">
+  <data name="txtNome.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;lblLogradouro.Name" xml:space="preserve">
-    <value>lblLogradouro</value>
+  <data name="txtBairro.Error" xml:space="preserve">
+    <value />
   </data>
-  <data name="mtxtDocumento.IconPadding" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;mtxtDocumento.Parent" xml:space="preserve">
+    <value>grupoDadosPessoais</value>
+  </data>
+  <data name="lblNumero.Location" type="System.Drawing.Point, System.Drawing">
+    <value>412, 373</value>
+  </data>
+  <data name="&gt;&gt;txtEmail.Name" xml:space="preserve">
+    <value>txtEmail</value>
+  </data>
+  <data name="lblTitulo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 28</value>
+  </data>
+  <data name="lblBairro.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10.8pt</value>
+  </data>
+  <data name="btnCadastrar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="txtNumero.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 23</value>
+  </data>
+  <data name="&gt;&gt;lblEmail.Parent" xml:space="preserve">
+    <value>grupoDadosPessoais</value>
+  </data>
+  <data name="lblRadError.TabIndex" type="System.Int32, mscorlib">
+    <value>4213144</value>
+  </data>
+  <data name="lblCidade.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mtxtTelefone.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblNome.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtNumero.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;menuPrincipalToolStripMenuItem.Name" xml:space="preserve">
+    <value>menuPrincipalToolStripMenuItem</value>
+  </data>
+  <data name="mtxtDocumento.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;txtBairro.Name" xml:space="preserve">
+    <value>txtBairro</value>
+  </data>
+  <data name="mtxtCEP.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;lblTitulo.Name" xml:space="preserve">
+    <value>lblTitulo</value>
+  </data>
+  <data name="radJuridica.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="txtNumero.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;mtxtDocumento.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lblTitulo.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>4213145</value>
+  <data name="lblLogradouro.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10.8pt</value>
   </data>
-  <data name="&gt;&gt;mtxtCEP.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btnLimparCampos.Error" xml:space="preserve">
+    <value />
   </data>
-  <data name="lblCidade.Text" xml:space="preserve">
-    <value>Cidade</value>
+  <data name="txtNumero.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
   </data>
-  <data name="&gt;&gt;lblRadError.Type" xml:space="preserve">
+  <data name="&gt;&gt;menuStrip.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
+    <value>pnlConteudo</value>
+  </data>
+  <data name="&gt;&gt;lblLogradouro.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="mtxtTelefone.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="lblNumero.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtLogradouro.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="lblCidade.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 20</value>
+  </data>
+  <data name="&gt;&gt;lblDocumento.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="radFisica.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="panel1.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblCidade.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10.8pt</value>
-  </data>
-  <data name="lblEmail.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10.8pt</value>
-  </data>
-  <data name="lblNumero.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="mtxtCEP.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10.2pt</value>
-  </data>
-  <data name="&gt;&gt;sairToolStripMenuItem.Name" xml:space="preserve">
-    <value>sairToolStripMenuItem</value>
-  </data>
-  <data name="txtCidade.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="lblBairro.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10.8pt</value>
-  </data>
-  <data name="&gt;&gt;radJuridica.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="grupoDadosPessoais.TabIndex" type="System.Int32, mscorlib">
-    <value>4213145</value>
-  </data>
-  <data name="&gt;&gt;lblTelefone.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="grupoDadosPessoais.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btnCadastrar.Name" xml:space="preserve">
-    <value>btnCadastrar</value>
-  </data>
-  <data name="mtxtTelefone.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="lblRadError.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="radJuridica.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblTitulo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 33</value>
-  </data>
-  <data name="btnLimparCampos.Text" xml:space="preserve">
-    <value>Limpar</value>
-  </data>
-  <data name="lblCidade.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblNumero.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="menuStrip.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;mtxtTelefone.Name" xml:space="preserve">
-    <value>mtxtTelefone</value>
+  <data name="radJuridica.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="lblNome.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lblLogradouro.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 371</value>
-  </data>
-  <data name="radJuridica.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="lblBairro.TabIndex" type="System.Int32, mscorlib">
-    <value>4213143</value>
-  </data>
-  <data name="lblBairro.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblEmail.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lblLogradouro.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 20</value>
-  </data>
-  <data name="lblCEP.Text" xml:space="preserve">
-    <value>CEP</value>
-  </data>
-  <data name="txtEstado.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="mtxtCEP.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
-  </data>
-  <data name="lblBairro.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="txtBairro.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="txtBairro.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="grupoDadosPessoais.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="mtxtDocumento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 23</value>
-  </data>
-  <data name="mtxtCEP.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="txtEmail.MaxLength" type="System.Int32, mscorlib">
-    <value>254</value>
-  </data>
-  <data name="lblTelefone.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;radFisica.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="mtxtTelefone.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="grupoEndereco.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;txtEmail.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;lblDocumento.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtCidade.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="lblTitulo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 28</value>
-  </data>
-  <data name="txtLogradouro.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="lblRadError.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblCEP.TabIndex" type="System.Int32, mscorlib">
-    <value>4213132</value>
-  </data>
-  <data name="txtNome.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="panel1.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="txtEstado.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 23</value>
-  </data>
-  <data name="lblNome.Error" xml:space="preserve">
+  <data name="lblLogradouro.Error" xml:space="preserve">
     <value />
-  </data>
-  <data name="txtNome.MaxLength" type="System.Int32, mscorlib">
-    <value>100</value>
-  </data>
-  <data name="pnlConteudo.TabIndex" type="System.Int32, mscorlib">
-    <value>4213134</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="lblEstado.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;lblLogradouro.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="mtxtTelefone.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="radFisica.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="txtNome.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblEmail.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblCEP.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="txtBairro.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 23</value>
-  </data>
-  <data name="&gt;&gt;sairToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblCEP.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblLogradouro.Parent" xml:space="preserve">
-    <value>grupoEndereco</value>
-  </data>
-  <data name="txtBairro.Location" type="System.Drawing.Point, System.Drawing">
-    <value>654, 333</value>
-  </data>
-  <data name="&gt;&gt;radFisica.Parent" xml:space="preserve">
-    <value>grupoDadosPessoais</value>
-  </data>
-  <data name="&gt;&gt;mtxtDocumento.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;btnLimparCampos.Parent" xml:space="preserve">
-    <value>pnlConteudo</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
-    <value>pnlConteudo</value>
-  </data>
-  <data name="&gt;&gt;lblNumero.Name" xml:space="preserve">
-    <value>lblNumero</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
-    <value>26</value>
-  </data>
-  <data name="&gt;&gt;txtCidade.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lblBairro.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="mtxtTelefone.Mask" xml:space="preserve">
-    <value>(00) 00000-0000</value>
-  </data>
-  <data name="btnCadastrar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 10.8pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;lblCEP.Name" xml:space="preserve">
-    <value>lblCEP</value>
-  </data>
-  <data name="lblLogradouro.Text" xml:space="preserve">
-    <value>Logradouro</value>
-  </data>
-  <data name="&gt;&gt;pnlConteudo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnLimparCampos.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="grupoEndereco.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;lblCidade.Name" xml:space="preserve">
-    <value>lblCidade</value>
-  </data>
-  <data name="txtEmail.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblTelefone.Text" xml:space="preserve">
-    <value>Telefone</value>
-  </data>
-  <data name="radJuridica.Text" xml:space="preserve">
-    <value>Pessoa Jurídica</value>
-  </data>
-  <data name="&gt;&gt;lblNumero.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblCidade.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtLogradouro.Name" xml:space="preserve">
-    <value>txtLogradouro</value>
-  </data>
-  <data name="grupoEndereco.TabIndex" type="System.Int32, mscorlib">
-    <value>4213146</value>
-  </data>
-  <data name="&gt;&gt;errorProvider1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txtNome.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;pnlConteudo.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="txtBairro.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="lblNome.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10.8pt</value>
-  </data>
-  <data name="pictureBox1.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="txtCidade.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="txtLogradouro.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;pessoasToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="radJuridica.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>812, 529</value>
-  </data>
-  <data name="lblNumero.Location" type="System.Drawing.Point, System.Drawing">
-    <value>412, 373</value>
-  </data>
-  <data name="btnLimparCampos.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lblNome.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txtLogradouro.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="pessoasToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 20</value>
-  </data>
-  <data name="radFisica.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10.2pt</value>
-  </data>
-  <data name="lblCEP.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 20</value>
-  </data>
-  <data name="pnlConteudo.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="lblEstado.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="menuPrincipalToolStripMenuItem.Text" xml:space="preserve">
-    <value>Menu Principal</value>
-  </data>
-  <data name="lblTitulo.Text" xml:space="preserve">
-    <value>Cadastro de Pessoa</value>
-  </data>
-  <data name="txtNome.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10.2pt</value>
-  </data>
-  <data name="txtNumero.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
-    <value>pnlConteudo</value>
-  </data>
-  <data name="mtxtCEP.Mask" xml:space="preserve">
-    <value>00000-000</value>
-  </data>
-  <data name="lblCidade.Location" type="System.Drawing.Point, System.Drawing">
-    <value>380, 332</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="sairToolStripMenuItem.Text" xml:space="preserve">
-    <value>Sair</value>
-  </data>
-  <data name="btnLimparCampos.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="&gt;&gt;grupoDadosPessoais.Parent" xml:space="preserve">
-    <value>pnlConteudo</value>
-  </data>
-  <data name="txtEmail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 146</value>
-  </data>
-  <data name="&gt;&gt;txtBairro.Name" xml:space="preserve">
-    <value>txtBairro</value>
-  </data>
-  <data name="lblEstado.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 20</value>
-  </data>
-  <data name="txtNumero.MaxLength" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="lblDocumento.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="radFisica.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="txtBairro.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblEstado.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblEmail.Text" xml:space="preserve">
-    <value>E-mail</value>
-  </data>
-  <data name="txtCidade.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="&gt;&gt;radJuridica.Parent" xml:space="preserve">
-    <value>grupoDadosPessoais</value>
-  </data>
-  <data name="btnCadastrar.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="lblNome.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txtLogradouro.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="lblEmail.TabIndex" type="System.Int32, mscorlib">
-    <value>932131</value>
-  </data>
-  <data name="lblCidade.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblTelefone.TabIndex" type="System.Int32, mscorlib">
-    <value>13132</value>
-  </data>
-  <data name="lblCEP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 332</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
-  </data>
-  <data name="txtEstado.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="lblTelefone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 267</value>
-  </data>
-  <data name="&gt;&gt;lblTitulo.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="txtNumero.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="txtNumero.Location" type="System.Drawing.Point, System.Drawing">
-    <value>412, 392</value>
-  </data>
-  <data name="lblEstado.Text" xml:space="preserve">
-    <value>Estado</value>
-  </data>
-  <data name="mtxtDocumento.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;txtBairro.Parent" xml:space="preserve">
-    <value>grupoEndereco</value>
-  </data>
-  <data name="&gt;&gt;txtNumero.Parent" xml:space="preserve">
-    <value>grupoEndereco</value>
-  </data>
-  <data name="txtLogradouro.Size" type="System.Drawing.Size, System.Drawing">
-    <value>342, 23</value>
-  </data>
-  <data name="&gt;&gt;menuStrip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="radJuridica.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10.2pt</value>
-  </data>
-  <data name="radJuridica.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="txtEmail.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="txtNumero.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;txtCidade.Name" xml:space="preserve">
-    <value>txtCidade</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>796, 23</value>
-  </data>
-  <data name="lblDocumento.Text" xml:space="preserve">
-    <value>Documento</value>
-  </data>
-  <data name="lblTelefone.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lblEmail.Parent" xml:space="preserve">
-    <value>grupoDadosPessoais</value>
-  </data>
-  <data name="&gt;&gt;grupoDadosPessoais.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="mtxtDocumento.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 230</value>
-  </data>
-  <data name="&gt;&gt;txtNumero.Name" xml:space="preserve">
-    <value>txtNumero</value>
-  </data>
-  <data name="menuStrip1.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="mtxtDocumento.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>796, 490</value>
-  </data>
-  <data name="txtNumero.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="txtNumero.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;lblTitulo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblRadError.Parent" xml:space="preserve">
     <value>grupoDadosPessoais</value>
   </data>
-  <data name="btnCadastrar.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblNumero.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;pnlConteudo.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="grupoEndereco.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="txtNumero.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="lblTelefone.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="mtxtDocumento.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="menuStrip.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="btnCadastrar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="txtEmail.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="menuStrip.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="lblCidade.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 20</value>
-  </data>
-  <data name="lblBairro.Text" xml:space="preserve">
-    <value>Bairro</value>
-  </data>
-  <data name="mtxtTelefone.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
-  </data>
-  <data name="radFisica.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 23</value>
-  </data>
-  <data name="lblDocumento.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 3, 0</value>
-  </data>
-  <data name="lblEstado.TabIndex" type="System.Int32, mscorlib">
-    <value>4213141</value>
-  </data>
-  <data name="lblDocumento.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lblNome.Parent" xml:space="preserve">
-    <value>grupoDadosPessoais</value>
-  </data>
-  <data name="pessoasToolStripMenuItem.Text" xml:space="preserve">
-    <value>Pessoas</value>
-  </data>
-  <data name="lblTitulo.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="txtCidade.Location" type="System.Drawing.Point, System.Drawing">
-    <value>457, 333</value>
-  </data>
-  <data name="&gt;&gt;txtEmail.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblEstado.Parent" xml:space="preserve">
-    <value>grupoEndereco</value>
-  </data>
-  <data name="lblLogradouro.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10.8pt</value>
-  </data>
-  <data name="pnlConteudo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="mtxtDocumento.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;lblTelefone.Name" xml:space="preserve">
-    <value>lblTelefone</value>
-  </data>
-  <data name="&gt;&gt;txtEstado.Name" xml:space="preserve">
-    <value>txtEstado</value>
-  </data>
-  <data name="&gt;&gt;errorProvider.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txtEmail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>342, 26</value>
-  </data>
-  <data name="menuStrip1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="txtEmail.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10.2pt</value>
-  </data>
-  <data name="&gt;&gt;lblNome.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;mtxtDocumento.Parent" xml:space="preserve">
-    <value>grupoDadosPessoais</value>
-  </data>
-  <data name="btnCadastrar.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;lblCEP.Parent" xml:space="preserve">
-    <value>grupoEndereco</value>
-  </data>
-  <data name="txtBairro.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lblBairro.Parent" xml:space="preserve">
-    <value>grupoEndereco</value>
-  </data>
-  <data name="&gt;&gt;txtEstado.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblLogradouro.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txtEmail.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblLogradouro.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuStrip.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 2, 0, 2</value>
-  </data>
-  <data name="&gt;&gt;mtxtTelefone.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblEstado.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 332</value>
-  </data>
-  <data name="&gt;&gt;errorProvider1.Name" xml:space="preserve">
-    <value>errorProvider1</value>
+  <data name="&gt;&gt;lblEmail.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -3808,230 +3748,131 @@
         AAA=
 </value>
   </data>
-  <data name="btnCadastrar.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="&gt;&gt;mtxtTelefone.Parent" xml:space="preserve">
+    <value>grupoDadosPessoais</value>
   </data>
-  <data name="mtxtCEP.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="lblCEP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 332</value>
   </data>
-  <data name="lblNumero.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 19</value>
+  <data name="txtNumero.Location" type="System.Drawing.Point, System.Drawing">
+    <value>412, 392</value>
   </data>
-  <data name="&gt;&gt;radFisica.Name" xml:space="preserve">
-    <value>radFisica</value>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="&gt;&gt;txtEmail.Name" xml:space="preserve">
-    <value>txtEmail</value>
+  <data name="&gt;&gt;lblTitulo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="btnLimparCampos.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
+  <data name="txtEmail.MaxLength" type="System.Int32, mscorlib">
+    <value>254</value>
   </data>
-  <data name="lblCEP.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="lblLogradouro.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>684, 443</value>
-  </data>
-  <data name="lblEmail.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="txtCidade.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;grupoEndereco.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblCEP.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;lblEstado.Name" xml:space="preserve">
-    <value>lblEstado</value>
-  </data>
-  <data name="&gt;&gt;txtNumero.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnCadastrar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="mtxtCEP.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 26</value>
-  </data>
-  <data name="&gt;&gt;errorProvider.Name" xml:space="preserve">
-    <value>errorProvider</value>
-  </data>
-  <data name="&gt;&gt;lblTitulo.Name" xml:space="preserve">
-    <value>lblTitulo</value>
-  </data>
-  <data name="menuStrip.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lblDocumento.Name" xml:space="preserve">
-    <value>lblDocumento</value>
-  </data>
-  <data name="btnCadastrar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 436</value>
-  </data>
-  <data name="&gt;&gt;radJuridica.Name" xml:space="preserve">
-    <value>radJuridica</value>
-  </data>
-  <data name="btnCadastrar.Text" xml:space="preserve">
-    <value>Cadastrar</value>
-  </data>
-  <data name="lblTelefone.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10.8pt</value>
-  </data>
-  <data name="&gt;&gt;radFisica.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblCidade.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;lblBairro.Name" xml:space="preserve">
-    <value>lblBairro</value>
-  </data>
-  <data name="lblCEP.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;txtEstado.Parent" xml:space="preserve">
-    <value>grupoEndereco</value>
-  </data>
-  <data name="txtEstado.Location" type="System.Drawing.Point, System.Drawing">
-    <value>252, 333</value>
-  </data>
-  <data name="txtCidade.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="txtEmail.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="radFisica.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 186</value>
-  </data>
-  <data name="txtNumero.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 23</value>
-  </data>
-  <data name="&gt;&gt;txtCidade.Parent" xml:space="preserve">
-    <value>grupoEndereco</value>
-  </data>
-  <data name="&gt;&gt;lblEmail.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="radJuridica.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 23</value>
-  </data>
-  <data name="&gt;&gt;mtxtCEP.Name" xml:space="preserve">
-    <value>mtxtCEP</value>
-  </data>
-  <data name="txtEstado.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;lblCidade.Parent" xml:space="preserve">
-    <value>grupoEndereco</value>
-  </data>
-  <data name="txtEstado.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+  <data name="txtNumero.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
   <data name="&gt;&gt;mtxtCEP.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="btnLimparCampos.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+  <data name="txtCidade.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
   </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+  <data name="txtBairro.Location" type="System.Drawing.Point, System.Drawing">
+    <value>654, 333</value>
+  </data>
+  <data name="lblRadError.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;btnCadastrar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="&gt;&gt;txtLogradouro.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;btnLimparCampos.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
-  <data name="&gt;&gt;lblCidade.ZOrder" xml:space="preserve">
-    <value>10</value>
+  <data name="panel1.Error" xml:space="preserve">
+    <value />
   </data>
-  <data name="&gt;&gt;lblCEP.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="lblLogradouro.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 20</value>
   </data>
-  <data name="lblEmail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 20</value>
-  </data>
-  <data name="mtxtCEP.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="lblTitulo.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;menuStrip.Name" xml:space="preserve">
-    <value>menuStrip</value>
-  </data>
-  <data name="btnLimparCampos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 23</value>
-  </data>
-  <data name="&gt;&gt;lblDocumento.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblNome.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lblDocumento.AutoSize" type="System.Boolean, mscorlib">
+  <data name="pessoasToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 20</value>
+  </data>
+  <data name="lblBairro.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtEstado.Location" type="System.Drawing.Point, System.Drawing">
+    <value>252, 333</value>
+  </data>
+  <data name="lblNumero.Text" xml:space="preserve">
+    <value>Número</value>
+  </data>
+  <data name="&gt;&gt;lblCidade.Parent" xml:space="preserve">
+    <value>grupoEndereco</value>
+  </data>
+  <data name="lblDocumento.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;txtNome.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblNome.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 20</value>
+  </data>
+  <data name="lblBairro.Text" xml:space="preserve">
+    <value>Bairro</value>
+  </data>
+  <data name="txtLogradouro.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="lblCEP.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Cadastro</value>
-  </data>
-  <data name="&gt;&gt;txtEstado.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;menuPrincipalToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btnLimparCampos.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;btnCadastrar.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="mtxtCEP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>88, 332</value>
+  <data name="&gt;&gt;menuStrip.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>796, 24</value>
   </data>
-  <data name="lblNumero.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="lblTelefone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 267</value>
   </data>
-  <data name="txtLogradouro.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;lblTelefone.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;lblNumero.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="mtxtCEP.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="pnlConteudo.Error" xml:space="preserve">
+  <data name="menuStrip.Error" xml:space="preserve">
     <value />
   </data>
   <data name="lblNome.IconPadding" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="lblTitulo.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;lblTelefone.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
-  <data name="&gt;&gt;mtxtDocumento.Name" xml:space="preserve">
-    <value>mtxtDocumento</value>
-  </data>
-  <data name="&gt;&gt;lblTelefone.Parent" xml:space="preserve">
-    <value>grupoDadosPessoais</value>
-  </data>
-  <data name="lblBairro.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+  <data name="txtCidade.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
     <value>MiddleRight</value>
   </data>
-  <data name="&gt;&gt;mtxtTelefone.ZOrder" xml:space="preserve">
-    <value>10</value>
+  <data name="&gt;&gt;mtxtCEP.Parent" xml:space="preserve">
+    <value>grupoEndereco</value>
+  </data>
+  <data name="menuStrip1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 2, 0, 2</value>
+  </data>
+  <data name="lblTelefone.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10.8pt</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+    <value>pnlConteudo</value>
+  </data>
+  <data name="mtxtTelefone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 26</value>
+  </data>
+  <data name="menuPrincipalToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 20</value>
   </data>
   <data name="btnCadastrar.Size" type="System.Drawing.Size, System.Drawing">
     <value>144, 46</value>
@@ -4039,167 +3880,329 @@
   <data name="&gt;&gt;grupoDadosPessoais.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="&gt;&gt;pnlConteudo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="mtxtTelefone.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 50</value>
   </data>
-  <data name="lblTelefone.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 20</value>
+  <data name="&gt;&gt;radFisica.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btnCadastrar.Parent" xml:space="preserve">
-    <value>pnlConteudo</value>
-  </data>
-  <data name="lblNumero.Text" xml:space="preserve">
-    <value>Número</value>
+  <data name="sairToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 20</value>
   </data>
   <data name="&gt;&gt;txtNumero.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="&gt;&gt;lblEstado.ZOrder" xml:space="preserve">
-    <value>11</value>
+  <data name="txtBairro.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 23</value>
+  </data>
+  <data name="lblDocumento.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 3, 0</value>
+  </data>
+  <data name="mtxtCEP.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10.2pt</value>
+  </data>
+  <data name="lblCEP.TabIndex" type="System.Int32, mscorlib">
+    <value>4213132</value>
   </data>
   <data name="txtNome.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="lblDocumento.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 208</value>
-  </data>
-  <data name="menuStrip.Text" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="lblEstado.Error" xml:space="preserve">
+  <data name="lblRadError.Error" xml:space="preserve">
     <value />
-  </data>
-  <data name="txtEmail.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>4213144</value>
-  </data>
-  <data name="&gt;&gt;txtNome.Parent" xml:space="preserve">
-    <value>grupoDadosPessoais</value>
-  </data>
-  <data name="&gt;&gt;txtLogradouro.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="lblEstado.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10.8pt</value>
-  </data>
-  <data name="lblNumero.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10.2pt</value>
-  </data>
-  <data name="radFisica.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="lblBairro.Error" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblDocumento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 20</value>
-  </data>
-  <data name="radJuridica.Location" type="System.Drawing.Point, System.Drawing">
-    <value>162, 186</value>
-  </data>
-  <data name="lblNome.Text" xml:space="preserve">
-    <value>Nome</value>
-  </data>
-  <data name="&gt;&gt;txtNome.Name" xml:space="preserve">
-    <value>txtNome</value>
-  </data>
-  <data name="&gt;&gt;grupoDadosPessoais.Name" xml:space="preserve">
-    <value>grupoDadosPessoais</value>
-  </data>
-  <data name="menuStrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="lblNome.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 72</value>
-  </data>
-  <data name="pnlConteudo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="mtxtDocumento.Mask" xml:space="preserve">
-    <value>000.000.000-00</value>
-  </data>
-  <data name="radFisica.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lblRadError.Name" xml:space="preserve">
-    <value>lblRadError</value>
-  </data>
-  <data name="menuStrip1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 2, 0, 2</value>
-  </data>
-  <data name="radJuridica.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblNome.TabIndex" type="System.Int32, mscorlib">
-    <value>2132321</value>
-  </data>
-  <data name="menuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>796, 24</value>
-  </data>
-  <data name="lblNumero.TabIndex" type="System.Int32, mscorlib">
-    <value>4213140</value>
-  </data>
-  <data name="&gt;&gt;btnLimparCampos.Name" xml:space="preserve">
-    <value>btnLimparCampos</value>
-  </data>
-  <data name="&gt;&gt;grupoEndereco.Name" xml:space="preserve">
-    <value>grupoEndereco</value>
-  </data>
-  <data name="lblRadError.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="pnlConteudo.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;mtxtTelefone.Parent" xml:space="preserve">
-    <value>grupoDadosPessoais</value>
-  </data>
-  <data name="lblTitulo.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FormCadastro</value>
-  </data>
-  <data name="pnlConteudo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;mtxtCEP.Parent" xml:space="preserve">
-    <value>grupoEndereco</value>
-  </data>
-  <data name="&gt;&gt;pnlConteudo.Name" xml:space="preserve">
-    <value>pnlConteudo</value>
-  </data>
-  <data name="lblLogradouro.TabIndex" type="System.Int32, mscorlib">
-    <value>4213137</value>
-  </data>
-  <data name="lblEmail.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;txtBairro.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="panel1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
-    <value>MiddleRight</value>
-  </data>
-  <data name="menuStrip1.IconPadding" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="txtNome.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 93</value>
-  </data>
-  <data name="menuStrip1.Text" xml:space="preserve">
-    <value>menuStrip1</value>
   </data>
   <data name="grupoEndereco.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 336</value>
   </data>
-  <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>145, 17</value>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>812, 529</value>
+  </data>
+  <data name="&gt;&gt;radFisica.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="txtLogradouro.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblCEP.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtLogradouro.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 392</value>
+  </data>
+  <data name="&gt;&gt;txtNumero.Parent" xml:space="preserve">
+    <value>grupoEndereco</value>
+  </data>
+  <data name="txtNome.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="lblTelefone.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;lblNome.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="grupoDadosPessoais.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>796, 23</value>
+  </data>
+  <data name="lblEstado.Text" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="&gt;&gt;lblLogradouro.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblCEP.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblTelefone.Parent" xml:space="preserve">
+    <value>grupoDadosPessoais</value>
+  </data>
+  <data name="lblNome.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblEmail.Text" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="radFisica.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 23</value>
+  </data>
+  <data name="lblNumero.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;mtxtTelefone.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;grupoDadosPessoais.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="lblEmail.TabIndex" type="System.Int32, mscorlib">
+    <value>932131</value>
+  </data>
+  <data name="&gt;&gt;grupoDadosPessoais.Parent" xml:space="preserve">
+    <value>pnlConteudo</value>
+  </data>
+  <data name="menuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="lblRadError.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblBairro.Name" xml:space="preserve">
+    <value>lblBairro</value>
+  </data>
+  <data name="txtEmail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 146</value>
+  </data>
+  <data name="lblCidade.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtNome.Name" xml:space="preserve">
+    <value>txtNome</value>
+  </data>
+  <data name="txtNome.Size" type="System.Drawing.Size, System.Drawing">
+    <value>342, 26</value>
+  </data>
+  <data name="radFisica.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="lblTelefone.Text" xml:space="preserve">
+    <value>Telefone</value>
+  </data>
+  <data name="lblCidade.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="pnlConteudo.TabIndex" type="System.Int32, mscorlib">
+    <value>4213134</value>
+  </data>
+  <data name="txtNome.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="txtEstado.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lblCidade.Location" type="System.Drawing.Point, System.Drawing">
+    <value>380, 332</value>
+  </data>
+  <data name="&gt;&gt;txtLogradouro.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lblEmail.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="mtxtTelefone.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="lblBairro.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblEstado.Location" type="System.Drawing.Point, System.Drawing">
+    <value>176, 332</value>
+  </data>
+  <data name="grupoDadosPessoais.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="txtBairro.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;lblTitulo.Parent" xml:space="preserve">
+    <value>pnlConteudo</value>
+  </data>
+  <data name="menuPrincipalToolStripMenuItem.Text" xml:space="preserve">
+    <value>Menu Principal</value>
+  </data>
+  <data name="txtNome.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10.2pt</value>
+  </data>
+  <data name="&gt;&gt;txtBairro.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtLogradouro.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblNumero.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 19</value>
+  </data>
+  <data name="lblTelefone.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblCEP.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;txtCidade.Name" xml:space="preserve">
+    <value>txtCidade</value>
+  </data>
+  <data name="&gt;&gt;lblTelefone.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pessoasToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="mtxtDocumento.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblDocumento.Name" xml:space="preserve">
+    <value>lblDocumento</value>
+  </data>
+  <data name="&gt;&gt;lblNome.Parent" xml:space="preserve">
+    <value>grupoDadosPessoais</value>
+  </data>
+  <data name="&gt;&gt;lblBairro.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnCadastrar.Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlConteudo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="lblDocumento.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mtxtCEP.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lblRadError.Location" type="System.Drawing.Point, System.Drawing">
+    <value>276, 168</value>
+  </data>
+  <data name="sairToolStripMenuItem.Text" xml:space="preserve">
+    <value>Sair</value>
+  </data>
+  <data name="&gt;&gt;grupoEndereco.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblDocumento.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 20</value>
+  </data>
+  <data name="pictureBox1.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="panel1.IconAlignment" type="System.Windows.Forms.ErrorIconAlignment, System.Windows.Forms">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="lblEstado.TabIndex" type="System.Int32, mscorlib">
+    <value>4213141</value>
+  </data>
+  <data name="&gt;&gt;lblEstado.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mtxtCEP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblLogradouro.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 371</value>
+  </data>
+  <data name="mtxtTelefone.Mask" xml:space="preserve">
+    <value>(00) 00000-0000</value>
+  </data>
+  <data name="&gt;&gt;radFisica.Name" xml:space="preserve">
+    <value>radFisica</value>
+  </data>
+  <data name="&gt;&gt;mtxtCEP.Name" xml:space="preserve">
+    <value>mtxtCEP</value>
+  </data>
+  <data name="menuStrip.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;errorProvider.Name" xml:space="preserve">
+    <value>errorProvider</value>
+  </data>
+  <data name="&gt;&gt;txtLogradouro.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblEmail.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10.8pt</value>
+  </data>
+  <data name="&gt;&gt;lblNumero.Name" xml:space="preserve">
+    <value>lblNumero</value>
+  </data>
+  <data name="&gt;&gt;radJuridica.Parent" xml:space="preserve">
+    <value>grupoDadosPessoais</value>
+  </data>
+  <data name="pnlConteudo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="txtEmail.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="pnlConteudo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="lblTitulo.Text" xml:space="preserve">
+    <value>Cadastro de Pessoa</value>
+  </data>
+  <data name="lblTelefone.IconPadding" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="grupoEndereco.TabIndex" type="System.Int32, mscorlib">
+    <value>4213146</value>
+  </data>
+  <data name="mtxtTelefone.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10.2pt</value>
+  </data>
+  <data name="radJuridica.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 23</value>
+  </data>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>pt-BR</value>
+  </metadata>
+  <metadata name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>300, 17</value>
@@ -4207,13 +4210,10 @@
   <metadata name="errorProvider.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>145, 17</value>
   </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>pt-BR</value>
-  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>145, 17</value>
   </metadata>
 </root>

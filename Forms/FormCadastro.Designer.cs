@@ -211,6 +211,7 @@
             errorProvider.SetIconAlignment(mtxtCEP, (ErrorIconAlignment)resources.GetObject("mtxtCEP.IconAlignment"));
             errorProvider.SetIconPadding(mtxtCEP, (int)resources.GetObject("mtxtCEP.IconPadding"));
             mtxtCEP.Name = "mtxtCEP";
+            mtxtCEP.Leave += BuscaEndereco;
             mtxtCEP.Validated += ValidaCamposMascara;
             // 
             // txtBairro
