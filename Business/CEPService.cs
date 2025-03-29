@@ -19,14 +19,18 @@ namespace CadastroImobiliaria.Business
 
                 Endereco endereco = JsonSerializer.Deserialize<Endereco>(conteudo);
 
-                if(endereco == null)
-                    throw new Exception("CEP não encontrado.");
+                if(endereco == null || !string.IsNullOrEmpty(endereco.Erro))
+                    throw new ArgumentException("CEP não encontrado.");
 
                 return endereco;    
             }
             catch (HttpRequestException)
             {
                 throw new Exception("Erro ao buscar o CEP. Verifique sua conexão na internet.");
+            }
+            catch (ArgumentException ex)
+            {
+                throw new ArgumentException(ex.Message);
             }
             catch (Exception)
             {

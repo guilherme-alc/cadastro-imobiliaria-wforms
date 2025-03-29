@@ -20,5 +20,7 @@ namespace CadastroImobiliaria.Models
         public string Regiao { get; set; }
         [JsonPropertyName("ddd")]
         public string DDD { get; set; }
+        [JsonPropertyName("erro")]
+        public string Erro { get; set; }
     }
 }
