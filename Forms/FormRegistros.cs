@@ -147,6 +147,10 @@ namespace CadastroImobiliaria
                 LimparCampos();
                 dgvPessoas.DataSource = PessoaService.ObtemTodosRegistros();
             }
+            catch (FormatException ex)
+            {
+                MessageBox.Show($"Não há pessoa para atualizar. Certifique-se de que um registro foi selecionado.", "Nenhum registro selecionado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             catch (Exception ex)
             {
                 MessageBox.Show($"{ex.Message}", "Erro ao atualizar cadastro", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -172,7 +176,7 @@ namespace CadastroImobiliaria
             }
             catch (FormatException ex)
             {
-                MessageBox.Show($"Não há pessoas para excluir. Certifique-se de que uma pessoa foi selecionada.", "Nenhum registro selecionado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Não há pessoa para excluir. Certifique-se de que um registro foi selecionado.", "Nenhum registro selecionado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
