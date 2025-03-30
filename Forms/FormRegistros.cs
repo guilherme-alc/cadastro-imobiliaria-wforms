@@ -10,6 +10,17 @@ namespace CadastroImobiliaria
         public FormRegistros()
         {
             InitializeComponent();
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(TabulacaoEnter);
+        }
+
+        private void TabulacaoEnter(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                this.SelectNextControl(this.ActiveControl, true, true, true, true);
+            }
         }
 
         private void CarregaFormularioPessoas(object sender, EventArgs e)
